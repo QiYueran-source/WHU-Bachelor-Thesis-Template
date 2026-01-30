@@ -1,0 +1,394 @@
+<p><span>关键词1；关键词2；关键词3</span></p>
+<p>请使用中文分号“；”分割关键词！</p>
+<p>摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容摘要内容</p>
+<p><span>Key1; Key2; Key3</span></p>
+<p>Please use English semicolon and space to separate key words.</p>
+<p>This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract. This is abstract.</p>
+<h1 id="引言">引言</h1>
+<h2 id="概述">概述</h2>
+<p>与Word等所见即所得编辑工具不同，使用 LaTeX工具排版可以将写作与排版过程分离，写作者只需要关心文字的部分，而剩下的排版工作全部交给工具自动完成。</p>
+<h2 id="格式要求">格式要求</h2>
+<p>正文宋体小四，正文行间距固定为23磅。</p>
+<p>通过空一行（两次回车）实现段落换行，仅仅是回车并不会产生新的段落。</p>
+<p>也可以通过 <code>\par</code> 命令来新起一段。</p>
+<h2 id="各节一级标题">各节一级标题</h2>
+<p>我是内容</p>
+<h3 id="各节二级标题">各节二级标题</h3>
+<p>你是内容</p>
+<h4 id="各节三级标题">各节三级标题</h4>
+<p>他是内容</p>
+<h2 id="字体字号">字体字号</h2>
+<p><span><strong>宋体加粗</strong></span> <span><strong>English</strong></span></p>
+<p><span><em>宋体斜体</em></span> <span><em>English</em></span></p>
+<p><span><strong><em>宋体粗斜体</em></strong></span> <span><strong><em>English</em></strong></span></p>
+<h2 id="编译">编译</h2>
+<p>本模板必须使用XeLaTeX + BibTeX编译，否则会直接报错。 本模板支持多个平台，结合sublime/vscode/overleaf都可以使用。</p>
+<h1 id="文献综述">文献综述</h1>
+<h2 id="公式的使用">公式的使用</h2>
+<p>在文中引用公式可以这么写：<span class="math inline"><em>a</em><sup>2</sup> + <em>b</em><sup>2</sup> = <em>c</em><sup>2</sup></span>这是勾股定理，他还可以表示为<span class="math inline">$c=\sqrt{a^2+b^2}$</span>，还可以让公式单独一段并且加上编号。注意，公式前请不要空行。 <br /><span class="math display">sin<sup>2</sup><em>θ</em> + cos<sup>2</sup><em>θ</em> = 1</span><br /></p>
+<p>还可以通过添加标签在正文中引用公式，如式<a href="#eq:pingfanghe" data-reference-type="eqref" data-reference="eq:pingfanghe">[eq:pingfanghe]</a>。</p>
+<p>我们还可以轻松打出一个漂亮的矩阵： <br /><span class="math display">$$\mathbf{A}=
+  \left[\begin{matrix}
+    1&amp;2&amp;3&amp;4\\
+    11&amp;22&amp;33&amp;44\\
+  \end{matrix}\right] \times
+  \left[\begin{matrix}
+    22&amp;24\\
+    32&amp;34\\
+    42&amp;44\\
+    52&amp;54\\
+  \end{matrix}\right]$$</span><br /></p>
+<p>或者多行对齐的公式： <br /><span class="math display">$$\begin{aligned}
+    f_1(x)&amp;=(x+y)^2\\
+          &amp;=x^2+2xy+y^2
+  \end{aligned}$$</span><br /></p>
+<h2 id="插图的使用">插图的使用</h2>
+<p>LaTeX环境下可以使用常见的图片格式：JPEG、PNG、PDF、EPS等。当然也可以使用LaTeX直接绘制矢量图形，可以参考pgf/tikz等包中的相关内容。需要注意的是，无论采用什么方式绘制图形，首先考虑的是图片的清晰程度以及图片的可理解性，过于不清晰的图片将可能会浪费很多时间。</p>
+<p>图示例如下：</p>
+<p><embed src="figures/whulogo.pdf" title="fig:" id="fig:whu" style="width:30.0%" /><br />
+</p>
+<p><code>[htbp]</code>选项分别是此处、页顶、页底、独立一页。<code>[width=\textwidth]</code>让图片占满整行，或<code>[width=2cm]</code>直接设置宽度。可以随时在文中进行引用，如图 <a href="#fig:whu" data-reference-type="ref" data-reference="fig:whu">2.1</a>，建议缩放时保持图像的宽高比不变。</p>
+<h2 id="表格的使用">表格的使用</h2>
+<p>表格的输入可能会比较麻烦，可以使用在线的工具，如 <a href="https://www.tablesgenerator.com/">Tables Generator</a> 能便捷的创建表格，也可以使用离线的工具，如 <a href="https://ctan.org/pkg/excel2latex">Excel2LaTeX</a> 支持从Excel表格转换成LaTeX表格。<a href="https://en.wikibooks.org/wiki/LaTeX/Tables">LaTeX/Tables</a> 上及 <a href="https://www.tug.org/pracjourn/2007-1/mori/mori.pdf">Tables in LaTeX</a> 也有更多的示例能够参考。</p>
+<h3 id="普通表格">普通表格</h3>
+<p>下面是一些普通表格的示例：</p>
+<div id="tab:1">
+<table>
+<caption>简单表格</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">我是</th>
+<th style="text-align: center;">一只</th>
+<th style="text-align: right;">普通</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">的</td>
+<td style="text-align: center;">表格</td>
+<td style="text-align: right;">呀</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tab:2">
+<table>
+<caption>一般三线表</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">姓名</th>
+<th style="text-align: center;">学号</th>
+<th style="text-align: center;">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">张三</td>
+<td style="text-align: center;">001</td>
+<td style="text-align: center;">男</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">李四</td>
+<td style="text-align: center;">002</td>
+<td style="text-align: center;">女</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="跨页表格">跨页表格</h3>
+<p>跨页表格常用于附录（把正文懒得放下的实验数据统统放在附录的表中），以下是一个跨页表格的示例：</p>
+<table>
+<caption>跨页表格示例</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="统计表格">统计表格</h3>
+<p>要创建占满整个文字宽度的表格需要使用到tabularx，如不需要，使用tabular就行。引用表格与其它引用一样，只需要：表 <a href="#tab:3" data-reference-type="ref" data-reference="tab:3">[tab:3]</a>，统计表格一般是三线表形式。</p>
+<p><span>CCCC</span> 序号&amp;年龄&amp;身高&amp;体重<br />
+&amp;14&amp;156&amp;42<br />
+2&amp;16&amp;158&amp;45<br />
+3&amp;14&amp;162&amp;48<br />
+4&amp;15&amp;163&amp;50<br />
+平均&amp;15&amp;159.75&amp;46.25<br />
+</p>
+<h2 id="列表的使用">列表的使用</h2>
+<p>下面演示了创建有序及无序列表，如需其它样式，<a href="https://www.latex-tutorial.com/tutorials/lists/">LaTeX Lists</a> 上有更多的示例。</p>
+<h3 id="有序列表">有序列表</h3>
+<p>这是一个计数的列表</p>
+<ol>
+<li><p>第一项</p>
+<ol>
+<li><p>第一项中的第一项</p></li>
+<li><p>第一项中的第二项</p></li>
+</ol></li>
+<li><p>第二项</p>
+<ol>
+<li><p>第一项中的第一项</p></li>
+<li><p>第一项中的第二项</p></li>
+</ol></li>
+<li><p>第三项</p></li>
+</ol>
+<h3 id="不计数列表">不计数列表</h3>
+<p>这是一个不计数的列表</p>
+<ul>
+<li><p>第一项</p>
+<ul>
+<li><p>第一项中的第一项</p></li>
+<li><p>第一项中的第二项</p></li>
+</ul></li>
+<li><p>第二项</p></li>
+<li><p>第三项</p></li>
+</ul>
+<h2 id="定理的使用">定理的使用</h2>
+<p>设向量<span class="math inline"><strong>a</strong> ≠ <strong>0</strong></span>，那么向量<span class="math inline"><strong>b</strong>//<strong>a</strong></span>的充分必要条件是：存在唯一的实数<span class="math inline"><em>λ</em></span>，使<span class="math inline"><strong>b</strong> = <em>λ</em><strong>a</strong></span>。</p>
+<p>这是一条定义。</p>
+<p>这是一条引理。</p>
+<p>对数轴上任意一点<span class="math inline"><em>P</em></span>，轴上有向线段<span class="math inline">$\vec {OP}$</span>都可唯一地表示为点<span class="math inline"><em>P</em></span>的坐标与轴上单位向量<span class="math inline"><strong>e</strong><sub><em>u</em></sub></span>的乘积：<span class="math inline">$\vec {OP}=u \boldsymbol e_u$</span>。</p>
+<p>这是一条性质。</p>
+<p>这是一条例。</p>
+<p>这是一条注。</p>
+<h1 id="研究设计">研究设计</h1>
+<p>计算基于多Agent的预期协同度因子AED涉及到多方面工作，主要包括数据、模型和系统设计。</p>
+<p>数据是训练的基石，没有合适的数据和特征工程，即便模型再精妙，也无法发挥作用。</p>
+<p>模型是计算的核心，对于不同的AI-Agent，需要引入模型异质性，模拟不同投资者的差异。</p>
+<p>系统设计是实现的关键，由于多Agent协同工作的需求，必须设计合理的系统架构，才能保证计算的高效性。</p>
+<h2 id="数据">数据</h2>
+<h3 id="数据来源">数据来源</h3>
+<h3 id="数据处理">数据处理</h3>
+<h3 id="数据分析">数据分析</h3>
+<h2 id="模型设计">模型设计</h2>
+<h2 id="系统设计">系统设计</h2>
+<h3 id="架构设计">架构设计</h3>
+<h4 id="设计动机">设计动机</h4>
+<p>本研究涉及全市场、长时序、多因子的数据规模与多Agent并行的训练需求，若采用单机全量加载与集中训练，将面临内存与算力瓶颈，因此采用基于主从节点模式的分布式架构，将数据管理与训练执行分离，以控制单机资源占用并支持水平扩展。</p>
+<p><strong>全量数据内存估算。</strong> 因子数据规模为：证券数 <span class="math inline"><em>N</em> = 3500</span>、年份 <span class="math inline"><em>Y</em> = 28</span>、每月一条记录故月数 <span class="math inline"><em>T</em> = 12</span>、因子数 <span class="math inline"><em>F</em> = 88</span>。全量因子矩阵的浮点规模为 <span class="math inline"><em>N</em> × <em>Y</em> × <em>T</em> × <em>F</em> = 3500 × 28 × 12 × 88 = 1.035 × 10<sup>8</sup></span> 个数值；按双精度（8字节）存储约 <span class="math inline">828</span> MB，考虑 DataFrame 索引、列名及预处理过程中的中间副本（如标准化、合并收益率等），单机全量常驻内存约 <span class="math inline">1.5 ∼ 2.5</span> GB。若进一步保留多期滚动窗口或多份快照，内存易达 <span class="math inline">3</span> GB 以上，对普通开发机或单台训练节点不友好。</p>
+<p><strong>训练阶段内存与算力估算。</strong> 训练时显存与 CPU 占用与输入形式、批量大小和网络结构相关。（1）<strong>显存</strong>：单证券输入（如形状 <span class="math inline">12 × 88</span>）、小批量（如 256）下，MLP 等小模型约 <span class="math inline">0.5 ∼ 2</span> GB 显存；若采用多月多证券张量（如 <span class="math inline">12 × 3500 × 88</span>）或大批量，仅单批输入即达数百 MB 至数 GB，加上模型参数、梯度和优化器状态，总显存需求可达数 GB 至十余 GB。（2）<strong>CPU</strong>：数据线程负责从 Redis 拉取数据片、预处理与组 batch，多线程时 CPU 占用与 worker 数、序列长度成正比；消息与网络 I/O 在中央节点与训练节点间会带来额外 CPU 与带宽消耗，但相比全量加载与大规模矩阵运算仍更可控。</p>
+<p>因此，通过中央节点按需加载与按“年—月—证券”切片供给、训练节点按滚动窗口拉取数据并执行训练，可避免单机全量载入，将单节点内存控制在可接受范围内，并便于通过增加训练节点扩展算力。</p>
+<h3 id="中央节点">中央节点</h3>
+<h4 id="数据组织">数据组织</h4>
+<h4 id="数据流水线">数据流水线</h4>
+<h3 id="训练节点">训练节点</h3>
+<h4 id="容器">容器</h4>
+<h4 id="工作流">工作流</h4>
+<h5 id="数据线程">数据线程</h5>
+<h5 id="训练线程">训练线程</h5>
+<h4 id="结果收集">结果收集</h4>
+<h1 id="其它格式">其它格式</h1>
+<h2 id="代码">代码</h2>
+<h3 id="原始代码">原始代码</h3>
+<p>朴实的代码块：</p>
+<p>使用verbatim可以得到原样的输出，如下：</p>
+<pre><code>    print(&quot;Hello world!&quot;)</code></pre>
+<p>使用<a href="https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings">listings</a>环境可以对代码进行进一步的格式化，如下：</p>
+<div class="sourceCode" id="cb2" data-language="Python" data-frame="single"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>a <span class="op">=</span> np.zeros((<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<h3 id="代码高亮">代码高亮</h3>
+<p>还可以对代码进行高亮，请参考 <a href="https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted">Code Highlighting with minted</a>。 请先到cls文件中启用minted库。 注意使用Minted库时，需要系统默认Python有Pygments库，可以通过<code>$ pip install Pygments</code> 来进行安装。且需要在编译时加上<code>--shell-escape</code>参数，否则会报错。</p>
+<h3 id="算法描述伪代码">算法描述/伪代码</h3>
+<p>参考 <a href="https://en.wikibooks.org/wiki/LaTeX/Algorithms">Algorithms</a>，下面是一个简单的示例：</p>
+<p>initialization</p>
+<h2 id="绘图">绘图</h2>
+<p>关于使用 LaTeX 绘图的更多例子，请参考 <a href="https://www.overleaf.com/learn/latex/Pgfplots_package">Pgfplots package</a> 中的例子。 一般建议使用如Photoshop、PowerPoint等制图，再转换成PDF等格式插入。</p>
+<h2 id="写在最后">写在最后</h2>
+<p>工具不重要，对工具的合理运用才重要。希望本模板对大家的论文写作有所帮助。</p>
+<h1 class="unnumbered" id="致谢">致谢</h1>
+<p>以简短的文字表达作者对完成论文和学业提供帮助的老师、同学、领导、同事及亲属的感激之情。</p>
+<h1 id="数据-1">数据</h1>
+<h2 id="第一个测试">第一个测试</h2>
+<p>测试公式编号 <br /><span class="math display">1 + 1 = 2.</span><br /></p>
+<p>表格编号测试</p>
+<p><span>*<span>20</span>c</span> &amp; 13 &amp; 13 &amp; 13 &amp; 13<br />
+12 &amp; 14 &amp; 13 &amp; 13 &amp; 13<br />
+</p>
+<p> </p>

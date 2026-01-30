@@ -1,0 +1,39 @@
+%% 整体架构图：中央节点、中央服务器、服务器微服务与训练节点
+%% 使用 mermaid-cli 生成 PNG: npx -y @mermaid-js/mermaid-cli mmdc -i architecture.mmd -o architecture.png
+
+graph TB
+    subgraph 中央节点
+        Master["中央节点 Master<br/>────────────<br/>控制信号<br/>数据提供<br/>结果分析"]
+    end
+
+    subgraph 公网服务器
+        Frp["frp服务<br/>────────────<br/>frp 反向代理 frps<br/>实现节点与中央的通信"]
+        PortSvc["端口分配微服务<br/>────────────<br/>容器代理端口分配服务"]
+    end
+
+    subgraph 训练节点
+        Node1["训练节点 Node 1<br/>────────────<br/>训练<br/>"]
+        Node2["训练节点 Node 2"]
+        Node3["训练节点 Node 3"]
+    end
+
+    Master <-->|frp 隧道| Frp
+
+    PortSvc <-->|查询 / 分配可用端口| Node1
+
+    Frp <-->|frp 隧道| Node1
+    Frp <-->|frp 隧道| Node2
+    Frp <-->|frp 隧道| Node3
+
+    
+
+    %% 纵向排列：中央节点 → 服务器与微服务 → 训练节点
+    Master ~~~ Frp
+    Frp ~~~ Node1
+
+    style Master fill:#e1f5ff
+    style Frp fill:#e8f5e9
+    style PortSvc fill:#f3e5f5
+    style Node1 fill:#fff4e1
+    style Node2 fill:#fff4e1
+    style Node3 fill:#fff4e1
