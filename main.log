@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.1.30)  25 FEB 2026 14:34
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.1.30)  25 FEB 2026 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1315,23 +1315,25 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip148
 ))
 (./main.aux (./pages/abstract.aux) (./pages/chapter1.aux) (./pages/chapter2.aux
-) (./pages/chapter3.aux) (./pages/chapter4.aux) (./pages/thanks.aux)
-(./pages/appendix.aux) (./pages/null.aux))
+) (./pages/chapter3.aux
+
+LaTeX Warning: Label `tab:2' multiply defined.
+
+) (./pages/chapter4.aux) (./pages/thanks.aux) (./pages/appendix.aux)
+(./pages/null.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 14.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 14.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 14.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
 14.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 14.
@@ -1498,23 +1500,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  (./pages/chapter1.tex
  1
-) [1
+[1
 
 
 
-]
+]) [2]
 \openout2 = `pages/chapter2.aux'.
 
  (./pages/chapter2.tex
  2
 File: figures/whulogo.pdf Graphic file (type pdf)
 <use figures/whulogo.pdf>
-[2
+[3
 
 
 
 
-] [3] [4]
+] [4] [5]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
 t line 182.
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
@@ -1529,41 +1531,48 @@ Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 197.
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
  line 200.
-) [5]
+) [6]
 \openout2 = `pages/chapter3.aux'.
 
  (./pages/chapter3.tex
  3
-[6
+[7
 
 
 
 
 ]
-File: figures/architecture.png Graphic file (type bmp)
-<figures/architecture.png>
- [7] [8]) [9]
+Overfull \hbox (4.44742pt too wide) in paragraph at lines 53--55
+[]\TU/FandolSong-Regular(1)/m/n/12.045 最 后，| \TU/TimesNewRoman(0)/m/n/12.045 Ag
+ent \TU/FandolSong-Regular(1)/m/n/12.045 可 以 回 顾 自 己 之 前 投 资 组 合 的 收 益 情 况，|  对
+ 于 投 资 组 合 $[]$，|
+ []
+
+[8]) [9] [10]
 \openout2 = `pages/chapter4.aux'.
 
  (./pages/chapter4.tex
  4
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [10
+) [11
 
 
 
 
-]) [11]
-(./main.bbl) [12
+]) [12]
+(./main.bbl
+Missing character: There is no 玥 (U+73A5) in font [FandolSong-Regular.otf]/OT:l
+anguage=dflt;!
+[13
 
 
 
 
-]
+]) [14]
 \openout2 = `pages/thanks.aux'.
 
- (./pages/thanks.tex) [13
+ (./pages/thanks.tex) [15
 
 
 
@@ -1572,15 +1581,19 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 
  (./pages/appendix.tex
 附录 A
-) [14
+[16
 
 
 
 
 ]
+附录 B
+) [17
+
+]
 \openout2 = `pages/null.aux'.
 
- (./pages/null.tex) [15
+ (./pages/null.tex) [18
 
 
 
@@ -1592,16 +1605,19 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (./pages/chapter1.aux) (./pages/chapter2.aux) (./pages/chapter3.aux)
 (./pages/chapter4.aux) (./pages/thanks.aux) (./pages/appendix.aux)
 (./pages/null.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3729B706EEDD79783355CBAEC1AEE75A;3032.
+(rerunfilecheck)             Checksum: 61B8E3C54C68BFA80AE7EA5D6A6A0DDA;2598.
  ) 
 Here is how much of TeX's memory you used:
- 44847 strings out of 477728
- 1077626 string characters out of 5842238
- 1621768 words of memory out of 5000000
- 64666 multiletter control sequences out of 15000+600000
- 504023 words of font info for 183 fonts, out of 8000000 for 9000
+ 44906 strings out of 477728
+ 1079919 string characters out of 5842238
+ 1622004 words of memory out of 5000000
+ 64722 multiletter control sequences out of 15000+600000
+ 504063 words of font info for 188 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 103i,15n,105p,1232b,1204s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,22n,105p,1232b,1204s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (21 pages).
+Output written on main.pdf (24 pages).

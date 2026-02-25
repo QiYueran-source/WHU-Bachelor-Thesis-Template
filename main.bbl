@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -31,5 +31,86 @@ JONES C~M, SHI D, ZHANG X, et~al.
 \newblock
   锚定比率可以衡量股价高估吗?--基于崩盘风险视角的经验证据\allowbreak[J].
 \newblock 管理世界, 2020\allowbreak (1).
+
+\bibitem[Shiller(1981)]{shiller1981stock}
+SHILLER R~J.
+\newblock Do stock prices move too much to be justified by subsequent changes
+  in dividends?\allowbreak[J].
+\newblock American Economic Review, 1981, 71: 421-436.
+
+\bibitem[薛健\ 等(2020)薛健 and 汝毅]{xue2020information}
+薛健, 汝毅.
+\newblock 信息披露业务关系与新闻报道质量\allowbreak[J].
+\newblock 管理世界, 2020\allowbreak (10).
+
+\bibitem[伍戈\ 等(2015)伍戈 and 陈得文]{wu2015why}
+伍戈, 陈得文.
+\newblock
+  为什么预期稳定是重要的——兼议货币市场上的规则与相机抉择政策\allowbreak[J].
+\newblock 金融监管研究, 2015\allowbreak (5): 38-50.
+
+\bibitem[洪永淼\ 等(2021)洪永淼 and 汪寿阳]{hong2021how}
+洪永淼, 汪寿阳.
+\newblock 大数据如何改变经济学研究范式?\allowbreak[J].
+\newblock 管理世界, 2021\allowbreak (10).
+
+\bibitem[Sharpe(1964)]{sharpe1964capital}
+SHARPE W~F.
+\newblock Capital asset prices: A theory of market equilibrium under conditions
+  of risk\allowbreak[J].
+\newblock The Journal of Finance, 1964, 19\allowbreak (3): 425-442.
+
+\bibitem[Fama et~al.(1992)Fama and French]{fama1992cross}
+FAMA E~F, FRENCH K~R.
+\newblock The cross-section of expected stock returns\allowbreak[J].
+\newblock The Journal of Finance, 1992, 47\allowbreak (2): 427-465.
+
+\bibitem[Gu et~al.(2020)Gu, Kelly, and Xiu]{gu2020machine}
+GU S, KELLY B~T, XIU D.
+\newblock Empirical asset pricing via machine learning\allowbreak[J].
+\newblock The Review of Financial Studies, 2020, 33\allowbreak (5): 2223-2273.
+
+\bibitem[李斌\ 等(2019)李斌, 邵新月, and 李玥阳]{li2019machine}
+李斌, 邵新月, 李玥阳.
+\newblock 机器学习驱动的基本面量化投资研究\allowbreak[J].
+\newblock 中国工业经济, 2019\allowbreak (8).
+
+\bibitem[马甜\ 等(2022)马甜, 姜富伟, and 唐国豪]{ma2022deep}
+马甜, 姜富伟, 唐国豪.
+\newblock
+  深度学习与中国股票市场因子投资——基于生成式对抗网络方法\allowbreak[J].
+\newblock 经济学(季刊), 2022\allowbreak (3).
+
+\bibitem[Minsky(1961)]{minsky1961steps}
+MINSKY M.
+\newblock Steps toward artificial intelligence\allowbreak[J/OL].
+\newblock Proceedings of the IRE, 1961.
+\newblock DOI: \doi{10.1109/JRPROC.1961.287775}.
+
+\bibitem[Turgut et~al.(2023)Turgut and Bozdag]{turgut2023framework}
+TURGUT Y, BOZDAG C~E.
+\newblock A framework proposal for machine learning-driven agent-based models
+  through a case study analysis\allowbreak[J/OL].
+\newblock Simulation Modelling Practice and Theory, 2023, 123: 102707.
+\newblock DOI: \doi{10.1016/j.simpat.2022.102707}.
+
+\bibitem[Ahmed et~al.(2022)Ahmed, Alshater, El~Ammari, and
+  Hammami]{ahmed2022artificial}
+AHMED S, ALSHATER M~M, EL~AMMARI A, et~al.
+\newblock Artificial intelligence and machine learning in finance: A
+  bibliometric review\allowbreak[J/OL].
+\newblock Research in International Business and Finance, 2022, 61: 101646.
+\newblock DOI: \doi{10.1016/j.ribaf.2022.101646}.
+
+\bibitem[Liu et~al.(2021)Liu, Yang, Gao, and Wang]{liu2021finrl}
+LIU X~Y, YANG H, GAO J, et~al.
+\newblock Finrl: Deep reinforcement learning framework to automate trading in
+  quantitative finance\allowbreak[A].
+\newblock 2021.
+
+\bibitem[Breiman(2001)]{breiman2001random}
+BREIMAN L.
+\newblock Random forests\allowbreak[J].
+\newblock Machine Learning, 2001, 45\allowbreak (1): 5-32.
 
 \end{thebibliography}

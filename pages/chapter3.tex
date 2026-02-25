@@ -1,56 +1,106 @@
 % Chapter 3
 
 \chapter{研究设计}
-计算基于多Agent的预期协同度因子AED涉及到多方面工作，主要包括数据、模型和系统设计。\par
-数据是训练的基石，没有合适的数据和特征工程，即便模型再精妙，也无法发挥作用。\par 
-模型是计算的核心，对于不同的AI-Agent，需要引入模型异质性，模拟不同投资者的差异。\par 
-系统设计是实现的关键，由于多Agent协同工作的需求，必须设计合理的系统架构，才能保证计算的高效性。\par 
 
-\section{数据} 
+\section{模型设计}  
+对于一个Agent投资者，其决策和学习的过程可以分为以下几个步骤：
 
-\subsection{数据来源}
+\begin{algorithm}[H]
+  \setstretch{1.5}
+  \SetAlgoLined
+  \KwIn{特征数据}
+  \KwResult{更新后的神经网络}
+  step 1：特征数据 $\xrightarrow{\text{神经网络}}$ 投资决策\;
+  step 2：投资决策、收益数据 $\to$ 组合收益\;
+  step 3：组合收益序列 $\to$ 组合表现指标（如波动率、夏普比率、最大回撤等）\;
+  step 4：组合表现指标 $\to$ 奖励\;
+  step 5：奖励 $\to$ 更新后的神经网络\;
+  \caption{Agent投资者决策过程}
+  \label{alg:agent-decision}
+\end{algorithm}
 
-\subsection{数据处理}
+根据上述步骤，可以设计一个Agent投资者的决策和学习过程。
 
-\subsection{数据分析}
+\subsection{Agent构建}  
+\subsubsection{数据输入}   
+使用因子数据作为Agent投资者的输入，用于模拟投资者对于因子的解读和决策。
+因子数据是以年月-证券为主键的月度面板数据。因子数据$factor_{a,s,t,i}$
+表示$Agent_{a}$在$t$月份对于证券$s$的因子$i$的值。
+
+参考FinRL\cite{liu2021finrl}的设计，
+设定一个因子向量为  
+$$\vec{factors_{a,s,t}} = (factor_{a,s,t,1}, factor_{a,s,t,2}, \ldots, factor_{a,s,t,i}, \ldots)$$，
+
+考虑到不同的Agent投资者的数据获取能力不同，对数据的关注程度也不同，
+因此，参考机器学习中的特征选择方法\cite{breiman2001random}，
+设定Agent$a$只能随机获取88个因子中的$l$个因子，用于分析决策。
+筛选后的因子向量为  
+$$\vec{selected\_factors_{a,s,t}} = (factor_{a,s,t,random_1}, factor_{a,s,t,random_2}, \ldots, factor_{a,s,t,random_i}, \ldots)$$  
+其中$random_i$为随机选择的因子索引，不同的Agent投资者选择的因子索引不同。  
+
+设定Agent拥有一定的数据回顾能力，可以回顾过去$m$个月的因子向量。
+在月份$t$，Agent可以回顾过去$m$个月的因子向量，形成一个$(m, l)$的矩阵。
+$$\mathbf{factors\_matrix_{a,s,t}} = (\vec{factors_{a,s,t-m+1}}, \vec{factors_{a,s,t-m+2}}, \ldots, \vec{factors_{a,s,t}})$$  
+
+$Agent_{a}$需要选择$n$只证券，构建一个投资组合  
+$$\vec{portfolio} = (s_1, s_2, \ldots, s_n)$$  
+综合以上设定，$Agent_{a}$的输入按（证券数，时间步，因子数）组织，
+可表示为一个$(n, m, l)$的三维张量。
+
+最后，Agent可以回顾自己之前投资组合的收益情况，对于投资组合$\vec{portfolio}$，
+获取其$t,t-1,t-2,\ldots,t-m+1$月的收益  
+$$\vec{returns_{a,portfolio,t}} = (returns_{a,portfolio,t-m+1}, returns_{a,portfolio,t-m+2}, \ldots, returns_{a,portfolio,t})$$，  
+其中，$returns_{a,portfolio,t}$为使用$t-1$月的决策构建投资组合$\vec{portfolio}$在$t$月份的收益。
+该收益序列与具体证券无关，为组合整体收益。为与按证券组织的输入一致，将该收益序列复制$n$份，得到形状为$(n,m)$的矩阵（每行均为同一$m$维收益序列）；
+将该矩阵作为一路新特征与原有$(n, m, l)$张量在时间维上拼接，得到最终输入张量，其维度为$(n, m+1, l)$（第二维由$m$个时间步的因子与$1$个收益矩阵拼接得到）。
+
+由于不同特征的量纲、数量级、分布等方面存在明显差异，因此需要对特征进行标准化处理，
+使得所有特征的均值为0，标准差为1。
+具体来说，记$N$为参与该月标准化的证券数量（如股票池大小）。对于每一个因子$factor_{a,s,t,i}$，求相同月份所有证券的因子值的均值和标准差  
+$$\mu_{i,t} = \frac{1}{N} \sum_{s=1}^{N} factor_{a,s,t,i}$$  
+$$\sigma_{i,t} = \sqrt{\frac{1}{N} \sum_{s=1}^{N} (factor_{a,s,t,i} - \mu_{i,t})^2}$$  
+然后对每一个因子$factor_{a,s,t,i}$进行标准化处理，得到标准化后的因子值  
+$$factor\_standardized_{a,s,t,i} = \frac{factor_{a,s,t,i} - \mu_{i,t}}{\sigma_{i,t}}$$  
+
+\subsubsection{神经网络设计}   
+与预测模型不同，Agent的神经网络采用端到端设计，
+无需预测组合未来的收益，而是直接进行决策，决定将多少比例的资金分配给每只证券（现金）。
+
+\textbf{（1）数据输入层。}
+参考FinRL\cite{liu2021finrl}，采用多层感知机（MLP）作为Agent由观测到投资权重的映射模型。
+输入为前述标准化后的张量，形状为$(n, m+1, l)$。
+
+\textbf{（2）展平与线性层。}
+将输入张量展平为$n \cdot (m+1) \cdot l$维向量，经Dropout层后，
+通过一层全连接层映射为$n+1$维的决策向量，
+对应$n$只证券的权重及一个现金(无风险资产)维度。
+
+\textbf{（3）激活与输出归一化。}
+按照决策的语义，网络的输出$w_i$表示证券（现金）$i$的权重，
+即将多少比例的资金分配给该证券（现金）。
+在基线回归中，不允许使用杠杆或者做空。  
+在上述约束下，网络输出为$\vec{output_{a,portfolio,t}} = (w_1, w_2, \ldots, w_{n+1})$，
+代表Agent $a$在$t$月份对于投资组合$\vec{portfolio}$的输出。  
+
+将输出转换为决策向量，需要满足以下约束：      
+\textbf{1)} 权重之和为1，即$\sum_{i=1}^{n+1} w_i = 1$，表示需要将全部资金用完，无用的资金需要分配给无风险资产（现金）；   
+\textbf{2)} 非负，即$w_i \geqslant 0$，表示不允许做空证券，或者使用杠杆（即现金权重为负，表示借入资金购买证券）；   
+
+考虑到后续研究中需要引入杠杆和做空的情况，
+使用softmax或者ReLU作为激活函数，会导致负权重丢失，因此使用Tanh作为激活函数。  
+$$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$   
+Tanh函数会将输出映射到$(-1, 1)$之间。   
+
+在基线回归中，对于小于0的权重，将其映射为0，保持非负性约束（后续将放松该约束），
+得到非负权重向量  
+$$w^{+}_{i} = \max(w_i, 0)$$    
+然后进行简单归一化，得到归一化后的权重向量     
+$$\vec{action_{a,portfolio,t}} = \left( \frac{w^{+}_{1}}{\sum_{j=1}^{n+1} w^{+}_{j}}, \ldots, \frac{w^{+}_{n+1}}{\sum_{j=1}^{n+1} w^{+}_{j}} \right)$$    
+
+\section{AED因子设计}
 
 
-\section{模型设计}
 
-\section{系统设计}
-\subsection{架构设计}
 
-\subsubsection{设计动机}
 
-本研究涉及全市场、长时序、多因子的数据规模与多Agent并行的训练需求，若采用单机全量加载与集中训练，将面临内存与算力瓶颈，因此采用基于主从节点模式的分布式架构，将数据管理与训练执行分离，以控制单机资源占用并支持水平扩展。\par
-
-\textbf{全量数据内存估算。} 因子数据规模为：证券数 $N=3500$、年份 $Y=28$、每月一条记录故月数 $T=12$、因子数 $F=88$。全量因子矩阵的浮点规模为 $N \times Y \times T \times F = 3500 \times 28 \times 12 \times 88 = 1.035 \times 10^8$ 个数值；按双精度（8字节）存储约 $828$ MB，考虑 DataFrame 索引、列名及预处理过程中的中间副本（如标准化、合并收益率等），单机全量常驻内存约 $1.5 \sim 2.5$ GB。若进一步保留多期滚动窗口或多份快照，内存易达 $3$ GB 以上，对普通开发机或单台训练节点不友好。\par
-
-\textbf{训练阶段内存与算力估算。} 训练时显存与 CPU 占用与输入形式、批量大小和网络结构相关。（1）\textbf{显存}：单证券输入（如形状 $12 \times 88$）、小批量（如 256）下，MLP 等小模型约 $0.5 \sim 2$ GB 显存；若采用多月多证券张量（如 $12 \times 3500 \times 88$）或大批量，仅单批输入即达数百 MB 至数 GB，加上模型参数、梯度和优化器状态，总显存需求可达数 GB 至十余 GB。（2）\textbf{CPU}：数据线程负责从 Redis 拉取数据片、预处理与组 batch，多线程时 CPU 占用与 worker 数、序列长度成正比；消息与网络 I/O 在中央节点与训练节点间会带来额外 CPU 与带宽消耗，但相比全量加载与大规模矩阵运算仍更可控。\par
-
-因此，通过中央节点按需加载与按“年—月—证券”切片供给、训练节点按滚动窗口拉取数据并执行训练，可避免单机全量载入，将单节点内存控制在可接受范围内，并便于通过增加训练节点扩展算力。
-
-\subsubsection{整体架构}
-
-系统采用主从节点模式：中央节点负责数据管理、消息调度与结果汇总，多个训练节点通过 Redis 与消息总线从中央获取数据并执行 Agent 训练。为了实现节点通信和节点端口分配，需要公网服务器提供frp服务，如图~\ref{fig:architecture} 所示。
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.95\textwidth]{figures/architecture.png}
-  \caption{整体架构：中央节点与训练节点}
-  \label{fig:architecture}
-\end{figure}
-
-中央节点部署于具备数据库与 Redis 访问权限的主机，承担四类职责：（1）从数据库按需加载因子与收益率数据，并且完成预处理；（2）通过消息总线与数据流水线将数据按“年—月—证券”切片写入 Redis，供训练节点按滚动窗口拉取；（3）对训练任务进行调度与监控；（4）接收并汇总各训练节点上报的指标与模型信息，进行实证分析。训练节点可多台并列，每节点在独立容器内运行：从 Redis 拉取数据片，经过适配后执行训练，将结果与模型写回中央或推送至统一仓库。中央与节点之间通过frp隧道通信，实现数据与算力分离、训练节点水平扩展。  
-
-\subsection{中央节点}
-\subsubsection{数据组织}  
-\subsubsection{数据流水线}    
-
-\subsection{训练节点} 
-\subsubsection{容器}  
-\subsubsection{工作流}  
-\paragraph{数据线程}
-\paragraph{训练线程}
-\subsubsection{结果收集}
-
+\section{因子检验}
