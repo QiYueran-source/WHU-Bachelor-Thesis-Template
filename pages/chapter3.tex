@@ -10,18 +10,19 @@
   \SetAlgoLined
   \KwIn{特征数据}
   \KwResult{更新后的神经网络}
-  step 1：特征数据 $\xrightarrow{\text{神经网络}}$ 投资决策\;
-  step 2：投资决策、收益数据 $\to$ 组合收益\;
-  step 3：组合收益序列 $\to$ 组合表现指标（如波动率、夏普比率、最大回撤等）\;
-  step 4：组合表现指标 $\to$ 奖励\;
-  step 5：奖励 $\to$ 更新后的神经网络\;
+  特征数据 $\xrightarrow{\text{神经网络}}$ 投资决策 \footnote{同一过程可旁支用于计算AED}\;
+  投资决策、收益数据 $\to$ 组合收益\;
+  组合收益序列 $\to$ 组合表现指标（如波动率、夏普比率、最大回撤等）\;
+  组合表现指标 $\to$ 奖励\;
+  奖励 $\to$ 更新后的神经网络\;
+  重复上述步骤，直到达到预设的训练次数或达到预设的训练时间。
   \caption{Agent投资者决策过程}
   \label{alg:agent-decision}
 \end{algorithm}
 
 根据上述步骤，可以设计一个Agent投资者的决策和学习过程。
 
-\subsection{Agent构建}  
+\subsection{Agent构建与训练}  
 \subsubsection{数据输入}   
 使用因子数据作为Agent投资者的输入，用于模拟投资者对于因子的解读和决策。
 因子数据是以年月-证券为主键的月度面板数据。因子数据$factor_{a,s,t,i}$
@@ -96,6 +97,29 @@ Tanh函数会将输出映射到$(-1, 1)$之间。
 $$w^{+}_{i} = \max(w_i, 0)$$    
 然后进行简单归一化，得到归一化后的权重向量     
 $$\vec{action_{a,portfolio,t}} = \left( \frac{w^{+}_{1}}{\sum_{j=1}^{n+1} w^{+}_{j}}, \ldots, \frac{w^{+}_{n+1}}{\sum_{j=1}^{n+1} w^{+}_{j}} \right)$$    
+
+\subsubsection{奖励设计}  
+在强化学习中，奖励函数是Agent用于评估其决策好坏，改进决策方向，实现模型优化的关键。
+参考Moody等\cite{moody1998performance}和jiang等\cite{jiang2017deep}的研究，
+使用二次效用函数\cite{markowitz1956optimization}作为奖励函数。
+
+具体来说，对于一个投资组合$\vec{portfolio}$，其在$t$月份的收益率为$r_{portfolio,t}$，
+获取其前$m$个月的收益率序列  
+$$\vec{returns_{portfolio,t}} = (r_{portfolio,t-m+1}, r_{portfolio,t-m+2}, \ldots, r_{portfolio,t})$$   
+计算其方差  
+$$\sigma_{portfolio,t}^2 = \frac{1}{m} \sum_{i=1}^{m} (r_{portfolio,t-i} - \bar{r_{portfolio,t}})^2$$   
+其中，$\bar{r_{portfolio,t}}$为前$m$个月的收益率均值。  
+
+使用二次效用函数作为奖励函数  
+$$reward_{a,portfolio,t} = \mu_{portfolio,t} - \frac{A}{2} \sigma_{portfolio,t}^2$$  
+
+其中，参数$A$是风险厌恶系数。
+$A$越大，表明Agent越厌恶风险，越倾向于选择低风险的组合。
+
+
+
+
+\subsubsection{强化学习模型设计}
 
 \section{AED因子设计}
 
