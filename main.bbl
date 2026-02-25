@@ -1,0 +1,35 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Henning et~al.(2025)Henning, Ojha, Spoon, Han, and
+  Camerer]{henning2025llm}
+HENNING T, OJHA S~M, SPOON R, et~al.
+\newblock Llm agents do not replicate human market traders: Evidence from
+  experimental finance\allowbreak[A].
+\newblock 2025.
+\newblock arXiv: \eprint{https://arxiv.org/abs/2502.15800}{2502.15800}.
+
+\bibitem[Jones et~al.(2025)Jones, Shi, Zhang, and Zhang]{jones2025retail}
+JONES C~M, SHI D, ZHANG X, et~al.
+\newblock Retail trading and return predictability in china\allowbreak[J].
+\newblock Journal of Financial and Quantitative Analysis, 2025, 60\allowbreak
+  (1): 68-104.
+
+\bibitem[杨威\ 等(2020)杨威, 冯璐, 宋敏, and
+  李春涛]{yang2020anchor}
+杨威, 冯璐, 宋敏, 等.
+\newblock
+  锚定比率可以衡量股价高估吗?--基于崩盘风险视角的经验证据\allowbreak[J].
+\newblock 管理世界, 2020\allowbreak (1).
+
+\end{thebibliography}

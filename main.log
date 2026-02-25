@@ -1,8 +1,8 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.1.30)  30 JAN 2026 15:56
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.1.30)  25 FEB 2026 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**main
 (./main.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (./whu-bachelor-style.cls
@@ -1498,11 +1498,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  (./pages/chapter1.tex
  1
-
-LaTeX Font Warning: Font shape `TU/FandolSong-Regular(1)/b/it' undefined
-(Font)              using `TU/FandolSong-Regular(1)/b/n' instead on input line 
-30.
-
 ) [1
 
 
@@ -1560,13 +1555,15 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 
 
 ]) [11]
-No file main.bbl.
+(./main.bbl) [12
+
+
+
+
+]
 \openout2 = `pages/thanks.aux'.
 
-(./pages/thanks.tex) [12
-
-
-
+ (./pages/thanks.tex) [13
 
 
 
@@ -1575,7 +1572,7 @@ No file main.bbl.
 
  (./pages/appendix.tex
 附录 A
-) [13
+) [14
 
 
 
@@ -1583,7 +1580,7 @@ No file main.bbl.
 ]
 \openout2 = `pages/null.aux'.
 
- (./pages/null.tex) [14
+ (./pages/null.tex) [15
 
 
 
@@ -1595,19 +1592,16 @@ No file main.bbl.
 (./pages/chapter1.aux) (./pages/chapter2.aux) (./pages/chapter3.aux)
 (./pages/chapter4.aux) (./pages/thanks.aux) (./pages/appendix.aux)
 (./pages/null.aux))
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5E86AEB57660DE51C4213693980FC44F;3561.
+(rerunfilecheck)             Checksum: 3729B706EEDD79783355CBAEC1AEE75A;3032.
  ) 
 Here is how much of TeX's memory you used:
- 44839 strings out of 477728
- 1077143 string characters out of 5842238
- 1621409 words of memory out of 5000000
- 64656 multiletter control sequences out of 15000+600000
- 504039 words of font info for 185 fonts, out of 8000000 for 9000
+ 44847 strings out of 477728
+ 1077626 string characters out of 5842238
+ 1621768 words of memory out of 5000000
+ 64666 multiletter control sequences out of 15000+600000
+ 504023 words of font info for 183 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 103i,15n,105p,1236b,1204s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,15n,105p,1232b,1204s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (20 pages).
+Output written on main.pdf (21 pages).
