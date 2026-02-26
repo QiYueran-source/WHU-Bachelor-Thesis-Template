@@ -30,38 +30,52 @@
 
 参考FinRL\cite{liu2021finrl}的设计，
 设定一个因子向量为  
-$$\vec{factors_{a,s,t}} = (factor_{a,s,t,1}, factor_{a,s,t,2}, \ldots, factor_{a,s,t,i}, \ldots)$$，
+
+$$\vec{factors}_{a,s,t} = (factor_{a,s,t,1}, factor_{a,s,t,2}, \ldots, factor_{a,s,t,i}, \ldots)$$ 
+
+由于不同特征的量纲、数量级、分布等方面存在明显差异，因此需要对特征进行标准化处理，
+使得所有特征的均值为0，标准差为1。
+具体来说，记$N$为参与该月标准化的证券数量（如股票池大小）。对于每一个因子$factor_{a,s,t,i}$，求相同月份所有证券的因子值的均值和标准差  
+
+$$\mu_{i,t} = \frac{1}{N} \sum_{s=1}^{N} factor_{a,s,t,i}$$  
+
+$$\sigma_{i,t} = \sqrt{\frac{1}{N} \sum_{s=1}^{N} (factor_{a,s,t,i} - \mu_{i,t})^2}$$  
+
+然后对每一个因子$factor_{a,s,t,i}$进行标准化处理，得到标准化后的因子值  
+
+$$factor\_standardized_{a,s,t,i} = \frac{factor_{a,s,t,i} - \mu_{i,t}}{\sigma_{i,t}}$$  
 
 考虑到不同的Agent投资者的数据获取能力不同，对数据的关注程度也不同，
 因此，参考机器学习中的特征选择方法\cite{breiman2001random}，
 设定Agent$a$只能随机获取88个因子中的$l$个因子，用于分析决策。
 筛选后的因子向量为  
-$$\vec{selected\_factors_{a,s,t}} = (factor_{a,s,t,random_1}, factor_{a,s,t,random_2}, \ldots, factor_{a,s,t,random_i}, \ldots)$$  
+
+$$\vec{selected\_factors}_{a,s,t} = (factor_{a,s,t,random_1}, factor_{a,s,t,random_2}, \ldots, factor_{a,s,t,random_i}, \ldots)$$  
+
 其中$random_i$为随机选择的因子索引，不同的Agent投资者选择的因子索引不同。  
 
 设定Agent拥有一定的数据回顾能力，可以回顾过去$m$个月的因子向量。
 在月份$t$，Agent可以回顾过去$m$个月的因子向量，形成一个$(m, l)$的矩阵。
-$$\mathbf{factors\_matrix_{a,s,t}} = (\vec{factors_{a,s,t-m+1}}, \vec{factors_{a,s,t-m+2}}, \ldots, \vec{factors_{a,s,t}})$$  
+
+$$\mathbf{factors\_matrix}_{a,s,t} = (\vec{factors}_{a,s,t-m+1}, \vec{factors}_{a,s,t-m+2}, \ldots, \vec{factors}_{a,s,t})$$  
 
 $Agent_{a}$需要选择$n$只证券，构建一个投资组合  
+
 $$\vec{portfolio} = (s_1, s_2, \ldots, s_n)$$  
+
 综合以上设定，$Agent_{a}$的输入按（证券数，时间步，因子数）组织，
 可表示为一个$(n, m, l)$的三维张量。
 
 最后，Agent可以回顾自己之前投资组合的收益情况，对于投资组合$\vec{portfolio}$，
-获取其$t,t-1,t-2,\ldots,t-m+1$月的收益  
-$$\vec{returns_{a,portfolio,t}} = (returns_{a,portfolio,t-m+1}, returns_{a,portfolio,t-m+2}, \ldots, returns_{a,portfolio,t})$$，  
-其中，$returns_{a,portfolio,t}$为使用$t-1$月的决策构建投资组合$\vec{portfolio}$在$t$月份的收益。
-该收益序列与具体证券无关，为组合整体收益。为与按证券组织的输入一致，将该收益序列复制$n$份，得到形状为$(n,m)$的矩阵（每行均为同一$m$维收益序列）；
-将该矩阵作为一路新特征与原有$(n, m, l)$张量在时间维上拼接，得到最终输入张量，其维度为$(n, m+1, l)$（第二维由$m$个时间步的因子与$1$个收益矩阵拼接得到）。
+获取其$t,t-1,t-2,\ldots,t-m+1$月的收益，组成收益序列  
 
-由于不同特征的量纲、数量级、分布等方面存在明显差异，因此需要对特征进行标准化处理，
-使得所有特征的均值为0，标准差为1。
-具体来说，记$N$为参与该月标准化的证券数量（如股票池大小）。对于每一个因子$factor_{a,s,t,i}$，求相同月份所有证券的因子值的均值和标准差  
-$$\mu_{i,t} = \frac{1}{N} \sum_{s=1}^{N} factor_{a,s,t,i}$$  
-$$\sigma_{i,t} = \sqrt{\frac{1}{N} \sum_{s=1}^{N} (factor_{a,s,t,i} - \mu_{i,t})^2}$$  
-然后对每一个因子$factor_{a,s,t,i}$进行标准化处理，得到标准化后的因子值  
-$$factor\_standardized_{a,s,t,i} = \frac{factor_{a,s,t,i} - \mu_{i,t}}{\sigma_{i,t}}$$  
+$$\vec{returns}_{a,portfolio,t} = (return_{a,portfolio,t-m+1}, return_{a,portfolio,t-m+2}, \ldots, return_{a,portfolio,t})$$
+
+其中，$return_{a,portfolio,t}$为使用$t-1$月的决策构建投资组合$\vec{portfolio}$在$t$月份的收益。
+其计算方式为各个证券在$t-1$月的决策水平其在$t$月份的收益水平的加权平均。
+该收益序列与具体证券无关，为组合整体收益。为与按证券组织的输入一致，将该收益序列复制$n$份，得到形状为$(n,m)$的矩阵（每行均为同一$m$维收益序列）；
+再将该矩阵在特征维上扩展为形状为$(n,m,1)$的三维张量，并与原有$(n, m, l)$张量在特征维上拼接，得到最终输入张量，其维度为$(n, m, l+1)$
+（第三维由$l$个因子特征与$1$个组合收益特征拼接得到）。
 
 \subsubsection{神经网络设计}   
 与预测模型不同，Agent的神经网络采用端到端设计，
@@ -69,52 +83,78 @@ $$factor\_standardized_{a,s,t,i} = \frac{factor_{a,s,t,i} - \mu_{i,t}}{\sigma_{i
 
 \textbf{（1）数据输入层。}
 参考FinRL\cite{liu2021finrl}，采用多层感知机（MLP）作为Agent由观测到投资权重的映射模型。
-输入为前述标准化后的张量，形状为$(n, m+1, l)$。
+输入为前述标准化后的观测张量，记作  
+
+$$\mathbf{X}_{a,\vec{portfolio},t} \in \mathbb{R}^{n \times m \times (l+1)},$$
+
+即形状为$(n, m, l+1)$的三维张量。
 
 \textbf{（2）展平与线性层。}
-将输入张量展平为$n \cdot (m+1) \cdot l$维向量，经Dropout层后，
-通过一层全连接层映射为$n+1$维的决策向量，
-对应$n$只证券的权重及一个现金(无风险资产)维度。
+将输入张量展平为一维向量，经Dropout层后，通过一层全连接层映射为$n+1$维向量。记展平后的输入为$\mathbf{x} = \mathrm{Flatten}(\mathbf{X}_{a,\vec{portfolio},t}) \in \mathbb{R}^{n m (l+1)}$，则
+
+$$\mathbf{z} = \mathbf{W} \,\mathbf{x}' + \mathbf{b}, \quad \mathbf{x}' = \mathrm{Dropout}(\mathbf{x}), \quad \mathbf{W} \in \mathbb{R}^{(n+1) \times nm(l+1)},\ \mathbf{b} \in \mathbb{R}^{n+1},$$
+
+得到$\mathbf{z} \in \mathbb{R}^{n+1}$，对应$n$只证券的权重及一个现金（无风险资产）维度。
 
 \textbf{（3）激活与输出归一化。}
-按照决策的语义，网络的输出$w_i$表示证券（现金）$i$的权重，
-即将多少比例的资金分配给该证券（现金）。
-在基线回归中，不允许使用杠杆或者做空。  
-在上述约束下，网络输出为$\vec{output_{a,portfolio,t}} = (w_1, w_2, \ldots, w_{n+1})$，
-代表Agent $a$在$t$月份对于投资组合$\vec{portfolio}$的输出。  
+按照决策的语义，网络的原始输出表示各证券（及现金）的权重。
+在基线回归中，不允许使用杠杆或者做空。
+上述全连接层输出$\mathbf{z}$经激活函数（见下文）得到网络原始输出向量  
+
+$$\vec{output}_{a,\vec{portfolio},t} = (w_1, w_2, \ldots, w_{n+1}) \in \mathbb{R}^{n+1},$$  
+
+即$w_i$表示分配给证券（或现金）$i$的比例；再经非负化与归一化后得到最终决策向量$\vec{action}_{a,\vec{portfolio},t}$（见下）。  
 
 将输出转换为决策向量，需要满足以下约束：      
+
 \textbf{1)} 权重之和为1，即$\sum_{i=1}^{n+1} w_i = 1$，表示需要将全部资金用完，无用的资金需要分配给无风险资产（现金）；   
+
 \textbf{2)} 非负，即$w_i \geqslant 0$，表示不允许做空证券，或者使用杠杆（即现金权重为负，表示借入资金购买证券）；   
 
 考虑到后续研究中需要引入杠杆和做空的情况，
 使用softmax或者ReLU作为激活函数，会导致负权重丢失，因此使用Tanh作为激活函数。  
+
 $$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$   
+
 Tanh函数会将输出映射到$(-1, 1)$之间。   
 
 在基线回归中，对于小于0的权重，将其映射为0，保持非负性约束（后续将放松该约束），
 得到非负权重向量  
+
 $$w^{+}_{i} = \max(w_i, 0)$$    
+
 然后进行简单归一化，得到归一化后的权重向量     
-$$\vec{action_{a,portfolio,t}} = \left( \frac{w^{+}_{1}}{\sum_{j=1}^{n+1} w^{+}_{j}}, \ldots, \frac{w^{+}_{n+1}}{\sum_{j=1}^{n+1} w^{+}_{j}} \right)$$    
+
+$$\vec{action}_{a,\vec{portfolio},t} = \left( \frac{w^{+}_{1}}{\sum_{j=1}^{n+1} w^{+}_{j}}, \ldots, \frac{w^{+}_{n+1}}{\sum_{j=1}^{n+1} w^{+}_{j}} \right)$$    
 
 \subsubsection{奖励设计}  
 在强化学习中，奖励函数是Agent用于评估其决策好坏，改进决策方向，实现模型优化的关键。
 参考Moody等\cite{moody1998performance}和jiang等\cite{jiang2017deep}的研究，
 使用二次效用函数\cite{markowitz1956optimization}作为奖励函数。
 
-具体来说，对于一个投资组合$\vec{portfolio}$，其在$t$月份的收益率为$r_{portfolio,t}$，
-获取其前$m$个月的收益率序列  
-$$\vec{returns_{portfolio,t}} = (r_{portfolio,t-m+1}, r_{portfolio,t-m+2}, \ldots, r_{portfolio,t})$$   
+具体来说，对于一个投资组合$\vec{portfolio}$，其在$t$月份的收益率为$return_{portfolio,t}$，
+其计算方式为各个证券在$t-1$月的决策水平其在$t$月份的收益水平的加权平均。
+
+$$return_{portfolio,t} = \vec{action}_{a,\vec{portfolio},t} \cdot \vec{returns}_{portfolio,t}$$
+
+获取其前$m$个月的收益序列  
+
+$$\vec{returns}_{portfolio,t} = (return_{portfolio,t-m+1}, return_{portfolio,t-m+2}, \ldots, return_{portfolio,t})$$  
+
 计算其方差  
+
 $$\sigma_{portfolio,t}^2 = \frac{1}{m} \sum_{i=1}^{m} (r_{portfolio,t-i} - \bar{r_{portfolio,t}})^2$$   
+
 其中，$\bar{r_{portfolio,t}}$为前$m$个月的收益率均值。  
 
-使用二次效用函数作为奖励函数  
-$$reward_{a,portfolio,t} = \mu_{portfolio,t} - \frac{A}{2} \sigma_{portfolio,t}^2$$  
+使用二次效用函数作为奖励函数   
+
+$$reward_{a,portfolio,t} = \mu_{portfolio,t} - \frac{A}{2} \sigma_{portfolio,t}^2$$   
 
 其中，参数$A$是风险厌恶系数。
 $A$越大，表明Agent越厌恶风险，越倾向于选择低风险的组合。
+根据尹海员等\cite{yin2011speciality}、张玥\cite{zhang2019china}、jiang\cite{jiang2023dynamic}等学者的研究，
+在A股市场中，投资者的风险系数
 
 
 
