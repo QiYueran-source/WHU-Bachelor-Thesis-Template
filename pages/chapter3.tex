@@ -180,7 +180,8 @@ $return_{s,t}$为证券$s$在$t$月份的收益，
 \[u = \mu - \frac{A}{2} \sigma^2\]
 
 具体来说，对于一个投资组合$\vec{portfolio}$，其在$t$月份的收益率为$return_{a,portfolio,t}$。
-计算方式和前述相同。
+由于可能涉及采样算法，计算奖励前，需要再对$\vec{action}_{a,\vec{portfolio},t}$进行归一化。
+后续计算方式和前述相同。
 
 Agent在$t$时间点上决策，获取$\vec{action}_{a,\vec{portfolio},t}$，
 计算持有该组合到下一个时间点期间的收益$return_{a,portfolio,t+1}$，作为期望收益$\mu$。
@@ -250,12 +251,35 @@ Actor网络将$f_\theta(obs)$映射为均值为$f_\theta(obs)$，方差为$\sigm
 Critic学习对上述期望的近似，即$V_\phi(obs) \approx V^\pi(obs)$，
 作为基线，评估实际奖励$reward$与期望奖励$V^\pi(obs)$的差距：
 
-\[\hat{A} = reward - V_\phi(obs)\]
+\[\hat{A}(obs, action) = reward(obs, action) - V_\phi(obs)\]
 
 通过不断训练，Critic网络改进对于$reward$的近似，是的后续计算更加准确。
 
+\textbf{（2）优化目标：}
+PPO的优化目标基于$\hat{A}(obs, action)$。当$\hat{A}(obs, action) > 0$时，表示当前策略比期望策略更好，
+需要增加当前策略的概率；当$\hat{A}(obs, action) < 0$时，表示当前策略比期望策略更差，
+需要减少当前策略的概率。
 
+\textbf{（3）策略更新：}
+定义概率比：
 
+\[ratio(\theta) =  \frac{\pi_\theta(action|obs)}{\pi_{\theta_{\mathrm{old}}}(action|obs)}\]
 
+表示新策略相对旧策略在该$(obs, action)$上的概率密度之比。
+$ratio(\theta)$越大，新策略越倾向做该动作。
 
+为了防止更新幅度过大，定义经过裁剪目标：
+
+\[
+L^{\mathrm{CLIP}}(\theta)
+= \mathbb{E}{(s,a,r) \sim \mathcal{D}} \Big[ \min\big( r(\theta)\, \hat{A},\;
+\operatorname{clip}\big( r(\theta),\, 1-\epsilon,\, 1+\epsilon \big)\, \hat{A} \big) \Big]
+\]
+
+其中$D$为多局单步游戏收集的$(obs, aciton, reward)$组成的集合，
+$\epsilon$为裁剪半径，裁剪函数$clip(r(\theta),1-\epsilon,1+\epsilon)$
+将概率比限制在$[1-\epsilon,1+\epsilon]$，以截断更新幅度。
+
+策略更新的目标为最大化$L^{CLIP}(\theta)$，
+或最小化$-L^{CLIP}(\theta)$
 
