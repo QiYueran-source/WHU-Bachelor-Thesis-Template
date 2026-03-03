@@ -319,5 +319,18 @@ L^{\mathrm{VF}}(\phi)
 可以使得策略朝着奖励增大的方向更新，
 同时保持策略的探索性。
 
+\subsection{滚动窗口}
+参考唐国豪\cite{唐国豪2025投资者预期协同}，FinRL\cite{liu2021finrl}等做法，
+使用滚动窗口的方式训练Agent，同时收集数据，用于后续因子构建。  
+
+由于计算奖励需要单个证券组合的历史收益序列，
+需要确保证券组合在窗口中保持不变。
+因此，进行提前采样，对于证券池$\mathcal{S}$，一共有$S$只证券，若一个证券组合由$n$只证券组成，
+则最多可构建$\binom{S}{n}$个不同的证券组合。选取其中$N$个证券组合$\mathcal{P} = \{\vec{portfolio}_1, \vec{portfolio}_2, \ldots, \vec{portfolio}_N\}$。
+
+对于一个时间窗口$t$，遍历所有证券组合$\vec{portfolio} \in \mathcal{P}$，每次输入观测$\mathbf{X}_{a,\vec{portfolio},t}$，
+得到决策$\vec{action}_{a,\vec{portfolio},t}$，计算奖励$reward(obs, action)$，更新网络参数。
+遍历完成后，进入下一个时间窗口$t+1$，然后打乱$\mathcal{P}$，重复上述过程。
 
 
+\subsection{参数设置}  
