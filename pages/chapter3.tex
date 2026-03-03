@@ -2,7 +2,7 @@
 
 \chapter{研究设计}
 
-\section{模型设计}  
+\section{Agent投资者设计}  
 对于一个Agent投资者，其决策和学习的过程可以分为以下几个步骤：
 
 \begin{algorithm}[H]
@@ -282,7 +282,7 @@ L^{PG}(\theta)
 \[
 L^{\mathrm{CLIP}}(\theta)
 = \mathbb{E}_{(obs,action,reward) \sim \mathcal{D}} 
-\Big[ \min \big( ratio(\theta)\ \cdot \hat{A} \; \operatorname{clip}\big( r(\theta),\, 1-\epsilon,\, 1+\epsilon \big)\, \hat{A} \big) \Big]
+\Big[ \min \big( ratio(\theta)\ \cdot \hat{A} \; \operatorname{clip}\big( r(\theta),\, 1-\epsilon,\, 1+\epsilon \big) \big) \Big]
 \]
 
 核心是使用$\operatorname{clip}$函数裁剪$ration$。
@@ -334,3 +334,43 @@ L^{\mathrm{VF}}(\phi)
 
 
 \subsection{参数设置}  
+
+
+
+
+
+
+
+
+
+
+
+\section{指标设计}
+为了刻画Agent投资者的预期协同效应，
+参考唐国豪等\cite{唐国豪2025投资者预期协同}、Bali等\cite{bali2023machine}、
+Hong等\cite{hong2016speculative}、Banerjee等\cite{banerjee2011learning}的做法，
+构建$AED_{s,t}$指标，即Agent预期分散度(Agent Expectation Dispersion, AED)，
+用于刻画Agent投资者的预期协同效应。
+
+具体来说，第$a$个Agent对于证券$s$的投资决策为$action_{a,s,t}$，
+记$MA_{s,t}$为$t$月份证券$s$的平均投资决策：
+
+\[MA_{s,t} = \frac{1}{N} \sum_{a=1}^{N} action_{a,s,t}\]
+
+$SA_{s,t}$为$t$月份证券$s$决策标准差：
+
+\[SA_{s,t} = \sqrt{\frac{1}{N} \sum_{a=1}^{N} (action_{a,s,t} - MA_{s,t})^2}\]
+
+则:
+
+\[AED_{s,t} = \frac{MA_{s,t}}{SA_{s,t}}\]
+
+$AED$用于综合刻画投资这对证券决策的强度和集中度。
+如果大部分投资者都倾向于一致做多证券$s$，则$MA$较大，$SA$较小，$AED$较大，
+表示投资者一致看好证券$s$\;
+如果大部分投资者都倾向于一致做空证券$s$，则$MA$较小，$SA$较小，$AED$较小，
+表示投资者一致看空证券$s$\;
+如果投资者对于证券$s$的决策较为分散，则$SA$较大，$AED$较小，
+表示投资者无法形成一致预期。    
+
+

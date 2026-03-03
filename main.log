@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  2 MAR 2026 20:32
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  3 MAR 2026 08:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1812,28 +1812,49 @@ Package natbib Warning: Citation `schulman2017proximal' on page 12 undefined on
 Package natbib Warning: Citation `raffin2021stable' on page 12 undefined on inp
 ut line 235.
 
-[12] [13]) [14]
+[12] [13]
+
+Package natbib Warning: Citation `唐国豪2025投资者预期协同' on page 14 undefined on input
+ line 323.
+
+
+Package natbib Warning: Citation `唐国豪2025投资者预期协同' on page 14 undefined on input
+ line 350.
+
+
+Package natbib Warning: Citation `bali2023machine' on page 14 undefined on inpu
+t line 350.
+
+
+Package natbib Warning: Citation `hong2016speculative' on page 14 undefined on 
+input line 351.
+
+
+Package natbib Warning: Citation `banerjee2011learning' on page 14 undefined on
+ input line 351.
+
+[14]) [15]
 \openout2 = `pages/chapter4.aux'.
 
  (pages/chapter4.tex
  4
 (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [15
+) [16
 
 
 
 
-]) [16] (main.bbl
-[17
+]) [17] (main.bbl
+[18
 
 
 
 
-]) [18]
+]) [19]
 \openout2 = `pages/thanks.aux'.
 
- (pages/thanks.tex) [19
+ (pages/thanks.tex) [20
 
 
 
@@ -1842,19 +1863,19 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 
  (pages/appendix.tex
 附录 A
-[20
+[21
 
 
 
 
 ]
 附录 B
-) [21
+) [22
 
 ]
 \openout2 = `pages/null.aux'.
 
- (pages/null.tex) [22
+ (pages/null.tex) [23
 
 
 
@@ -1875,21 +1896,24 @@ L3 programming layer <2022/08/05>
  ***********
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 1347DCF4E864A4685823B02A8B2EC85D;2714
-(rerunfilecheck)             After:  344A0DFFDF7F1FEB2B20FD74C821EAF9;2962.
+(rerunfilecheck)             Before: 3343CF149451BAACF26FEB14AE923B02;3150
+(rerunfilecheck)             After:  9CC698CB94A49ED8F9C2472C95B0EA03;3270.
  ) 
 Here is how much of TeX's memory you used:
  44909 strings out of 402987
  1061055 string characters out of 5452872
- 1728939 words of memory out of 5000000
+ 1729055 words of memory out of 5000000
  72874 multiletter control sequences out of 15000+600000
  662541 words of font info for 202 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,18n,125p,1234b,1192s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (28 pages).
+Output written on main.pdf (29 pages).
