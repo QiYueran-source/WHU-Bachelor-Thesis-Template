@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{31}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -14,10 +14,10 @@
 \bibitem[Henning et~al.(2025)Henning, Ojha, Spoon, Han, and
   Camerer]{henning2025llm}
 HENNING T, OJHA S~M, SPOON R, et~al.
-\newblock Llm agents do not replicate human market traders: Evidence from
-  experimental finance\allowbreak[A].
-\newblock 2025.
-\newblock arXiv: \eprint{https://arxiv.org/abs/2502.15800}{2502.15800}.
+\newblock LLM AGENTS DO NOT REPLICATE HUMAN MARKET TRADERS: EVIDENCE FROM
+  EXPERIMENTAL FINANCE\allowbreak[A/OL].
+\newblock arXiv (2025).
+\newblock \url{https://arxiv.org/abs/2502.15800}.
 
 \bibitem[Jones et~al.(2025)Jones, Shi, Zhang, and Zhang]{jones2025retail}
 JONES C~M, SHI D, ZHANG X, et~al.
@@ -56,7 +56,7 @@ SHILLER R~J.
 
 \bibitem[Sharpe(1964)]{sharpe1964capital}
 SHARPE W~F.
-\newblock Capital asset prices: A theory of market equilibrium under conditions
+\newblock Capital asset prices: a theory of market equilibrium under conditions
   of risk\allowbreak[J].
 \newblock The Journal of Finance, 1964, 19\allowbreak (3): 425-442.
 
@@ -97,20 +97,115 @@ TURGUT Y, BOZDAG C~E.
 \bibitem[Ahmed et~al.(2022)Ahmed, Alshater, El~Ammari, and
   Hammami]{ahmed2022artificial}
 AHMED S, ALSHATER M~M, EL~AMMARI A, et~al.
-\newblock Artificial intelligence and machine learning in finance: A
+\newblock Artificial intelligence and machine learning in finance: a
   bibliometric review\allowbreak[J/OL].
 \newblock Research in International Business and Finance, 2022, 61: 101646.
 \newblock DOI: \doi{10.1016/j.ribaf.2022.101646}.
 
+\bibitem[Shi et~al.(2021)Shi, Liu, Zhang, and Wang]{shi2021xpm}
+SHI S, LIU Y, ZHANG C, et~al.
+\newblock XPM: an explainable deep reinforcement learning framework for
+  portfolio management\allowbreak[C/OL]//\allowbreak
+Proceedings of the 30th ACM International Conference on Big Data Analytics
+  (ICBDA).
+\newblock ACM, 2021: 1245-1254.
+\newblock \url{https://doi.org/10.1145/3459637.3482348}.
+
+\bibitem[Lee et~al.(2020)Lee, Kim, Yi, and Kang]{lee2020maps}
+LEE J, KIM R, YI S~W, et~al.
+\newblock MAPS: multi-agent reinforcement learning-based portfolio management
+  system\allowbreak[A/OL].
+\newblock arXiv (2020).
+\newblock \url{https://arxiv.org/abs/2007.05402}.
+
 \bibitem[Liu et~al.(2021)Liu, Yang, Gao, and Wang]{liu2021finrl}
 LIU X~Y, YANG H, GAO J, et~al.
-\newblock Finrl: Deep reinforcement learning framework to automate trading in
-  quantitative finance\allowbreak[A].
-\newblock 2021.
+\newblock FinRL: deep reinforcement learning framework to automate trading in
+  quantitative finance\allowbreak[A/OL].
+\newblock arXiv (2021).
+\newblock \url{https://arxiv.org/abs/2111.09395}.
 
 \bibitem[Breiman(2001)]{breiman2001random}
 BREIMAN L.
 \newblock Random forests\allowbreak[J].
 \newblock Machine Learning, 2001, 45\allowbreak (1): 5-32.
+
+\bibitem[Moody et~al.(1998)Moody, Wu, Liao, and Saffell]{moody1998performance}
+MOODY J~E, WU L, LIAO Y, et~al.
+\newblock Performance functions and reinforcement learning for trading systems
+  and portfolios\allowbreak[J].
+\newblock Journal of Forecasting, 1998, 17\allowbreak (5-6): 441-466.
+
+\bibitem[Jiang et~al.(2017)Jiang, Xu, and Liang]{jiang2017deep}
+JIANG Z, XU D, LIANG J.
+\newblock A deep reinforcement learning framework for the financial portfolio
+  management problem\allowbreak[A/OL].
+\newblock arXiv (2017).
+\newblock \url{https://arxiv.org/abs/1706.10059}.
+\newblock DOI: \doi{10.48550/arXiv.1706.10059}.
+
+\bibitem[Markowitz(1956)]{markowitz1956optimization}
+MARKOWITZ H~M.
+\newblock The optimization of a quadratic function subject to linear
+  constraints\allowbreak[J/OL].
+\newblock Naval Research Logistics Quarterly, 1956, 3\allowbreak (1-2):
+  111-133.
+\newblock DOI: \doi{10.1002/nav.3800030110}.
+
+\bibitem[尹海员\ 等(2011)尹海员 and 李忠民]{yin2011speciality}
+尹海员, 李忠民.
+\newblock
+  个体特质、信息获取与风险态度——来自中国股民的调查分析\allowbreak[J].
+\newblock 经济评论, 2011, 2: 29-37.
+
+\bibitem[张玥(2019)]{zhang2019china}
+张玥.
+\newblock 中国股市投资者风险厌恶系数测算研究\allowbreak[J].
+\newblock 福建质量管理, 2019: 74-76,53.
+
+\bibitem[Jiang et~al.(2023)Jiang, Niu, Wang, Wang, and Tong]{jiang2023dynamic}
+JIANG L, NIU H, WANG H, et~al.
+\newblock Dynamic implied risk aversion term structure: an empirical analysis
+  based on shanghai stock exchange 50 ETF option\allowbreak[J/OL].
+\newblock Mathematical Problems in Engineering, 2023, 2023: 9917375.
+\newblock DOI: \doi{10.1155/2023/9917375}.
+
+\bibitem[Schulman et~al.(2017)Schulman, Wolski, Dhariwal, Radford, and
+  Klimov]{schulman2017proximal}
+SCHULMAN J, WOLSKI F, DHARIWAL P, et~al.
+\newblock Proximal policy optimization algorithms\allowbreak[A/OL].
+\newblock arXiv (2017).
+\newblock \url{https://arxiv.org/abs/1707.06347}.
+\newblock DOI: \doi{10.48550/arXiv.1707.06347}.
+
+\bibitem[Raffin et~al.(2021)Raffin, Hill, Gleave, Kanervisto, Ernestus, and
+  Dormann]{raffin2021stable}
+RAFFIN A, HILL A, GLEAVE A, et~al.
+\newblock Stable-Baselines3: reliable reinforcement learning
+  implementations\allowbreak[J/OL].
+\newblock Journal of Machine Learning Research, 2021, 22\allowbreak (268): 1-8.
+\newblock \url{http://jmlr.org/papers/v22/20-1284.html}.
+
+\bibitem[唐国豪\ 等(2025)唐国豪, 陈海玮, 朱琳, and
+  姜富伟]{唐国豪2025投资者预期协同}
+唐国豪, 陈海玮, 朱琳, 等.
+\newblock
+  投资者预期协同的资产定价研究——基于多特征机器学习视角\allowbreak[J].
+\newblock 管理世界, 2025\allowbreak (12): 88-104.
+
+\bibitem[Bali et~al.(2023)Bali, Kelly, M{\"o}rke, and Rahman]{bali2023machine}
+BALI T~G, KELLY B~T, M{\"O}RKE M, et~al.
+\newblock Machine forecast disagreement: w31583\allowbreak[R].
+\newblock National Bureau of Economic Research (NBER), 2023.
+
+\bibitem[Hong et~al.(2016)Hong and Sraer]{hong2016speculative}
+HONG H, SRAER D~A.
+\newblock Speculative betas\allowbreak[J].
+\newblock The Journal of Finance, 2016, 71\allowbreak (5): 2095-2141.
+
+\bibitem[Banerjee(2011)]{banerjee2011learning}
+BANERJEE S.
+\newblock Learning from prices and the dispersion in beliefs\allowbreak[J].
+\newblock The Review of Financial Studies, 2011, 24\allowbreak (9): 3025-3068.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  3 MAR 2026 08:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  4 MAR 2026 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1547,8 +1547,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip155
 )) (main.aux (pages/abstract.aux) (pages/chapter1.aux) (pages/chapter2.aux) (pa
-ges/chapter3.aux) (pages/chapter4.aux) (pages/thanks.aux)
-(pages/appendix.aux) (pages/null.aux))
+ges/chapter3.aux) (pages/chapter4.aux) (pages/chapter5.aux)
+(pages/chapter6.aux) (pages/thanks.aux) (pages/appendix.aux) (pages/null.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 14.
@@ -1724,34 +1724,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  (pages/chapter2.tex
  2
-File: figures/whulogo.pdf Graphic file (type pdf)
-<use figures/whulogo.pdf>
-[3
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 5.
+
+) [3
 
 
 
 
-] [4] [5]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 182.
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 185.
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 188.
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 191.
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 194.
-Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 197.
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 200.
-) [6]
+]
 \openout2 = `pages/chapter3.aux'.
 
  (pages/chapter3.tex
  3
-[7
+[4
 
 
 
@@ -1762,25 +1749,12 @@ Overfull \hbox (1.63155pt too wide) in paragraph at lines 76--78
 un(1)/m/n/12.045 可 以 回 顾 自 己 之 前 投 资 组 合 的 收 益 情 况，|  对 于 投 资 组 合 $[]$，|
  []
 
-[8]
+[5]
 Overfull \hbox (29.73853pt too wide) detected at line 100
 [][] \OT1/txr/m/n/12.045 = []
  []
 
-[9]
-
-Package natbib Warning: Citation `moody1998performance' on page 10 undefined on
- input line 176.
-
-
-Package natbib Warning: Citation `jiang2017deep' on page 10 undefined on input 
-line 176.
-
-
-Package natbib Warning: Citation `markowitz1956optimization' on page 10 undefin
-ed on input line 177.
-
-[10]
+[6] [7]
 Overfull \hbox (5.59999pt too wide) in paragraph at lines 181--184
 []\TU/SimSun(1)/m/n/12.045 具 体 来 说，|  对 于 一 个 投 资 组 合 $[]$，|  其 在 $\OML/txmi/m/
 it/12.045 t$ \TU/SimSun(1)/m/n/12.045 月 份 的 收 益 率 为 $\OML/txmi/m/it/12.045 retu
@@ -1788,73 +1762,48 @@ rn[]$\TU/SimSun(1)/m/n/12.045 。|
  []
 
 
-Package natbib Warning: Citation `yin2011speciality' on page 11 undefined on in
-put line 200.
-
-
-Package natbib Warning: Citation `zhang2019china' on page 11 undefined on input
- line 200.
-
-
-Package natbib Warning: Citation `jiang2023dynamic' on page 11 undefined on inp
-ut line 200.
-
-
 LaTeX Warning: Command \u invalid in math mode on input line 212.
 
 Missing character: There is no ̆ in font txmi!
-[11]
-
-Package natbib Warning: Citation `schulman2017proximal' on page 12 undefined on
- input line 231.
-
-
-Package natbib Warning: Citation `raffin2021stable' on page 12 undefined on inp
-ut line 235.
-
-[12] [13]
-
-Package natbib Warning: Citation `唐国豪2025投资者预期协同' on page 14 undefined on input
- line 323.
-
-
-Package natbib Warning: Citation `唐国豪2025投资者预期协同' on page 14 undefined on input
- line 350.
-
-
-Package natbib Warning: Citation `bali2023machine' on page 14 undefined on inpu
-t line 350.
-
-
-Package natbib Warning: Citation `hong2016speculative' on page 14 undefined on 
-input line 351.
-
-
-Package natbib Warning: Citation `banerjee2011learning' on page 14 undefined on
- input line 351.
-
-[14]) [15]
+[8] [9] [10] [11]) [12]
 \openout2 = `pages/chapter4.aux'.
 
  (pages/chapter4.tex
  4
-(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [16
+) [13
 
 
 
 
-]) [17] (main.bbl
-[18
+]
+\openout2 = `pages/chapter5.aux'.
+
+ (pages/chapter5.tex
+ 5
+) [14
 
 
 
 
-]) [19]
+]
+\openout2 = `pages/chapter6.aux'.
+
+ (pages/chapter6.tex
+ 6
+) [15
+
+
+
+
+] (main.bbl [16
+
+
+
+
+] [17]) [18]
 \openout2 = `pages/thanks.aux'.
 
- (pages/thanks.tex) [20
+ (pages/thanks.tex) [19
 
 
 
@@ -1863,19 +1812,19 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 
  (pages/appendix.tex
 附录 A
-[21
+[20
 
 
 
 
 ]
 附录 B
-) [22
+) [21
 
 ]
 \openout2 = `pages/null.aux'.
 
- (pages/null.tex) [23
+ (pages/null.tex) [22
 
 
 
@@ -1883,37 +1832,24 @@ File: lstlang1.sty 2025/11/14 1.11b listings language file
 \tf@thm=\write6
 \openout6 = `main.thm'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
-(main.aux (pages/abstract.aux) (pages/chapter1.aux) (pages/chapter2.aux)
-(pages/chapter3.aux) (pages/chapter4.aux) (pages/thanks.aux)
+ (main.aux (pages/abstract.aux) (pages/chapter1.aux) (pages/chapter2.aux) (page
+s/chapter3.aux) (pages/chapter4.aux)
+(pages/chapter5.aux) (pages/chapter6.aux) (pages/thanks.aux)
 (pages/appendix.aux) (pages/null.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 3343CF149451BAACF26FEB14AE923B02;3150
-(rerunfilecheck)             After:  9CC698CB94A49ED8F9C2472C95B0EA03;3270.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 965BC8C01F71AC3AFE44856AC47F6FC0;1996.
  ) 
 Here is how much of TeX's memory you used:
- 44909 strings out of 402987
- 1061055 string characters out of 5452872
- 1729055 words of memory out of 5000000
- 72874 multiletter control sequences out of 15000+600000
- 662541 words of font info for 202 fonts, out of 8000000 for 9000
+ 44676 strings out of 402987
+ 1056375 string characters out of 5452872
+ 1555814 words of memory out of 5000000
+ 72648 multiletter control sequences out of 15000+600000
+ 652456 words of font info for 165 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,18n,125p,1234b,1192s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,18n,125p,1234b,978s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (29 pages).
+Output written on main.pdf (28 pages).
