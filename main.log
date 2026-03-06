@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  4 MAR 2026 11:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  6 MAR 2026 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1725,20 +1725,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
  (pages/chapter2.tex
  2
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5.
+Package natbib Warning: Citation `barber2009retail' on page 3 undefined on inpu
+t line 10.
 
-) [3
+
+Package natbib Warning: Citation `hong2000bad' on page 3 undefined on input lin
+e 10.
+
+
+Package natbib Warning: Citation `tang2025macro' on page 3 undefined on input l
+ine 13.
+
+
+Package natbib Warning: Citation `lemmon2004consumer' on page 3 undefined on in
+put line 18.
+
+
+Package natbib Warning: Citation `朱宏泉 2016 异质信念' on page 3 undefined on input l
+ine 22.
+
+
+Package natbib Warning: Citation `huang2016 异质信念' on page 3 undefined on input 
+line 24.
+
+
+Package natbib Warning: Citation `diether2002differences' on page 3 undefined o
+n input line 31.
+
+
+Package natbib Warning: Citation `anderson2005heterogeneous' on page 3 undefine
+d on input line 32.
+
+
+Package natbib Warning: Citation `伍燕然 2012 分析师预测偏差' on page 3 undefined on inpu
+t line 35.
+
+[3
 
 
 
 
 ]
+
+Package natbib Warning: Citation `部慧 2018 股评投资者情绪' on page 4 undefined on input
+ line 38.
+
+
+Package natbib Warning: Citation `万海远 2024 税收政策' on page 4 undefined on input l
+ine 39.
+
+) [4]
 \openout2 = `pages/chapter3.aux'.
 
  (pages/chapter3.tex
  3
-[4
+[5
 
 
 
@@ -1749,12 +1790,12 @@ Overfull \hbox (1.63155pt too wide) in paragraph at lines 76--78
 un(1)/m/n/12.045 可 以 回 顾 自 己 之 前 投 资 组 合 的 收 益 情 况，|  对 于 投 资 组 合 $[]$，|
  []
 
-[5]
+[6]
 Overfull \hbox (29.73853pt too wide) detected at line 100
 [][] \OT1/txr/m/n/12.045 = []
  []
 
-[6] [7]
+[7] [8]
 Overfull \hbox (5.59999pt too wide) in paragraph at lines 181--184
 []\TU/SimSun(1)/m/n/12.045 具 体 来 说，|  对 于 一 个 投 资 组 合 $[]$，|  其 在 $\OML/txmi/m/
 it/12.045 t$ \TU/SimSun(1)/m/n/12.045 月 份 的 收 益 率 为 $\OML/txmi/m/it/12.045 retu
@@ -1765,12 +1806,12 @@ rn[]$\TU/SimSun(1)/m/n/12.045 。|
 LaTeX Warning: Command \u invalid in math mode on input line 212.
 
 Missing character: There is no ̆ in font txmi!
-[8] [9] [10] [11]) [12]
+[9] [10] [11] [12]) [13]
 \openout2 = `pages/chapter4.aux'.
 
  (pages/chapter4.tex
  4
-) [13
+) [14
 
 
 
@@ -1780,7 +1821,7 @@ Missing character: There is no ̆ in font txmi!
 
  (pages/chapter5.tex
  5
-) [14
+) [15
 
 
 
@@ -1790,20 +1831,20 @@ Missing character: There is no ̆ in font txmi!
 
  (pages/chapter6.tex
  6
-) [15
+) [16
 
 
 
 
-] (main.bbl [16
+] (main.bbl [17
 
 
 
 
-] [17]) [18]
+] [18]) [19]
 \openout2 = `pages/thanks.aux'.
 
- (pages/thanks.tex) [19
+ (pages/thanks.tex) [20
 
 
 
@@ -1812,19 +1853,19 @@ Missing character: There is no ̆ in font txmi!
 
  (pages/appendix.tex
 附录 A
-[20
+[21
 
 
 
 
 ]
 附录 B
-) [21
+) [22
 
 ]
 \openout2 = `pages/null.aux'.
 
- (pages/null.tex) [22
+ (pages/null.tex) [23
 
 
 
@@ -1832,24 +1873,34 @@ Missing character: There is no ̆ in font txmi!
 \tf@thm=\write6
 \openout6 = `main.thm'.
 
- (main.aux (pages/abstract.aux) (pages/chapter1.aux) (pages/chapter2.aux) (page
-s/chapter3.aux) (pages/chapter4.aux)
-(pages/chapter5.aux) (pages/chapter6.aux) (pages/thanks.aux)
-(pages/appendix.aux) (pages/null.aux))
+
+
+Package natbib Warning: There were undefined citations.
+
+(main.aux (pages/abstract.aux) (pages/chapter1.aux) (pages/chapter2.aux)
+(pages/chapter3.aux) (pages/chapter4.aux) (pages/chapter5.aux)
+(pages/chapter6.aux) (pages/thanks.aux) (pages/appendix.aux) (pages/null.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 965BC8C01F71AC3AFE44856AC47F6FC0;1996.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 9193324E17E9AF07C9D191CC7C936B6E;2343
+(rerunfilecheck)             After:  1D2FC1C942AD4A40B7127FC49B7676B1;2343.
  ) 
 Here is how much of TeX's memory you used:
- 44676 strings out of 402987
- 1056375 string characters out of 5452872
+ 44690 strings out of 402987
+ 1057249 string characters out of 5452872
  1555814 words of memory out of 5000000
- 72648 multiletter control sequences out of 15000+600000
- 652456 words of font info for 165 fonts, out of 8000000 for 9000
+ 72661 multiletter control sequences out of 15000+600000
+ 652464 words of font info for 166 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,18n,125p,1234b,978s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (28 pages).
+Output written on main.pdf (29 pages).
