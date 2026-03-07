@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  7 MAR 2026 16:58
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  7 MAR 2026 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1883,15 +1883,18 @@ File: figures/appendix-system/整体架构.png Graphic file (type bmp)
 ]
 File: figures/appendix-system/训练流程.png Graphic file (type bmp)
 <figures/appendix-system/训练流程.png>
- [23]
+ [23] [24]
+File: figures/appendix-system/数据流水线.png Graphic file (type bmp)
+<figures/appendix-system/数据流水线.png>
 
-LaTeX Warning: Reference `system-workflow' on page 24 undefined on input line 7
-6.
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
+[]|\TU/SimSun(1)/m/n/10.53937 数 据 库 读 取 器
+ []
 
-[24]) [25]
+[25] [26]) [27]
 \openout2 = `pages/null.aux'.
 
- (pages/null.tex) [26
+ (pages/null.tex) [28
 
 
 
@@ -1912,21 +1915,21 @@ L3 programming layer <2022/08/05>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7900646E81F2070DE1EA1A93B5F9C33B;2701.
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 90D920E264B49C1E1499929E9749950F;2881
+(rerunfilecheck)             After:  087FDDBC1B57E3C036DD845E20790EC9;2787.
  ) 
 Here is how much of TeX's memory you used:
- 44722 strings out of 402987
- 1058229 string characters out of 5452872
- 1555888 words of memory out of 5000000
- 72687 multiletter control sequences out of 15000+600000
- 652480 words of font info for 168 fonts, out of 8000000 for 9000
+ 44789 strings out of 402987
+ 1061540 string characters out of 5452872
+ 1555977 words of memory out of 5000000
+ 72750 multiletter control sequences out of 15000+600000
+ 654271 words of font info for 174 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,18n,125p,1234b,978s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (34 pages).
