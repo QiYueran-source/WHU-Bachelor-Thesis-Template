@@ -7,43 +7,21 @@
 
 \begin{table}[htbp]
     \centering
-    \caption{分组检验与对冲组合收益表现}
-    \label{tab:group_return_final}
-    \begin{tabular}{ccccccc}
+    \caption{分组检验与对冲组合收益表现（含p值）}
+    \label{tab:group_return_with_p}
+    \begin{tabular}{cccccc}
         \toprule
-        分组ID & 平均收益率（\%） & 夏普比率 & CAPM Alpha & FF3 Alpha & FF5 Alpha \\
+        分组ID & 平均收益率 & 夏普比率 & CAPM Alpha & FF3 Alpha & FF5 Alpha \\
         \midrule
-        "0" & \makecell{-0.060 \\ \text{[-0.660]}} & -4.664 & \makecell{-0.191 \text{[-2.216]} \\ (**)} & \makecell{-0.173 \text{[-2.059]} \\ (**)} & \makecell{-0.146 \text{[-1.742]} \\ (*)} \\
-        "1" & \makecell{0.036 \\ \text{[0.413]}} & 3.149 & \makecell{-0.104 \\ \text{[-1.364]}} & \makecell{-0.091 \\ \text{[-1.253]}} & \makecell{-0.062 \\ \text{[-0.879]}} \\
-        "2" & \makecell{0.117 \\ \text{[1.518]}} & 11.580 & \makecell{-0.019 \\ \text{[-0.279]}} & \makecell{-0.003 \\ \text{[-0.039]}} & \makecell{0.016 \\ \text{[0.251]}} \\
-        "3" & \makecell{0.163 \text{[2.655]} \\ (***) } & 21.000 & \makecell{0.025 \\ \text{[0.484]}} & \makecell{0.038 \\ \text{[0.774]}} & \makecell{0.059 \\ \text{[1.246]}} \\
-        "4" & \makecell{0.202 \text{[4.400]} \\ (***) } & 33.130 & \makecell{0.068 \text{[1.698]} \\ (*)} & \makecell{0.081 \text{[2.124]} \\ (**)} & \makecell{0.101 \text{[2.653]} \\ (***) } \\
-        对冲组合 & \makecell{0.263 \text{[3.643]} \\ (***) } & 27.180 & \makecell{0.134 \text{[1.880]} \\ (*)} & \makecell{0.129 \text{[1.840]} \\ (*)} & \makecell{0.122 \text{[1.746]} \\ (*)} \\
+        组合1 & \makecell{-0.060 \\ \text{[-0.660]} \\ \text{(0.510)}} & -4.664 & \makecell{-0.191$^{**}$ \\ \text{[-2.216]} \\ \text{(0.028)}} & \makecell{-0.173$^{**}$ \\ \text{[-2.059]} \\ \text{(0.040)}} & \makecell{-0.146$^{*}$ \\ \text{[-1.742]} \\ \text{(0.082)}} \\
+        组合2 & \makecell{0.036 \\ \text{[0.413]} \\ \text{(0.680)}} & 3.149 & \makecell{-0.104 \\ \text{[-1.364]} \\ \text{(0.174)}} & \makecell{-0.091 \\ \text{[-1.253]} \\ \text{(0.211)}} & \makecell{-0.062 \\ \text{[-0.879]} \\ \text{(0.380)}} \\
+        组合3 & \makecell{0.117 \\ \text{[1.518]} \\ \text{(0.130)}} & 11.580 & \makecell{-0.019 \\ \text{[-0.279]} \\ \text{(0.780)}} & \makecell{-0.003 \\ \text{[-0.039]} \\ \text{(0.969)}} & \makecell{0.016 \\ \text{[0.251]} \\ \text{(0.802)}} \\
+        组合4 & \makecell{0.163$^{***}$ \\ \text{[2.655]} \\ \text{(0.008)}} & 21.000 & \makecell{0.025 \\ \text{[0.484]} \\ \text{(0.629)}} & \makecell{0.038 \\ \text{[0.774]} \\ \text{(0.439)}} & \makecell{0.059 \\ \text{[1.246]} \\ \text{(0.213)}} \\
+        组合5 & \makecell{0.202$^{***}$ \\ \text{[4.400]} \\ \text{(0.000)}} & 33.130 & \makecell{0.068$^{*}$ \\ \text{[1.698]} \\ \text{(0.091)}} & \makecell{0.081$^{**}$ \\ \text{[2.124]} \\ \text{(0.035)}} & \makecell{0.101$^{***}$ \\ \text{[2.653]} \\ \text{(0.008)}} \\
+        对冲组合 & \makecell{0.263$^{***}$ \\ \text{[3.643]} \\ \text{(0.000)}} & 27.180 & \makecell{0.134$^{*}$ \\ \text{[1.880]} \\ \text{(0.061)}} & \makecell{0.129$^{*}$ \\ \text{[1.840]} \\ \text{(0.066)}} & \makecell{0.122$^{*}$ \\ \text{[1.746]} \\ \text{(0.082)}} \\
         \bottomrule
-        \multicolumn{7}{l}{\footnotesize 注：1. 平均收益率、夏普比率、Alpha类核心指标均已乘以100，以百分比形式呈现；} \\
-        \multicolumn{7}{l}{\footnotesize 2. 格式为值[t统计量](显著性)；(*)p<0.1，(**)p<0.05，(***)p<0.01，分别表示在10\%、5\%、1\%的水平上统计显著。} \\
+        \multicolumn{6}{l}{\footnotesize 注：1. 所有值均已百分化；} \\
+        \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
+        \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
     \end{tabular}
 \end{table}
-
-\begin{table}[htbp]
-    \centering
-    \caption{变量回归检验结果}
-    \label{tab:regression_result}
-    \begin{tabular}{lccc}
-        \toprule
-        变量 & 单控制变量 & 4控制变量 & 6控制变量 \\
-        \midrule
-        AED & \makecell{0.078 \text{[7.089]} \\ (***) } & \makecell{0.087 \text{[8.130]} \\ (***) } & \makecell{0.086 \text{[8.047]} \\ (***) } \\
-        betavals &  & \makecell{-0.001 \text{[-0.795]} \\ (0.000) } & \makecell{-0.001 \text{[-0.881]} \\ (0.000) } \\
-        ln\_market\_value &  & \makecell{0.003 \text{[4.212]} \\ (***) } & \makecell{0.003 \text{[4.225]} \\ (***) } \\
-        bm\_ratio &  & \makecell{-0.017 \text{[-5.850]} \\ (***) } & \makecell{-0.019 \text{[-6.528]} \\ (***) } \\
-        gross\_margin &  &  & \makecell{-0.006 \text{[-3.206]} \\ (***) } \\
-        investment\_ratio &  &  & \makecell{0.001 \text{[0.209]} \\ (0.000) } \\
-        常数项 & \makecell{-0.044 \text{[-9.474]} \\ (***) } & \makecell{-0.081 \text{[-6.388]} \\ (***) } & \makecell{-0.078 \text{[-5.922]} \\ (***) } \\
-        \midrule
-        观测数 & 241 & 241 & 241 \\
-        \bottomrule
-        \multicolumn{4}{l}{\footnotesize 注：格式为系数[t统计量](显著性)；(*)p<0.1，(**)p<0.05，(***)p<0.01，分别表示在10\%、5\%、1\%的水平上统计显著。} \\
-    \end{tabular}
-\end{table}
-
