@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  7 MAR 2026 22:22
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  8 MAR 2026 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1547,8 +1547,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip155
 )) (main.aux (pages/abstract.aux) (pages/chapter1.aux) (pages/chapter2.aux) (pa
-ges/chapter3.aux) (pages/chapter4.aux) (pages/chapter5.aux)
-(pages/chapter6.aux) (pages/thanks.aux) (pages/appendix.aux) (pages/null.aux))
+ges/chapter3.aux) (pages/chapter4.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 14.
@@ -1702,63 +1701,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--25
 ] [2
 
 
-]) (main.toc [3
-
-
-
-])
+]) (main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [4]
+ [3
+
+
+
+]
 \openout2 = `pages/chapter1.aux'.
 
  (pages/chapter1.tex
  1
+
+Package natbib Warning: Citation `greenwood2014expectations' on page 1 undefine
+d on input line 7.
+
+
+Package natbib Warning: Citation `jones2025retail' on page 1 undefined on input
+ line 8.
+
+
+Package natbib Warning: Citation `xue2020information' on page 1 undefined on in
+put line 10.
+
+
+Package natbib Warning: Citation `kumar2006retail' on page 1 undefined on input
+ line 11.
+
+
+Package natbib Warning: Citation `wu2015why' on page 1 undefined on input line 
+14.
+
+
+Package natbib Warning: Citation `hong2021how' on page 1 undefined on input lin
+e 18.
+
+
+Package natbib Warning: Citation `sharpe1964capital' on page 1 undefined on inp
+ut line 19.
+
+
+Package natbib Warning: Citation `fama1992cross' on page 1 undefined on input l
+ine 19.
+
+
+Package natbib Warning: Citation `gu2020machine' on page 1 undefined on input l
+ine 21.
+
+
+Package natbib Warning: Citation `li2019machine' on page 1 undefined on input l
+ine 23.
+
+
+Package natbib Warning: Citation `ma2022deep' on page 1 undefined on input line
+ 25.
+
+
+Package natbib Warning: Citation `minsky1961steps' on page 1 undefined on input
+ line 31.
+
+
+Package natbib Warning: Citation `turgut2023framework' on page 1 undefined on i
+nput line 34.
+
+
+Package natbib Warning: Citation `ahmed2022artificial' on page 1 undefined on i
+nput line 35.
+
 [1
 
 
 
-]) [2]
+]
+
+Package natbib Warning: Citation `shi2021xpm' on page 2 undefined on input line
+ 44.
+
+
+Package natbib Warning: Citation `lee2020maps' on page 2 undefined on input lin
+e 46.
+
+) [2]
 \openout2 = `pages/chapter2.aux'.
 
  (pages/chapter2.tex
  2
 
-Package natbib Warning: Citation `barber2009retail' on page 3 undefined on inpu
-t line 10.
+Package natbib Warning: Citation `唐国豪2025投资者预期协同' on page 3 undefined on input 
+line 9.
 
 
-Package natbib Warning: Citation `hong2000bad' on page 3 undefined on input lin
-e 10.
+Package natbib Warning: Citation `lemmon2006consumer' on page 3 undefined on in
+put line 15.
 
 
-Package natbib Warning: Citation `tang2025macro' on page 3 undefined on input l
-ine 13.
+Package natbib Warning: Citation `朱宏泉2016异质信念' on page 3 undefined on input lin
+e 19.
 
 
-Package natbib Warning: Citation `lemmon2004consumer' on page 3 undefined on in
-put line 18.
-
-
-Package natbib Warning: Citation `朱宏泉 2016 异质信念' on page 3 undefined on input l
-ine 22.
-
-
-Package natbib Warning: Citation `huang2016 异质信念' on page 3 undefined on input 
-line 24.
+Package natbib Warning: Citation `孟庆斌2018卖空机制' on page 3 undefined on input lin
+e 21.
 
 
 Package natbib Warning: Citation `diether2002differences' on page 3 undefined o
-n input line 31.
+n input line 28.
 
 
 Package natbib Warning: Citation `anderson2005heterogeneous' on page 3 undefine
-d on input line 32.
+d on input line 29.
 
 
 Package natbib Warning: Citation `伍燕然 2012 分析师预测偏差' on page 3 undefined on inpu
-t line 35.
+t line 32.
+
+
+Package natbib Warning: Citation `部慧 2018 股评投资者情绪' on page 3 undefined on input
+ line 35.
+
+
+Package natbib Warning: Citation `万海远 2024 税收政策' on page 3 undefined on input l
+ine 36.
 
 [3
 
@@ -1767,169 +1831,8 @@ t line 35.
 
 ]
 
-Package natbib Warning: Citation `部慧 2018 股评投资者情绪' on page 4 undefined on input
- line 38.
-
-
-Package natbib Warning: Citation `万海远 2024 税收政策' on page 4 undefined on input l
-ine 39.
-
-
 Package natbib Warning: Citation `hornik1989multilayer' on page 4 undefined on 
-input line 44.
+input line 41.
 
 
-Package natbib Warning: Citation `sims2003implications' on page 4 undefined on 
-input line 46.
-
-
-Package natbib Warning: Citation `daniel1998investor' on page 4 undefined on in
-put line 46.
-
-
-Package natbib Warning: Citation `hong2007disagreement' on page 4 undefined on 
-input line 46.
-
-) [4]
-\openout2 = `pages/chapter3.aux'.
-
- (pages/chapter3.tex
- 3
-[5
-
-
-
-
-]
-Overfull \hbox (1.63155pt too wide) in paragraph at lines 76--78
-[]\TU/SimSun(1)/m/n/12.045 最 后，| \TU/TimesNewRoman(0)/m/n/12.045 Agent \TU/SimS
-un(1)/m/n/12.045 可 以 回 顾 自 己 之 前 投 资 组 合 的 收 益 情 况，|  对 于 投 资 组 合 $[]$，|
- []
-
-[6]
-Overfull \hbox (29.73853pt too wide) detected at line 100
-[][] \OT1/txr/m/n/12.045 = []
- []
-
-[7] [8]
-Overfull \hbox (5.59999pt too wide) in paragraph at lines 181--184
-[]\TU/SimSun(1)/m/n/12.045 具 体 来 说，|  对 于 一 个 投 资 组 合 $[]$，|  其 在 $\OML/txmi/m/
-it/12.045 t$ \TU/SimSun(1)/m/n/12.045 月 份 的 收 益 率 为 $\OML/txmi/m/it/12.045 retu
-rn[]$\TU/SimSun(1)/m/n/12.045 。|
- []
-
-
-LaTeX Warning: Command \u invalid in math mode on input line 212.
-
-Missing character: There is no ̆ in font txmi!
-[9] [10] [11] [12]) [13]
-\openout2 = `pages/chapter4.aux'.
-
- (pages/chapter4.tex
- 4
-) [14
-
-
-
-
-]
-\openout2 = `pages/chapter5.aux'.
-
- (pages/chapter5.tex
- 5
-) [15
-
-
-
-
-]
-\openout2 = `pages/chapter6.aux'.
-
- (pages/chapter6.tex
- 6
-) [16
-
-
-
-
-] (main.bbl [17
-
-
-
-
-] [18]) [19]
-\openout2 = `pages/thanks.aux'.
-
- (pages/thanks.tex) [20
-
-
-
-]
-\openout2 = `pages/appendix.aux'.
-
- (pages/appendix.tex
-附录 A
-[21
-
-
-
-
-]
-附录 B
-File: figures/appendix-system/整体架构.png Graphic file (type bmp)
-<figures/appendix-system/整体架构.png>
-[22
-
-]
-File: figures/appendix-system/训练流程.png Graphic file (type bmp)
-<figures/appendix-system/训练流程.png>
- [23] [24]
-File: figures/appendix-system/数据流水线.png Graphic file (type bmp)
-<figures/appendix-system/数据流水线.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--118
-[]|\TU/SimSun(1)/m/n/10.53937 数 据 库 读 取 器
- []
-
-[25] [26]) [27]
-\openout2 = `pages/null.aux'.
-
- (pages/null.tex) [28
-
-
-
-]
-\tf@thm=\write6
-\openout6 = `main.thm'.
-
-
-
-Package natbib Warning: There were undefined citations.
-
-(main.aux (pages/abstract.aux) (pages/chapter1.aux) (pages/chapter2.aux)
-(pages/chapter3.aux) (pages/chapter4.aux) (pages/chapter5.aux)
-(pages/chapter6.aux) (pages/thanks.aux) (pages/appendix.aux) (pages/null.aux))
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2022/08/05>
- ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 90D920E264B49C1E1499929E9749950F;2881
-(rerunfilecheck)             After:  087FDDBC1B57E3C036DD845E20790EC9;2787.
- ) 
-Here is how much of TeX's memory you used:
- 44789 strings out of 402987
- 1061540 string characters out of 5452872
- 1555977 words of memory out of 5000000
- 72750 multiletter control sequences out of 15000+600000
- 654271 words of font info for 174 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 103i,18n,125p,1234b,978s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on main.pdf (34 pages).
+Package natbib Warnin

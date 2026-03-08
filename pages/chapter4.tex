@@ -1,3 +1,52 @@
 % Chapter 4
 
 \chapter{实证分析}
+
+\section{分组检验结果}
+
+实证结果如表~\ref{tab:group_return}所示。
+
+\begin{table}[htbp]
+    \centering
+    \caption{分组检验与对冲组合收益表现}
+    \label{tab:group_return}
+    \begin{tabular}{ccccccc}
+        \toprule
+        分组ID & 样本量 & 平均收益率 & 夏普比率 & CAPM Alpha & FF3 Alpha & FF5 Alpha \\
+        \midrule
+        "0" & 241 & \makecell{-0.001 \\ [-0.660]} & -0.047 & \makecell{-0.002$^{**}$ \\ [-2.216]} & \makecell{-0.002$^{**}$ \\ [-2.059]} & \makecell{-0.001$^{*}$ \\ [-1.742]} \\
+        "1" & 241 & \makecell{0.000 \\ [0.413]} & 0.031 & \makecell{-0.001 \\ [-1.364]} & \makecell{-0.001 \\ [-1.253]} & \makecell{-0.001 \\ [-0.879]} \\
+        "2" & 241 & \makecell{0.001 \\ [1.518]} & 0.116 & \makecell{-0.000 \\ [-0.279]} & \makecell{-0.000 \\ [-0.039]} & \makecell{0.000 \\ [0.251]} \\
+        "3" & 241 & \makecell{0.002$^{***}$ \\ [2.655]} & 0.210 & \makecell{0.000 \\ [0.484]} & \makecell{0.000 \\ [0.774]} & \makecell{0.001 \\ [1.246]} \\
+        "4" & 241 & \makecell{0.002$^{***}$ \\ [4.400]} & 0.331 & \makecell{0.001$^{*}$ \\ [1.698]} & \makecell{0.001$^{**}$ \\ [2.124]} & \makecell{0.001$^{***}$ \\ [2.653]} \\
+        对冲组合 & 241 & \makecell{0.003$^{***}$ \\ [3.643]} & 0.272 & \makecell{0.001$^{*}$ \\ [1.880]} & \makecell{0.001$^{*}$ \\ [1.840]} & \makecell{0.001$^{*}$ \\ [1.746]} \\
+        \bottomrule
+        \multicolumn{7}{l}{\footnotesize 注：括号内为t统计量；$^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$，分别表示在10\%、5\%、1\%的水平上统计显著。} \\
+    \end{tabular}
+\end{table}
+
+\section{Fama-MacBeth回归结果}
+
+Fama-MacBeth回归结果如表~\ref{tab:regression_result}所示。
+
+\begin{table}[htbp]
+    \centering
+    \caption{变量回归检验结果}
+    \label{tab:regression_result}
+    \begin{tabular}{lccc}
+        \toprule
+        变量 & 单控制变量 & 4控制变量 & 6控制变量 \\
+        \midrule
+        AED & \makecell{0.078$^{***}$ \\ [7.089]} & \makecell{0.087$^{***}$ \\ [8.130]} & \makecell{0.086$^{***}$ \\ [8.047]} \\
+        betavals &  & \makecell{-0.001 \\ [-0.795]} & \makecell{-0.001 \\ [-0.881]} \\
+        ln\_market\_value &  & \makecell{0.003$^{***}$ \\ [4.212]} & \makecell{0.003$^{***}$ \\ [4.225]} \\
+        bm\_ratio &  & \makecell{-0.017$^{***}$ \\ [-5.850]} & \makecell{-0.019$^{***}$ \\ [-6.528]} \\
+        gross\_margin &  &  & \makecell{-0.006$^{***}$ \\ [-3.206]} \\
+        investment\_ratio &  &  & \makecell{0.001 \\ [0.209]} \\
+        常数项 & \makecell{-0.044$^{***}$ \\ [-9.474]} & \makecell{-0.081$^{***}$ \\ [-6.388]} & \makecell{-0.078$^{***}$ \\ [-5.922]} \\
+        \midrule
+        观测数 & 241 & 241 & 241 \\
+        \bottomrule
+        \multicolumn{4}{l}{\footnotesize 注：中括号内为t统计量；$^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$，分别表示在10\%、5\%、1\%的水平上统计显著。} \\
+    \end{tabular}
+\end{table}
