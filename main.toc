@@ -22,6 +22,7 @@
 \contentsline {section}{\numberline {4.2}投资者预期共识定价效应}{16}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}投资组合分析}{16}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Fama-MacBeth回归}{17}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}稳健性检验}{18}{section.4.3}%
 \contentsline {chapter}{\numberline { 5\hspace {.3em}}进一步研究}{19}{chapter.5}%
 \contentsline {chapter}{\numberline { 6\hspace {.3em}}结论与建议}{20}{chapter.6}%
 \contentsline {chapter}{参考文献}{21}{section*.6}%
@@ -35,4 +36,6 @@
 \contentsline {subsection}{\numberline {B.1.4}系统工作流程}{30}{subsection.B.1.4}%
 \contentsline {section}{\numberline {B.2}数据流水线}{31}{section.B.2}%
 \contentsline {subsection}{\numberline {B.2.1}消息流}{31}{subsection.B.2.1}%
-\contentsline {section}{\numberline {B.3}分布式训练}{33}{section.B.3}%
+\contentsline {section}{\numberline {B.3}训练节点}{33}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}容器化部署环境}{33}{subsection.B.3.1}%
+\contentsline {subsection}{\numberline {B.3.2}训练进程}{34}{subsection.B.3.2}%

@@ -92,7 +92,8 @@ FRP（Fast Reverse Proxy）是一个开源的反向代理工具，
 
 \subsection{消息流}
 
-数据流水线采用事件驱动的异步通信架构，通过消息总线实现各组件间的松耦合协作。其工作流程如图~\ref{fig:data-pipeline}所示。
+数据流水线采用事件驱动的异步通信架构，通过消息总线实现各组件间的松耦合协作。
+其工作流程如图~\ref{fig:data-pipeline}所示。
 
 \begin{figure}[H]
     \centering
@@ -156,4 +157,61 @@ FRP（Fast Reverse Proxy）是一个开源的反向代理工具，
     形成持续的数据供应循环，确保训练过程的连续性。
 \end{enumerate}
 
-\section{分布式训练}
+\section{训练节点}
+\subsection{容器化部署环境}
+本系统使用Docker容器作为训练节点，保证训练环境的统一性和节点启动的可复用性，
+极大地减少了配置多Agent的复杂度。
+Docker是一种易用的容器工具，可类比为微型虚拟机，能够实现独立的环境隔离。
+
+具体来说，对于一个训练节点，使用Docker容器，其环境需要配备以下工具：
+\begin{enumerate}
+    \item nvidia-cuda工具，实现GPU训练
+    \item python3，用于执行具体训练代码  
+    \item rsync，用于同步实验结果
+    \item 其他网络管理工具
+\end{enumerate}
+
+使用华为云仓库的cuda:12.1.0-cudnn8-runtime-ubuntu22.04镜像，其中包含了nvidia-cuda，和python3  
+然后，在Docker配置中，安装rsync和其他网络工具。
+
+容器配置完成后，需要启动入口。
+在容器入口中，启动frp服务，使得中央节点可以访问容器；ss
+启动一个TCP监听进程，该进程持续监听中央节点经frp隧道转发的TCP连接，内含启动、查询、停止控制信号。  
+接收启动控制信号后，容器会启动训练进程(worker)，执行具体的训练、结果回传等任务；
+接收查询控制信号后，容器会返回当前训练状态、训练进度、训练结果等信息，编译中央节点汇总；
+接收停止控制信号后，容器会停止训练进程。  
+
+\subsection{训练进程}
+训练进程是训练节点的核心组件，负责执行具体的训练任务。
+
+训练进程包括三个主要模块：
+
+\begin{table}[H]
+    \centering
+    \caption{训练进程核心模块功能说明}
+    \label{tab:worker-modules-detail}
+    \begin{tabular}{@{}>{\raggedright}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.7\textwidth}@{}}
+    \toprule
+    \textbf{模块名称} & \textbf{功能描述} \\
+    \midrule
+    数据预加载模块 & 实现异步数据流水线，从Redis缓存预加载训练数据，维护访问计数器，避免训练过程阻塞。采用多层缓存策略，包括本地内存缓存和Redis分布式缓存。 \\
+    \midrule
+    模型训练模块 & 基于PyTorch和Stable-Baselines3框架，实现滚动窗口强化学习训练。从数据模块获取预处理数据，执行Agent训练，实时缓存训练状态和梯度信息。 \\
+    \midrule
+    结果同步模块 & 负责分布式训练结果的收集、格式化和同步。使用回调机制定期整理训练指标，以JSONL格式推送至主节点，确保数据一致性和容错性。 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+数据模块的实现参考数据流水线，由获取器（fetcher），监控器（monitor）和缓存（cache）组成。
+当训练模块需要数据时，会从缓存中获取，获取后清除该数据；
+监控器持续监控缓存中数据数量，不足则通过加载器加载数据。
+
+训练模块使用pytorch，Stable-Baselines3框架，实现滚动窗口的强化学习。
+每一期训练后，会将结果进行缓存。
+
+保存模块负责同步训练结果到主节点。
+使用Stable-Baselines3中的回调功能，每训练一年，收集一次结果缓存，整理为jsonl格式数据，
+使用rsync协议，推送到主节点，然后清理结果缓存。
+
+通过上述框架，可以实现滚动窗口训练；清理逻辑则避免了训练结果大量占用内存的问题。

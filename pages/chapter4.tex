@@ -58,7 +58,10 @@
 做法为，对于每一个年月截面数据，使用回归模型：
 
 \[
-return_{i,t+1} = a_{t} + \b_{1,t} MA_{i,t} + \b_{2,t} beta_{i,t} + \b_{3,t} ln\_market\_value_{i,t} + \b_{4,t} bm\_ratio_{i,t} + \b_{5,t} gross\_margin_{i,t} + \b_{6,t} investment\_ratio_{i,t} + \epsilon_{i,t}
+return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_market\_value_{i,t} +
+\]
+\[
++ b_{4,t} bm\_ratio_{i,t} + b_{5,t} gross\_margin_{i,t} + b_{6,t} investment\_ratio_{i,t} + \epsilon_{i,t}
 \]
 
 求出各个变量的系数序列，计算其均值，并进行t检验。
@@ -80,8 +83,6 @@ return_{i,t+1} = a_{t} + \b_{1,t} MA_{i,t} + \b_{2,t} beta_{i,t} + \b_{3,t} ln\_
         毛利率 &  &  & \makecell{-0.006$^{***}$ \\ \text{[-3.206]} \\ \text{(0.001)}} \\
         投资比率 &  &  & \makecell{0.000 \\ \text{[0.209]} \\ \text{(0.834)}} \\
         常数项 & \makecell{-0.044$^{***}$ \\ \text{[-9.474]} \\ \text{(0.000)}} & \makecell{-0.081$^{***}$ \\ \text{[-6.388]} \\ \text{(0.000)}} & \makecell{-0.078$^{***}$ \\ \text{[-5.922]} \\ \text{(0.000)}} \\
-        \midrule
-        观测数 & 241 & 241 & 241 \\
         \bottomrule
         \multicolumn{4}{l}{\footnotesize 1.$^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
         \multicolumn{4}{l}{\footnotesize 2.t值计算使用Newy-West标准误。} \\
@@ -95,3 +96,4 @@ return_{i,t+1} = a_{t} + \b_{1,t} MA_{i,t} + \b_{2,t} beta_{i,t} + \b_{3,t} ln\_
 这一结论在控制了多个常见收益影响因素后仍然成立。
 
 \section{稳健性检验}
+为了验证实验结果的稳定性，本文进行了一系列稳健性检验。
