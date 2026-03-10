@@ -49,31 +49,11 @@ Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: ref/refs.bib
-I was expecting a `{' or a `('---line 5 of file ref/refs.bib
- : % @chapter 
- :            1
+You're missing a field name---line 557 of file ref/refs.bib
+ :   pages={123--140},  
+ :                      % 若暂无具体页码，可删除该字段；补充后替换为实际页码
 I'm skipping whatever remains of this entry
-I was expecting a `{' or a `('---line 359 of file ref/refs.bib
- : % @chapter 
- :            2
-I'm skipping whatever remains of this entry
-I was expecting a `{' or a `('---line 361 of file ref/refs.bib
- : % @@2.1 
- :         预期共识度量
-I'm skipping whatever remains of this entry
-You're missing a field name---line 555 of file ref/refs.bib
- :   volume={59},  
- :                 % 2024年《经济研究》第4期对应卷号为59（可根据实际调整）
-I'm skipping whatever remains of this entry
-I was expecting a `{' or a `('---line 659 of file ref/refs.bib
- : % @@chap2.2 
- :             预期共识与资产定价
-I'm skipping whatever remains of this entry
-I was expecting a `{' or a `('---line 733 of file ref/refs.bib
- : % @@2.3 
- :         Agent投资
-I'm skipping whatever remains of this entry
-I was expecting a `{' or a `('---line 883 of file ref/refs.bib
+I was expecting a `{' or a `('---line 881 of file ref/refs.bib
  : % @chapter 
  :            3
 I'm skipping whatever remains of this entry
@@ -118,4 +98,4 @@ warning$ -- 0
 while$ -- 8798
 width$ -- 0
 write$ -- 725
-(There were 10 error messages)
+(There were 5 error messages)

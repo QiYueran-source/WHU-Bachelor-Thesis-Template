@@ -21,11 +21,20 @@
 对于每一个组合，通过t检验，验证其收益率是否显著异于0。
 由于收益序列具有序列相关性和异方差性，使用Newy-West标准误进行修正。
 可以发现，随着MA水平增加，组合的收益率显著增加，对冲组合具有0.263\%的显著正收益率。
+各组合的夏普比率如表~\ref{tab:group_return}的第3列所示。
+随着MA水平的增加，各组合的夏普比率也显著增加，即MA水平高的证券，
+承担单位风险能够获取的收益更大。
 
-\begin{table}[htbp]
+本文还使用CAPM模型，Fama-French三因子模型和Fama-French五因子模型，
+计算各个组合的风险调整后收益，结果如表~\ref{tab:group_return}的第4-6列所示。
+在经过风险调整后，对冲组合仍然具有显著的正$\alpha$，说明上述结果无法由常见的风险因素解释。
+
+总体而言，预期共识因子具有显著的定价效应，即MA水平高的证券，未来收益更高。
+
+\begin{table}[h]
     \centering
-    \caption{分组检验与对冲组合收益表现（含p值）}
-    \label{tab:group_return_with_p}
+    \caption{分组检验与对冲组合收益表现}
+    \label{tab:group_return}
     \begin{tabular}{cccccc}
         \toprule
         分组ID & 平均收益率 & 夏普比率 & CAPM Alpha & FF3 Alpha & FF5 Alpha \\
@@ -42,3 +51,47 @@
         \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
     \end{tabular}
 \end{table}
+
+\subsection{Fama-MacBeth回归}
+
+在进行投资组合分析后，使用Fama-MacBeth回归（后文简称FM回归），探究MA因子对于未来收益的影响。
+做法为，对于每一个年月截面数据，使用回归模型：
+
+\[
+return_{i,t+1} = a_{t} + \b_{1,t} MA_{i,t} + \b_{2,t} beta_{i,t} + \b_{3,t} ln\_market\_value_{i,t} + \b_{4,t} bm\_ratio_{i,t} + \b_{5,t} gross\_margin_{i,t} + \b_{6,t} investment\_ratio_{i,t} + \epsilon_{i,t}
+\]
+
+求出各个变量的系数序列，计算其均值，并进行t检验。
+在计算t值时，使用Newy-West标准误。
+结果如表~\ref{tab:fm_regression}所示。
+
+\begin{table}[h]
+    \centering
+    \caption{Fama-MacBeth回归结果}
+    \label{tab:fm_regression}
+    \begin{tabular}{lccc}
+        \toprule
+        变量 & 单控制变量 & 3控制变量 & 5控制变量 \\
+        \midrule
+        MA & \makecell{0.079$^{***}$ \\ \text{[7.089]} \\ \text{(0.000)}} & \makecell{0.087$^{***}$ \\ \text{[8.130]} \\ \text{(0.000)}} & \makecell{0.086$^{***}$ \\ \text{[8.047]} \\ \text{(0.000)}} \\
+        beta &  & \makecell{-0.001 \\ \text{[-0.795]} \\ \text{(0.427)}} & \makecell{-0.001 \\ \text{[-0.881]} \\ \text{(0.379)}} \\
+        对数流通市值 &  & \makecell{0.003$^{***}$ \\ \text{[4.212]} \\ \text{(0.000)}} & \makecell{0.003$^{***}$ \\ \text{[4.225]} \\ \text{(0.000)}} \\
+        账面市值比 &  & \makecell{-0.017$^{***}$ \\ \text{[-5.850]} \\ \text{(0.000)}} & \makecell{-0.019$^{***}$ \\ \text{[-6.528]} \\ \text{(0.000)}} \\
+        毛利率 &  &  & \makecell{-0.006$^{***}$ \\ \text{[-3.206]} \\ \text{(0.001)}} \\
+        投资比率 &  &  & \makecell{0.000 \\ \text{[0.209]} \\ \text{(0.834)}} \\
+        常数项 & \makecell{-0.044$^{***}$ \\ \text{[-9.474]} \\ \text{(0.000)}} & \makecell{-0.081$^{***}$ \\ \text{[-6.388]} \\ \text{(0.000)}} & \makecell{-0.078$^{***}$ \\ \text{[-5.922]} \\ \text{(0.000)}} \\
+        \midrule
+        观测数 & 241 & 241 & 241 \\
+        \bottomrule
+        \multicolumn{4}{l}{\footnotesize 1.$^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
+        \multicolumn{4}{l}{\footnotesize 2.t值计算使用Newy-West标准误。} \\
+    \end{tabular}
+\end{table}
+
+其中，第2列表示不引入控制变量，MA因子的FM回归结果；
+第3列表示引入beta,对数市值，账面市值比三个月频控制变量后FM回归的结果；
+第4列表示再引入毛利率和投资比率两个季频控制变量后FM回归的结果。
+从表中结果可知，MA对未来收益率具有显著的正向影响，
+这一结论在控制了多个常见收益影响因素后仍然成立。
+
+\section{稳健性检验}
