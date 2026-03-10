@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -11,13 +11,11 @@
   \let\eprint\href
 \fi
 
-\bibitem[Henning et~al.(2025)Henning, Ojha, Spoon, Han, and
-  Camerer]{henning2025llm}
-HENNING T, OJHA S~M, SPOON R, et~al.
-\newblock LLM AGENTS DO NOT REPLICATE HUMAN MARKET TRADERS: EVIDENCE FROM
-  EXPERIMENTAL FINANCE\allowbreak[A/OL].
-\newblock arXiv (2025).
-\newblock \url{https://arxiv.org/abs/2502.15800}.
+\bibitem[Greenwood et~al.(2014)Greenwood and
+  Shleifer]{greenwood2014expectations}
+GREENWOOD R, SHLEIFER A.
+\newblock Expectations of returns and expected returns\allowbreak[J].
+\newblock The Review of Financial Studies, 2014, 27\allowbreak (3): 714-746.
 
 \bibitem[Jones et~al.(2025)Jones, Shi, Zhang, and Zhang]{jones2025retail}
 JONES C~M, SHI D, ZHANG X, et~al.
@@ -25,23 +23,16 @@ JONES C~M, SHI D, ZHANG X, et~al.
 \newblock Journal of Financial and Quantitative Analysis, 2025, 60\allowbreak
   (1): 68-104.
 
-\bibitem[杨威\ 等(2020)杨威, 冯璐, 宋敏, and
-  李春涛]{yang2020anchor}
-杨威, 冯璐, 宋敏, 等.
-\newblock
-  锚定比率可以衡量股价高估吗?--基于崩盘风险视角的经验证据\allowbreak[J].
-\newblock 管理世界, 2020\allowbreak (1).
-
-\bibitem[Shiller(1981)]{shiller1981stock}
-SHILLER R~J.
-\newblock Do stock prices move too much to be justified by subsequent changes
-  in dividends?\allowbreak[J].
-\newblock American Economic Review, 1981, 71: 421-436.
-
 \bibitem[薛健\ 等(2020)薛健 and 汝毅]{xue2020information}
 薛健, 汝毅.
 \newblock 信息披露业务关系与新闻报道质量\allowbreak[J].
 \newblock 管理世界, 2020\allowbreak (10).
+
+\bibitem[Kumar et~al.(2006)Kumar and Lee]{kumar2006retail}
+KUMAR A, LEE C~M~C.
+\newblock Retail investor sentiment and return comovements\allowbreak[J/OL].
+\newblock The Journal of Finance, 2006, 61\allowbreak (5): 2451-2486.
+\newblock DOI: \doi{10.1111/j.1540-6261.2006.01063.x}.
 
 \bibitem[伍戈\ 等(2015)伍戈 and 陈得文]{wu2015why}
 伍戈, 陈得文.
@@ -118,12 +109,149 @@ LEE J, KIM R, YI S~W, et~al.
 \newblock arXiv (2020).
 \newblock \url{https://arxiv.org/abs/2007.05402}.
 
+\bibitem[唐国豪\ 等(2025)唐国豪, 陈海玮, 朱琳, and
+  姜富伟]{唐国豪2025投资者预期协同}
+唐国豪, 陈海玮, 朱琳, 等.
+\newblock
+  投资者预期协同的资产定价研究——基于多特征机器学习视角\allowbreak[J].
+\newblock 管理世界, 2025\allowbreak (12): 88-104.
+
+\bibitem[Lemmon et~al.(2006)Lemmon and Portniaguina]{lemmon2006consumer}
+LEMMON M, PORTNIAGUINA E.
+\newblock Consumer confidence and asset prices: some empirical
+  evidence\allowbreak[J/OL].
+\newblock The Review of Financial Studies, 2006, 19\allowbreak (4): 1499-1529.
+\newblock DOI: \doi{10.1093/rfs/hhj038}.
+
+\bibitem[朱宏泉\ 等(2016)朱宏泉, 余江, and
+  陈林]{朱宏泉2016异质信念}
+朱宏泉, 余江, 陈林.
+\newblock
+  异质信念、卖空限制与股票收益——基于中国证券市场的分析\allowbreak[J].
+\newblock 管理科学学报, 2016, 19\allowbreak (7): 115-126.
+
+\bibitem[孟庆斌\ 等(2018)孟庆斌 and
+  黄清华]{孟庆斌2018卖空机制}
+孟庆斌, 黄清华.
+\newblock
+  卖空机制是否降低了股价高估?——基于投资者异质信念的视角\allowbreak[J/OL].
+\newblock 管理科学学报, 2018, 21\allowbreak (4): 43-66.
+\newblock DOI: \doi{10.3969/j.issn.1007-9807.2018.04.003}.
+
+\bibitem[Diether et~al.(2002)Diether, Malloy, and
+  Scherbina]{diether2002differences}
+DIETHER K~B, MALLOY C~J, SCHERBINA A.
+\newblock Differences of opinion and the cross section of stock
+  returns\allowbreak[J/OL].
+\newblock The Journal of Finance, 2002, 57\allowbreak (5): 2113-2141.
+\newblock DOI: \doi{10.1111/1540-6261.00497}.
+
+\bibitem[Anderson et~al.(2005)Anderson, Ghysels, and
+  Juergens]{anderson2005heterogeneous}
+ANDERSON E~W, GHYSELS E, JUERGENS J~L.
+\newblock Do heterogeneous beliefs matter for asset pricing?\allowbreak[J/OL].
+\newblock The Review of Financial Studies, 2005, 18\allowbreak (3): 875-924.
+\newblock DOI: \doi{10.1093/rfs/hhi017}.
+
+\bibitem[Hornik et~al.(1989)Hornik, Stinchcombe, and
+  White]{hornik1989multilayer}
+HORNIK K, STINCHCOMBE M, WHITE H.
+\newblock Multilayer feedforward networks are universal
+  approximators\allowbreak[J].
+\newblock Neural Networks, 1989, 2\allowbreak (5): 359-366.
+
+\bibitem[Sims(2003)]{sims2003implications}
+SIMS C~A.
+\newblock Implications of rational inattention\allowbreak[J].
+\newblock Journal of Monetary Economics, 2003, 50\allowbreak (3): 665-690.
+
+\bibitem[Daniel et~al.(1998)Daniel, Hirshleifer, and
+  Subrahmanyam]{daniel1998investor}
+DANIEL K, HIRSHLEIFER D, SUBRAHMANYAM A.
+\newblock Investor psychology and security market under- and
+  overreactions\allowbreak[J].
+\newblock The Journal of Finance, 1998, 53\allowbreak (6): 1839-1885.
+
+\bibitem[Hong et~al.(2007)Hong and Stein]{hong2007disagreement}
+HONG H, STEIN J~C.
+\newblock Disagreement and the stock market\allowbreak[J].
+\newblock Journal of Economic Perspectives, 2007, 21\allowbreak (2): 109-128.
+
+\bibitem[Miller(1977)]{miller1977risk}
+MILLER E~M.
+\newblock Risk, uncertainty, and divergence of opinion\allowbreak[J/OL].
+\newblock The Journal of Finance, 1977, 32\allowbreak (4): 1151-1168.
+\newblock DOI: \doi{10.1111/j.1540-6261.1977.tb03317.x}.
+
+\bibitem[Johnson(2004)]{johnson2004forecast}
+JOHNSON T~C.
+\newblock Forecast dispersion and the cross section of expected
+  returns\allowbreak[J/OL].
+\newblock The Journal of Finance, 2004, 59\allowbreak (5): 1957-1978.
+\newblock DOI: \doi{10.1111/j.1540-6261.2004.00691.x}.
+
+\bibitem[Henning et~al.(2025)Henning, Ojha, Spoon, Han, and
+  Camerer]{henning2025llm}
+HENNING T, OJHA S~M, SPOON R, et~al.
+\newblock LLM agents do not replicate human market traders: evidence from
+  experimental finance: arXiv:2502.15800\allowbreak[R/OL].
+\newblock arxiv (2025).
+\newblock \url{https://arxiv.org/abs/2502.15800}.
+\newblock DOI: \doi{10.48550/arXiv.2502.15800}.
+
+\bibitem[Virattt et~al.(2025)Virattt and contributors]{virattt2025aihedgefund}
+VIRATTT, CONTRIBUTORS.
+\newblock AI hedge fund: a multi-agent system for algorithmic
+  trading\allowbreak[R/OL].
+\newblock GitHub, 2025.
+\newblock \url{https://github.com/virattt/ai-hedge-fund}.
+
+\bibitem[Yang et~al.(2025)Yang, Zhang, Wu, Zhang, Zhang, Yu, Hu, and
+  Wang]{yang2025twinmarket}
+YANG Y, ZHANG Y, WU M, et~al.
+\newblock TwinMarket: a scalable behavioral and social simulation for financial
+  markets\allowbreak[C/OL]//\allowbreak
+NeurIPS: Vol.~39\quad The Thirty-ninth Annual Conference on Neural Information
+  Processing Systems (NeurIPS).
+\newblock 2025.
+\newblock \url{https://arxiv.org/abs/2502.01506}.
+\newblock DOI: \doi{10.48550/arXiv.2502.01506}.
+
+\bibitem[Bai et~al.(2025)Bai, Gao, Wan, Zhang, and Song]{bai2025review}
+BAI Y, GAO Y, WAN R, et~al.
+\newblock A review of reinforcement learning in financial
+  applications\allowbreak[J/OL].
+\newblock Annual Review of Statistics and Its Application, 2025, 12: 209-232.
+\newblock DOI: \doi{10.1146/annurev-statistics-112723-034423}.
+
+\bibitem[Qureshi et~al.(2026)Qureshi, Kadia, Goyal, and
+  Narayan]{qureshi2026deep}
+QURESHI W, KADIA A, GOYAL A, et~al.
+\newblock Deep learning vs. reinforcement learning in automated stock trading:
+  a PRISMA-oriented systematic review\allowbreak[J/OL].
+\newblock International Journal of Scientific and Advanced Technology (IJSAT),
+  2026, 17\allowbreak (1).
+\newblock DOI: \doi{10.71079/IJSAT.2026.17101}.
+
+\bibitem[Marzban et~al.(2021)Marzban, Hashemi, Zare, and
+  Rahmani]{marzban2021wavecorr}
+MARZBAN S, HASHEMI M, ZARE M, et~al.
+\newblock WaveCorr: correlation-savvy deep reinforcement learning for portfolio
+  management\allowbreak[A/OL].
+\newblock arXiv (2021).
+\newblock \url{https://arxiv.org/abs/2109.07005}.
+
 \bibitem[Liu et~al.(2021)Liu, Yang, Gao, and Wang]{liu2021finrl}
 LIU X~Y, YANG H, GAO J, et~al.
 \newblock FinRL: deep reinforcement learning framework to automate trading in
   quantitative finance\allowbreak[A/OL].
 \newblock arXiv (2021).
 \newblock \url{https://arxiv.org/abs/2111.09395}.
+
+\bibitem[Bali et~al.(2023)Bali, Kelly, M{\"o}rke, and Rahman]{bali2023machine}
+BALI T~G, KELLY B~T, M{\"O}RKE M, et~al.
+\newblock Machine forecast disagreement: w31583\allowbreak[Z].
+\newblock National Bureau of Economic Research (NBER), 2023.
 
 \bibitem[Breiman(2001)]{breiman2001random}
 BREIMAN L.
@@ -185,18 +313,6 @@ RAFFIN A, HILL A, GLEAVE A, et~al.
   implementations\allowbreak[J/OL].
 \newblock Journal of Machine Learning Research, 2021, 22\allowbreak (268): 1-8.
 \newblock \url{http://jmlr.org/papers/v22/20-1284.html}.
-
-\bibitem[唐国豪\ 等(2025)唐国豪, 陈海玮, 朱琳, and
-  姜富伟]{唐国豪2025投资者预期协同}
-唐国豪, 陈海玮, 朱琳, 等.
-\newblock
-  投资者预期协同的资产定价研究——基于多特征机器学习视角\allowbreak[J].
-\newblock 管理世界, 2025\allowbreak (12): 88-104.
-
-\bibitem[Bali et~al.(2023)Bali, Kelly, M{\"o}rke, and Rahman]{bali2023machine}
-BALI T~G, KELLY B~T, M{\"O}RKE M, et~al.
-\newblock Machine forecast disagreement: w31583\allowbreak[R].
-\newblock National Bureau of Economic Research (NBER), 2023.
 
 \bibitem[Hong et~al.(2016)Hong and Sraer]{hong2016speculative}
 HONG H, SRAER D~A.
