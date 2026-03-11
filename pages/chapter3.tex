@@ -335,15 +335,69 @@ L^{\mathrm{VF}}(\phi)
 
 
 \subsection{参数设置}  
+本文的核心参数设置如下。
 
+MLP网络相关参数见表\ref{tab:param-mlp}。
+其中，证券组合的证券数$n$取1，即每次只决策一个证券，
+与后文为单个证券计算预期共识的设定保持一致。
 
+\begin{table}[htbp]
+  \centering
+  \caption{MLP 与正则化参数}
+  \label{tab:param-mlp}
+  \begin{tabular}{ll}
+    \toprule
+    参数 & 取值 \\
+    \midrule
+    n & 1\\
+    m & 12\\
+    l & 60\\
+    Dropout 比例 & 0.25 \\
+    激活函数 & Tanh \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
+PPO算法的主要超参数见表\ref{tab:param-ppo}。
 
+\begin{table}[htbp]
+  \centering
+  \caption{PPO 算法超参数}
+  \label{tab:param-ppo}
+  \begin{tabular}{ll}
+    \toprule
+    参数 & 取值 \\
+    \midrule
+    学习率（\texttt{lr}） & $5\times 10^{-4}$ \\
+    梯度裁剪范数（\texttt{clip\_grad\_norm}） & $0.5$ \\
+    权重衰减（\texttt{weight\_decay}） & $0.1$ \\
+    价值损失权重 $c_1$（\texttt{vf\_coef}） & $0.5$ \\
+    熵正则权重 $c_2$（\texttt{ent\_coef}） & $0.0$ \\
+    训练时间窗 & 2004--2024 年 \\
+    滚动窗口长度 $m$ & 12 个月 \\
+    掩码长度 & 60 个月 \\
+    采样与打乱种子（\texttt{sample\_and\_shuffle\_seed}） & 153 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
+奖励函数的风险厌恶系数参数$A$见表\ref{tab:param-A}。
+该设定使 $A$ 取值集中在 $[2,8]$ 附近，具有右偏、厚尾特征，用于刻画投资者风险厌恶的异质性；
+每个 Agent 独立从该分布采样一个 $A$ 并用于计算效用与奖励。
 
-
-
-
+\begin{table}[htbp]
+  \centering
+  \caption{风险厌恶系数 $A$ 的分布参数}
+  \label{tab:param-A}
+  \begin{tabular}{ll}
+    \toprule
+    参数 & 取值 \\
+    \midrule
+    对数均值 $\mu_A$ & $1$ \\
+    对数方差 $\sigma_A^2$ & $0.16$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
 \section{指标设计}
