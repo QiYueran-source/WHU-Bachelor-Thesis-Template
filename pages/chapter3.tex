@@ -10,7 +10,7 @@
   \SetAlgoLined
   \KwIn{特征数据}
   \KwResult{更新后的神经网络}
-  特征数据 $\xrightarrow{\text{神经网络}}$ 投资决策 \footnote{同一过程可旁支用于计算AED}\;
+  特征数据 $\xrightarrow{\text{神经网络}}$ 投资决策 \footnote{收集结果用于计算MA因子}\;
   投资决策、收益数据 $\to$ 组合收益\;
   组合收益序列 $\to$ 组合表现指标（如波动率、夏普比率、最大回撤等）\;
   组合表现指标 $\to$ 奖励\;
@@ -347,31 +347,26 @@ L^{\mathrm{VF}}(\phi)
 
 
 \section{指标设计}
-为了刻画Agent投资者的预期协同效应，
+为了刻画Agent投资者的预期共识效应，
 参考唐国豪等\cite{唐国豪2025投资者预期协同}、Bali等\cite{bali2023machine}、
 Hong等\cite{hong2016speculative}、Banerjee等\cite{banerjee2011learning}的做法，
-构建$AED_{s,t}$指标，即Agent预期分散度(Agent Expectation Dispersion, AED)，
-用于刻画Agent投资者的预期协同效应。
+构建$MA_{s,t}$指标，即Agent的平均决策值(Mean Action, MA)，
+用于刻画Agent投资者的预期共识效应。
 
 具体来说，第$a$个Agent对于证券$s$的投资决策为$action_{a,s,t}$，
 记$MA_{s,t}$为$t$月份证券$s$的平均投资决策：
 
 \[MA_{s,t} = \frac{1}{N} \sum_{a=1}^{N} action_{a,s,t}\]
 
-$SA_{s,t}$为$t$月份证券$s$决策标准差：
+平均决策值可以衡量Agent对于证券$s$的预期共识程度。
+如果平均决策值较大，则表示Agent对于证券$s$的决策值高，整体看多证券$s$；
+如果平均决策值较小，则表示Agent对于证券$s$的决策值低，整体看空证券$s$。
 
-\[SA_{s,t} = \sqrt{\frac{1}{N} \sum_{a=1}^{N} (action_{a,s,t} - MA_{s,t})^2}\]
+\section{数据}
+样本选取方面，本研究以2004年1月至2024年12月为研究区间，以中国A股票市场
+（含上证、深证、创业板和科创板）为研究对象，数据均为月度频率。
 
-则:
+在因子选取方面，本文使用
 
-\[AED_{s,t} = \frac{MA_{s,t}}{SA_{s,t}}\]
-
-$AED$用于综合刻画投资这对证券决策的强度和集中度。
-如果大部分投资者都倾向于一致做多证券$s$，则$MA$较大，$SA$较小，$AED$较大，
-表示投资者一致看好证券$s$\;
-如果大部分投资者都倾向于一致做空证券$s$，则$MA$较小，$SA$较小，$AED$较小，
-表示投资者一致看空证券$s$\;
-如果投资者对于证券$s$的决策较为分散，则$SA$较大，$AED$较小，
-表示投资者无法形成一致预期。    
 
 
