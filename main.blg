@@ -9,18 +9,6 @@ Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: pages/chapter1.aux
 Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: pages/chapter2.aux
-White space in argument---line 9 of file pages/chapter2.aux
- : \citation{伍燕然
- :                     2012 分析师预测偏差}
-I'm skipping whatever remains of this command
-White space in argument---line 10 of file pages/chapter2.aux
- : \citation{部慧
- :                  2018 股评投资者情绪}
-I'm skipping whatever remains of this command
-White space in argument---line 11 of file pages/chapter2.aux
- : \citation{万海远
- :                     2024 税收政策}
-I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: pages/chapter3.aux
 Reallocating 'name_of_file' (item size: 1) to 19 items.
@@ -49,53 +37,47 @@ Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: ref/refs.bib
-You're missing a field name---line 557 of file ref/refs.bib
- :   pages={123--140},  
- :                      % 若暂无具体页码，可删除该字段；补充后替换为实际页码
-I'm skipping whatever remains of this entry
-I was expecting a `{' or a `('---line 881 of file ref/refs.bib
- : % @chapter 
- :            3
-I'm skipping whatever remains of this entry
-You've used 47 entries,
+Warning--string name "示例doi，可替换为文献实际doi" is undefined
+--line 563 of file ref/refs.bib
+You've used 50 entries,
             6859 wiz_defined-function locations,
-            1548 strings with 18688 characters,
-and the built_in function-call counts, 3985350 in all, are:
-= -- 418560
-> -- 37187
-< -- 316232
-+ -- 14910
-- -- 7053
-* -- 15429
-:= -- 62422
-add.period$ -- 169
-call.type$ -- 47
-change.case$ -- 408
-chr.to.int$ -- 286426
-cite$ -- 47
-duplicate$ -- 733747
-empty$ -- 4181
-format.name$ -- 1197
-if$ -- 775315
-int.to.chr$ -- 5106
-int.to.str$ -- 48
+            1570 strings with 19325 characters,
+and the built_in function-call counts, 4002364 in all, are:
+= -- 419907
+> -- 38029
+< -- 317720
++ -- 15419
+- -- 7314
+* -- 15723
+:= -- 64504
+add.period$ -- 181
+call.type$ -- 50
+change.case$ -- 414
+chr.to.int$ -- 287182
+cite$ -- 50
+duplicate$ -- 734824
+empty$ -- 4589
+format.name$ -- 1281
+if$ -- 779332
+int.to.chr$ -- 5111
+int.to.str$ -- 51
 missing$ -- 0
-newline$ -- 279
-num.names$ -- 141
-pop$ -- 72810
+newline$ -- 297
+num.names$ -- 150
+pop$ -- 73006
 preamble$ -- 1
-purify$ -- 366
+purify$ -- 372
 quote$ -- 0
-skip$ -- 94479
+skip$ -- 95668
 stack$ -- 0
-substring$ -- 614777
-swap$ -- 513037
-text.length$ -- 930
+substring$ -- 616441
+swap$ -- 513506
+text.length$ -- 999
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 523
+type$ -- 556
 warning$ -- 0
-while$ -- 8798
+while$ -- 8912
 width$ -- 0
-write$ -- 725
-(There were 5 error messages)
+write$ -- 775
+(There was 1 warning)
