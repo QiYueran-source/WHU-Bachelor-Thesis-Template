@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{53}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -212,6 +212,19 @@ JOHNSON T~C.
 \newblock The Journal of Finance, 2004, 59\allowbreak (5): 1957-1978.
 \newblock DOI: \doi{10.1111/j.1540-6261.2004.00691.x}.
 
+\bibitem[Boehme et~al.(2006)Boehme, Danielsen, and Sorescu]{boehme2006short}
+BOEHME R~D, DANIELSEN B~R, SORESCU S~M.
+\newblock Short-sale constraints, differences of opinion, and
+  overvaluation\allowbreak[J].
+\newblock Journal of Financial and Quantitative Analysis, 2006, 41\allowbreak
+  (2): 455-487.
+
+\bibitem[Park(2005)]{park2005stock}
+PARK C.
+\newblock Stock return predictability and the dispersion in earnings
+  forecasts\allowbreak[J].
+\newblock The Journal of Business, 2005, 78\allowbreak (6): 2351-2376.
+
 \bibitem[Henning et~al.(2025)Henning, Ojha, Spoon, Han, and
   Camerer]{henning2025llm}
 HENNING T, OJHA S~M, SPOON R, et~al.
@@ -345,5 +358,11 @@ HONG H, SRAER D~A.
 BANERJEE S.
 \newblock Learning from prices and the dispersion in beliefs\allowbreak[J].
 \newblock The Review of Financial Studies, 2011, 24\allowbreak (9): 3025-3068.
+
+\bibitem[Maheu et~al.(2000)Maheu and McCurdy]{maheu2000identifying}
+MAHEU J~M, MCCURDY T~H.
+\newblock Identifying bull and bear markets in stock returns\allowbreak[J].
+\newblock Journal of Business \& Economic Statistics, 2000, 18\allowbreak (1):
+  100-112.
 
 \end{thebibliography}
