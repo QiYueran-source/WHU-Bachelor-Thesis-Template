@@ -45,7 +45,7 @@ Fama-French三因子模型下α为0.237\%（1\%水平显著），
 Fama-French五因子模型下α为0.207\%（5\%水平显著）。
 这说明MA带来的超额收益，无法由市场、规模、价值等常见风险因素解释。
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{分组检验与对冲组合收益表现}
     \label{tab:group_return}
@@ -89,13 +89,13 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
 在计算t值时，使用Newy-West标准误。
 结果如表~\ref{tab:fm_regression}所示。
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \caption{Fama-MacBeth回归结果}
     \label{tab:fm_regression}
     \begin{tabular}{lccc}
         \toprule
-        变量 & 单控制变量 & 4控制变量 & 6控制变量 \\
+        变量 & 无控制变量 & 3控制变量 & 5控制变量 \\
         \midrule
         MA & \makecell{$0.123^{***}$ \\ {[12.240]} \\ {(0.000)}} & \makecell{$0.139^{***}$ \\ {[14.480]} \\ {(0.000)}} & \makecell{$0.139^{***}$ \\ {[14.440]} \\ {(0.000)}} \\
         beta &  & \makecell{$-0.003$ \\ {[-1.329]} \\ {(0.184)}} & \makecell{$-0.004$ \\ {[-1.438]} \\ {(0.150)}} \\
