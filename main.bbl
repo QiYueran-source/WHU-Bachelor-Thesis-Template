@@ -1,4 +1,4 @@
-\begin{thebibliography}{53}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -267,14 +267,6 @@ QURESHI W, KADIA A, GOYAL A, et~al.
 \newblock International Journal of Scientific and Advanced Technology (IJSAT),
   2026, 17\allowbreak (1).
 \newblock DOI: \doi{10.71079/IJSAT.2026.17101}.
-
-\bibitem[Marzban et~al.(2021)Marzban, Hashemi, Zare, and
-  Rahmani]{marzban2021wavecorr}
-MARZBAN S, HASHEMI M, ZARE M, et~al.
-\newblock WaveCorr: correlation-savvy deep reinforcement learning for portfolio
-  management\allowbreak[A/OL].
-\newblock arXiv (2021).
-\newblock \url{https://arxiv.org/abs/2109.07005}.
 
 \bibitem[Liu et~al.(2021)Liu, Yang, Gao, and Wang]{liu2021finrl}
 LIU X~Y, YANG H, GAO J, et~al.

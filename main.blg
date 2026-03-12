@@ -39,45 +39,45 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: ref/refs.bib
 Warning--string name "示例doi，可替换为文献实际doi" is undefined
 --line 563 of file ref/refs.bib
-You've used 53 entries,
+You've used 52 entries,
             6859 wiz_defined-function locations,
-            1589 strings with 19809 characters,
-and the built_in function-call counts, 4355369 in all, are:
-= -- 456893
-> -- 40558
-< -- 345816
-+ -- 16393
-- -- 7801
-* -- 16874
-:= -- 68669
-add.period$ -- 190
-call.type$ -- 53
-change.case$ -- 420
-chr.to.int$ -- 313312
-cite$ -- 53
-duplicate$ -- 801329
-empty$ -- 4782
-format.name$ -- 1345
-if$ -- 847175
-int.to.chr$ -- 5498
-int.to.str$ -- 54
+            1584 strings with 19578 characters,
+and the built_in function-call counts, 4232019 in all, are:
+= -- 443708
+> -- 39301
+< -- 336129
++ -- 15876
+- -- 7559
+* -- 16379
+:= -- 66682
+add.period$ -- 186
+call.type$ -- 52
+change.case$ -- 417
+chr.to.int$ -- 304641
+cite$ -- 52
+duplicate$ -- 778644
+empty$ -- 4721
+format.name$ -- 1310
+if$ -- 823022
+int.to.chr$ -- 5307
+int.to.str$ -- 53
 missing$ -- 0
-newline$ -- 312
-num.names$ -- 159
-pop$ -- 79400
+newline$ -- 306
+num.names$ -- 156
+pop$ -- 77118
 preamble$ -- 1
-purify$ -- 403
+purify$ -- 391
 quote$ -- 0
-skip$ -- 103058
+skip$ -- 99985
 stack$ -- 0
-substring$ -- 672070
-swap$ -- 560706
-text.length$ -- 1050
+substring$ -- 653201
+swap$ -- 545114
+text.length$ -- 1023
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 589
+type$ -- 577
 warning$ -- 0
-while$ -- 9586
+while$ -- 9302
 width$ -- 0
-write$ -- 820
+write$ -- 806
 (There was 1 warning)
