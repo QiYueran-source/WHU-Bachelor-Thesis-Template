@@ -3,7 +3,64 @@
 \chapter{实证分析}
 \section{描述性统计}
 
+本文首先对核心变量进行描述性统计，
+结果如表~\ref{tab:descriptive_stats1}和~\ref{tab:descriptive_stats2}所示。
 
+\begin{table}[H]
+    \centering
+    \caption{描述性统计(1)}
+    \label{tab:descriptive_stats1}
+    \makebox[0pt][c]{%
+      \begin{tabular*}{1.2\textwidth}{@{\extracolsep{\fill}}lrrrr}
+        \toprule
+        变量 & 观测数 & 缺失数 & 均值 & 标准差 \\
+        \midrule
+        MA & 402640 & 0 & 0.669 & 0.114 \\
+        月收益率 & 402640 & 0 & 0.004 & 0.135 \\
+        beta & 998924 & 1076 & 1.111 & 5.738 \\
+        账面市值比 & 325753 & 674247 & 0.651 & 0.264 \\
+        对数流通市值 & 999501 & 499 & 15.061 & 1.320 \\
+        毛利率 & 318602 & 681398 & 0.265 & 3.826 \\
+        投资比率 & 402584 & 597416 & 0.943 & 0.103 \\
+        \bottomrule
+      \end{tabular*}%
+    }
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{描述性统计(2)}
+    \label{tab:descriptive_stats2}
+    \makebox[0pt][c]{%
+      \begin{tabular*}{1.2\textwidth}{@{\extracolsep{\fill}}lrrrrr}
+        \toprule
+        变量 & 最小值 & 25\%分位数 & 50\%分位数 & 75\%分位数 & 最大值 \\
+        \midrule
+        MA & 0.000 & 0.597 & 0.682 & 0.753 & 1.000 \\
+        月收益率 & -0.837 & -0.066 & -0.003 & 0.061 & 4.153 \\
+        beta & -2376.667 & 0.728 & 1.101 & 1.478 & 2540.833 \\
+        对数流通市值 & 9.939 & 14.188 & 14.985 & 15.818 & 21.748 \\
+        账面市值比 & -0.222 & 0.465 & 0.656 & 0.836 & 43.588 \\
+        毛利率 & -2137.804 & 0.151 & 0.245 & 0.371 & 2.161 \\
+        投资比率 & -0.311 & 0.935 & 0.990 & 1.000 & 1.233 \\
+        \bottomrule
+      \end{tabular*}%
+    }
+\end{table}
+
+本文对核心变量MA，月收益率和Fama-MacBeth回归的控制变量进行描述性统计，
+预期共识度（MA） 有效观测数402640个，无缺失值；
+其值范围为$[0.000, 1.000]$，符合不允许杠杆和做空的语义；
+其25\%分位数和75\%分位数相对集中，说明MA构造可以缓解Agent决策方差较大的问题。
+
+被解释变量股票月收益率有效观测数402640个，无缺失值；
+其分布呈现典型尖峰厚尾特征，极值区间为$[-0.837, 4.153]$，反映个股收益分化明显。
+
+控制变量方面，市场贝塔（beta） 有效观测数998924个，均值 1.111，略高于市场平均水平，存在少量极端值；
+账面市值比 有效观测数325753个，均值0.651，分布对称；
+毛利率 有效观测数318602个，均值 0.265，盈利水平分化显著；
+投资比率 有效观测数402584个，均值 0.943，整体接近 1；
+对数流通市值 有效观测数999501个，均值 15.061，规模分布均匀，覆盖大中小市值个股。
 
 \section{投资者预期共识定价效应}
 
@@ -18,22 +75,12 @@
 随后，对每个分组内的证券按流通市值进行加权，构建月度再平衡的投资组合，并计算各组合的月度收益率序列。
 在此基础上，构建“对冲组合”：以做多第10组、做空第1组的方式，计算每期多空收益差，得到对冲组合的收益序列。
 
-计算每一个投资组合的累计收益，绘制累计收益曲线，如图~\ref{fig:cumulative_return}所示。
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/emp/收益分层.png}
-    \caption{累计收益曲线}
-    \label{fig:cumulative_return}
-\end{figure}
-从图中可以看出，随着MA水平提升，组合的累积收益呈现较为明显的分层，
-即MA水平越高的证券，其累积收益越高。
-
-各组合的平均收益率如表~\ref{tab:group_return1}和~\ref{tab:group_return2}的第2列所示。
+各组合的平均收益率如表~\ref{tab:group_return}的第2列所示。
 为验证组合收益率是否显著异于0，本文对收益序列进行t检验，并针对收益序列的序列相关性与异方差性，使用Newey-West标准误进行修正。
 结果显示，随着MA水平的提升，组合平均收益率呈现严格的单调上升趋势，从第1组的-0.232\%（5\% 水平显著）
 逐步提升至第10组的0.148\%（1\% 水平显著）；
 对冲组合的月度平均收益率达到0.380\%，且在1\%的统计水平下显著为正。
-各组合的夏普比率如表~\ref{tab:group_return1}和~\ref{tab:group_return2}的第3列所示。
+各组合的夏普比率如表~\ref{tab:group_return}的第3列所示。
 伴随MA水平的提升，组合夏普比率同样呈现单调上升特征，
 从第1组的-14.550\%提升至第10组的43.880\%，
 说明MA水平越高的证券，承担单位风险所能获取的收益越高，
@@ -41,7 +88,7 @@
 
 本文进一步使用CAPM模型、Fama-French三因子模型与Fama-French五因子模型，
 计算各组合的风险调整后收益，
-结果如表~\ref{tab:group_return1}和~\ref{tab:group_return2}的第4-6列所示。
+结果如表~\ref{tab:group_return}的第4-6列所示。
 在经过经典风险因子调整后，对冲组合仍具有显著为正的α收益：
 CAPM模型下α为0.250\%（1\%水平显著），
 Fama-French三因子模型下α为0.237\%（1\%水平显著），
@@ -51,9 +98,9 @@ Fama-French五因子模型下α为0.207\%（5\%水平显著）。
 {\small
 \begin{table}[H]
     \centering
-    \caption{分组检验与对冲组合收益表现(1)}
-    \label{tab:group_return1}
-    \begin{tabular}{cccccc}
+    \caption{分组检验与对冲组合收益表现}
+    \label{tab:group_return}
+    \begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}}cccccc}
         \toprule
         分组ID & 平均收益率 & 夏普比率 & CAPM Alpha & FF3 Alpha & FF5 Alpha \\
         \midrule
@@ -64,36 +111,21 @@ Fama-French五因子模型下α为0.207\%（5\%水平显著）。
         组合5 & \makecell{$0.048$ \\ {[0.830]} \\ {(0.406)}} & 6.376 & \makecell{$-0.086^{*}$ \\ {[-1.753]} \\ {(0.080)}} & \makecell{$-0.076$ \\ {[-1.591]} \\ {(0.112)}} & \makecell{$-0.061$ \\ {[-1.266]} \\ {(0.205)}} \\
         组合6 & \makecell{$0.096^{*}$ \\ {[1.854]} \\ {(0.064)}} & 13.760 & \makecell{$-0.035$ \\ {[-0.765]} \\ {(0.444)}} & \makecell{$-0.026$ \\ {[-0.578]} \\ {(0.563)}} & \makecell{$-0.011$ \\ {[-0.241]} \\ {(0.810)}} \\
         组合7 & \makecell{$0.100^{**}$ \\ {[2.307]} \\ {(0.021)}} & 18.070 & \makecell{$-0.036$ \\ {[-1.011]} \\ {(0.312)}} & \makecell{$-0.028$ \\ {[-0.825]} \\ {(0.410)}} & \makecell{$-0.010$ \\ {[-0.315]} \\ {(0.753)}} \\
-        \bottomrule
-        \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率与Alpha值均已百分化；} \\
-        \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
-        \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
-    \end{tabular}
-\end{table}
-}
-
-\FloatBarrier
-
-{\small
-\begin{table}[H]
-    \centering
-    \caption{分组检验与对冲组合收益表现(2)}
-    \label{tab:group_return2}
-    \begin{tabular}{cccccc}
-        \toprule
-        分组ID & 平均收益率 & 夏普比率 & CAPM Alpha & FF3 Alpha & FF5 Alpha \\
-        \midrule
         组合8 & \makecell{$0.124^{***}$ \\ {[3.235]} \\ {(0.001)}} & 25.330 & \makecell{$-0.010$ \\ {[-0.315]} \\ {(0.753)}} & \makecell{$-0.002$ \\ {[-0.070]} \\ {(0.944)}} & \makecell{$0.007$ \\ {[0.239]} \\ {(0.811)}} \\
         组合9 & \makecell{$0.138^{***}$ \\ {[4.323]} \\ {(0.000)}} & 32.200 & \makecell{$0.006$ \\ {[0.219]} \\ {(0.826)}} & \makecell{$0.014$ \\ {[0.562]} \\ {(0.574)}} & \makecell{$0.025$ \\ {[1.006]} \\ {(0.315)}} \\
         组合10 & \makecell{$0.148^{***}$ \\ {[5.744]} \\ {(0.000)}} & 43.880 & \makecell{$0.018$ \\ {[0.778]} \\ {(0.437)}} & \makecell{$0.024$ \\ {[1.099]} \\ {(0.272)}} & \makecell{$0.035$ \\ {[1.540]} \\ {(0.124)}} \\
         对冲组合 & \makecell{$0.380^{***}$ \\ {[4.045]} \\ {(0.000)}} & 26.840 & \makecell{$0.250^{***}$ \\ {[2.686]} \\ {(0.007)}} & \makecell{$0.237^{***}$ \\ {[2.608]} \\ {(0.009)}} & \makecell{$0.207^{**}$ \\ {[2.247]} \\ {(0.025)}} \\
         \bottomrule
-        \multicolumn{6}{l}{\footnotesize 注：同表~\ref{tab:group_return1}。} \\
-    \end{tabular}
+        \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率与Alpha值均已百分化；} \\
+        \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
+        \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
+    \end{tabular*}
 \end{table}
 }
 
-总体而言，预期共识因子具有显著的正向定价效应，即个股MA水平越高，其未来的股票收益越高，验证了因子的投资价值与定价能力。
+
+总体而言，预期共识因子具有显著的正向定价效应，
+即个股MA水平越高，其未来的股票收益越高，验证了因子的投资价值与定价能力。
 
 \subsection{Fama-MacBeth回归}
 
@@ -116,7 +148,7 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
     \centering
     \caption{Fama-MacBeth回归结果}
     \label{tab:fm_regression}
-    \begin{tabular}{lccc}
+    \begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}}lccc}
         \toprule
         变量 & 无控制变量 & 3控制变量 & 5控制变量 \\
         \midrule
@@ -131,7 +163,7 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
         \bottomrule
         \multicolumn{4}{l}{\footnotesize 1.$^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
         \multicolumn{4}{l}{\footnotesize 2.t值计算使用Newy-West标准误。} \\
-    \end{tabular}
+    \end{tabular*}
 \end{table}
 }
 
@@ -140,9 +172,6 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
 第4列表示再引入毛利率和投资比率两个季频控制变量后FM回归的结果。
 从表中结果可知，MA对未来收益率具有显著的正向影响，
 这一结论在控制了多个常见收益影响因素后仍然成立。
-
-
-
 
 \section{稳健性检验}
 为了验证实验结果的稳定性，本文进行了一系列稳健性检验。
