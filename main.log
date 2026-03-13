@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  12 MAR 2026 16:54
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  13 MAR 2026 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1819,95 +1819,68 @@ Missing character: There is no ̆ in font txmi!
 (pages/appendix.tex
 附录 A
 
-Overfull \hbox (501.11752pt too wide) detected at line 15
+Overfull \hbox (501.11752pt too wide) detected at line 17
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
 []|\TU/SimSun(0)/m/n/7.52812 因 子 时 间 范
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 14--19
+Underfull \hbox (badness 10000) in alignment at lines 16--21
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (501.11752pt too wide) detected at line 21
+Overfull \hbox (501.11752pt too wide) detected at line 23
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 []|\TU/SimSun(0)/m/n/7.52812 因 子 时 间 范
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 19--25
+Underfull \hbox (badness 10000) in alignment at lines 21--27
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 25--28
+Underfull \hbox (badness 10000) in alignment at lines 27--30
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 28--31
+Underfull \hbox (badness 10000) in alignment at lines 30--33
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 33--33
+Underfull \hbox (badness 1194) in paragraph at lines 35--35
 []|\TU/TimesNewRoman(0)/m/n/7.52812 36-month momen-
  []
 
 
-Underfull \hbox (badness 5563) in paragraph at lines 33--33
+Underfull \hbox (badness 5563) in paragraph at lines 35--35
 []|\TU/TimesNewRoman(0)/m/n/7.52812 t-36 \TU/SimSun(0)/m/n/7.52812 月 份 末
  []
 
 
-Underfull \hbox (badness 1748) in paragraph at lines 35--35
+Underfull \hbox (badness 1748) in paragraph at lines 37--37
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Percent change in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 \TU/TimesNewRoman(0)/m/n/7.52812 capital expendi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--35
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 []|\TU/SimSun(0)/m/n/7.52812 当 期 与 前 年
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--37
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Growth in long-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--37
-[]|\TU/SimSun(0)/m/n/7.52812 净 经 营 性 资 产
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--37
-[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
-/m/n/7.52812 半 年
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 37--37
-\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
-7.52812 三 季 报 对
  []
 
 
@@ -1917,17 +1890,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 39--39
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Growth in long-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 39--39
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 内  |（至
+[]|\TU/SimSun(0)/m/n/7.52812 净 经 营 性 资 产
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--41
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 idiosyncratic
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
+/m/n/7.52812 半 年
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 39--39
+\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
+7.52812 三 季 报 对
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
@@ -1937,37 +1922,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--41
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 内  |（至
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 idiosyncratic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 \TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--41
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 \TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Industry adjusted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
 []|\TU/SimSun(0)/m/n/7.52812 行 业 调 整 的 资
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
-[]|\TU/SimSun(0)/m/n/7.52812 当 期 与 前 年
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]|\TU/SimSun(0)/m/n/7.52812 当 期 与 滞 后
+[]|\TU/SimSun(0)/m/n/7.52812 当 期 与 前 年
  []
 
 
@@ -1977,59 +1967,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 47--47
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 R&D to market
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
-[]|\TU/SimSun(0)/m/n/7.52812 研 发 支 出 市 值
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 47--47
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
+[]|\TU/SimSun(0)/m/n/7.52812 当 期 与 滞 后
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 R&D to market
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\TU/SimSun(0)/m/n/7.52812 研 发 支 出 市 值
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 49--49
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 49--49
+Underfull \hbox (badness 5756) in paragraph at lines 51--51
 \TU/SimSun(0)/m/n/7.52812 前 为 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 8
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 49--49
+Underfull \hbox (badness 5756) in paragraph at lines 51--51
 \TU/TimesNewRoman(0)/m/n/7.52812 4 \TU/SimSun(0)/m/n/7.52812 个 月 前 为
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-\TU/SimSun(0)/m/n/7.52812 使 用 对 应 数
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 liabilities-to-
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 51--51
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 51--52
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+\TU/SimSun(0)/m/n/7.52812 使 用 对 应 数
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 liabilities-to-
  []
 
 
@@ -2041,11 +2030,6 @@ Underfull \hbox (badness 5331) in paragraph at lines 53--53
 
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Scaled earnings
  []
 
 
@@ -2061,12 +2045,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 57--57
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 operating cash-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
-[]|\TU/SimSun(0)/m/n/7.52812 营 业 现 金 流 价
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Scaled earnings
  []
 
 
@@ -2081,53 +2060,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 operating cash-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\TU/SimSun(0)/m/n/7.52812 营 业 现 金 流 价
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 59--59
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 []|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 \TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 \TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 volatility of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 换 手 率 的
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
@@ -2137,44 +2112,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--67
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 67--67
+\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 volatility of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 换 手 率 的
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 []|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 内  |（至
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Industry adjusted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 \TU/TimesNewRoman(0)/m/n/7.52812 cash-flow-to-price
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 []|\TU/SimSun(0)/m/n/7.52812 行 业 调 整 现 金
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 71--71
+Underfull \hbox (badness 7133) in paragraph at lines 73--73
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Real estate hold-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
-[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
-/m/n/7.52812 半 年
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 71--71
-\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
-7.52812 三 季 报 数
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
@@ -2196,59 +2179,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 75--75
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 earnings-to-price
+[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
+/m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 75--75
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
+Underfull \hbox (badness 3601) in paragraph at lines 75--75
+\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
+7.52812 三 季 报 数
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
-[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 77--77
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 idiosyncratic mo-
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 earnings-to-price
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
-\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
-\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 79--79
+Underfull \hbox (badness 5331) in paragraph at lines 77--77
 []|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
 (0)/m/n/7.52812 月
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 cash-flow-to-price
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 idiosyncratic mo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 81--81
-[]|\TU/SimSun(0)/m/n/7.52812 现 金 流 价 格 比
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
  []
 
 
@@ -2264,12 +2243,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--83
-[]|\TU/SimSun(0)/m/n/7.52812 速 动 比 率 增 长
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 cash-flow-to-price
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 83--83
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
+[]|\TU/SimSun(0)/m/n/7.52812 现 金 流 价 格 比
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 83--83
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
  []
 
 
@@ -2279,13 +2264,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 85--85
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 dividend-to-price
+[]|\TU/SimSun(0)/m/n/7.52812 速 动 比 率 增 长
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 85--85
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
  []
 
 
@@ -2295,66 +2279,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 87--87
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 dividend-to-price
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 87--87
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--89
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 89--89
+Underfull \hbox (badness 3601) in paragraph at lines 91--91
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Change in fore-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []|\TU/SimSun(0)/m/n/7.52812 预 期 每 股 收 益
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 91--91
+Underfull \hbox (badness 5331) in paragraph at lines 93--93
 []|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
 (0)/m/n/7.52812 月
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
-[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 现 金
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 95--95
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
  []
 
 
@@ -2364,7 +2343,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 97--97
-[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 价 格
+[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 现 金
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
  []
 
 
@@ -2380,32 +2364,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 99--99
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 6-month momen-
+[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 价 格
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 存 货
+Underfull \hbox (badness 5331) in paragraph at lines 99--99
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 current ratio
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 6-month momen-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 103--103
-[]|\TU/SimSun(0)/m/n/7.52812 流 动 比 率 增 长
+[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 存 货
  []
 
 
@@ -2420,48 +2400,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 105--105
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 volatility of vol-
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 current ratio
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 105--105
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+[]|\TU/SimSun(0)/m/n/7.52812 流 动 比 率 增 长
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 105--105
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 内  |（至
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 105--106
-[]|\TU/SimSun(0)/m/n/7.52812 每 月 一 次
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-\TU/SimSun(0)/m/n/7.52812 构 投 资 组 合
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Overfull \hbox (0.94336pt too wide) in paragraph at lines 109--109
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 pchgm_pchsale| 
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 volatility of vol-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
-[]|\TU/SimSun(0)/m/n/7.52812 毛 利 率 变 动\TU/TimesNewRoman(0)/m/n/7.52812 %-
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
  []
 
 
-Underfull \hbox (badness 1867) in paragraph at lines 109--109
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 份、| \TU/Times
-NewRoman(0)/m/n/7.52812 t-12
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 内  |（至
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+[]|\TU/SimSun(0)/m/n/7.52812 每 月 一 次
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+\TU/SimSun(0)/m/n/7.52812 构 投 资 组 合
  []
 
 
@@ -2470,82 +2449,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
  []
 
 
+Overfull \hbox (0.94336pt too wide) in paragraph at lines 111--111
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 pchgm_pchsale| 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[]|\TU/SimSun(0)/m/n/7.52812 当 期 与 滞 后
+[]|\TU/SimSun(0)/m/n/7.52812 毛 利 率 变 动\TU/TimesNewRoman(0)/m/n/7.52812 %-
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 111--111
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 份、| \TU/Times
+NewRoman(0)/m/n/7.52812 t-12
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 111--112
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Underfull \hbox (badness 1635) in paragraph at lines 113--113
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 cash flow to debt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-[]|\TU/SimSun(0)/m/n/7.52812 现 金 流 负 债 比
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--115
-[]|\TU/SimSun(0)/m/n/7.52812 增 值 因 子 的 绝
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
+[]|\TU/SimSun(0)/m/n/7.52812 当 期 与 滞 后
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 115--115
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 cash flow to debt
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[]|\TU/SimSun(0)/m/n/7.52812 现 金 流 负 债 比
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
+[]|\TU/SimSun(0)/m/n/7.52812 增 值 因 子 的 绝
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 115--115
+Underfull \hbox (badness 3601) in paragraph at lines 117--117
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
-[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 119--119
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Debt capacity/firm
- []
-
-
-Underfull \hbox (badness 4242) in paragraph at lines 119--119
-[]|\TU/SimSun(0)/m/n/7.52812 偿 债 能 力\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSu
-n(0)/m/n/7.52812 总 资
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 119--119
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
@@ -2554,8 +2527,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
  []
 
 
+Underfull \hbox (badness 1210) in paragraph at lines 121--121
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Debt capacity/firm
+ []
+
+
+Underfull \hbox (badness 4242) in paragraph at lines 121--121
+[]|\TU/SimSun(0)/m/n/7.52812 偿 债 能 力\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSu
+n(0)/m/n/7.52812 总 资
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 121--121
-[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 增 长
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 121--121
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
  []
 
 
@@ -2564,76 +2554,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 123--123
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 增 长
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 125--125
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Forecasted growth
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--123
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
 []|\TU/SimSun(0)/m/n/7.52812 分 析 师 预 测 每
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--123
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
 []|\TU/SimSun(0)/m/n/7.52812 分 析 师 预 测
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 []|\TU/SimSun(0)/m/n/7.52812 无 明 确 说 明
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 |\TU/SimSun(0)/m/n/7.52812 （数 据 起 始
  []
 
 
-Underfull \hbox (badness 4217) in paragraph at lines 125--125
+Underfull \hbox (badness 4217) in paragraph at lines 127--127
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Net operating as-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 125--125
+Underfull \hbox (badness 3601) in paragraph at lines 127--127
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
 []|\TU/SimSun(0)/m/n/7.52812 研 发 成 本 收 入
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 127--127
+Underfull \hbox (badness 5331) in paragraph at lines 129--129
 []|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
 (0)/m/n/7.52812 月
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Profit margin
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--129
-[]|\TU/SimSun(0)/m/n/7.52812 营 业 利 润 增 长
  []
 
 
@@ -2643,65 +2628,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 131--131
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Capital expendi-
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Profit margin
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 131--131
+[]|\TU/SimSun(0)/m/n/7.52812 营 业 利 润 增 长
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Capital expendi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 131--131
+Underfull \hbox (badness 3601) in paragraph at lines 133--133
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 []|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 \TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--133
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 \TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
  []
 
 
-Underfull \hbox (badness 2221) in paragraph at lines 135--135
+Underfull \hbox (badness 2221) in paragraph at lines 137--137
 []|\TU/TimesNewRoman(0)/m/n/7.52812 sales to inventory
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
 []|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 存 货
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
 []|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 135--135
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
@@ -2716,130 +2705,124 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
  []
 
 
-Overfull \hbox (3.03491pt too wide) in paragraph at lines 139--139
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 pchsale_pchinvt| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
-[]|\TU/SimSun(0)/m/n/7.52812 销 售 收 入 变 化
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
-[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
-/m/n/7.52812 半 年
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 139--139
-\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
-7.52812 三 季 报 数
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
-\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
-\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Corporate invest-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
-[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
-/m/n/7.52812 半 年
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 143--143
-\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
-7.52812 三 季 报 数
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Underfull \hbox (badness 1194) in paragraph at lines 145--145
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 12-month momen-
- []
-
-
-Underfull \hbox (badness 5563) in paragraph at lines 145--145
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 t-12 \TU/SimSun(0)/m/n/7.52812 月 份 末
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Dimson \TU/SimSun(0)/m/n/7.52812 调 整
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 149--149
+Underfull \hbox (badness 5331) in paragraph at lines 139--139
 []|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
 (0)/m/n/7.52812 月
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--151
+Overfull \hbox (3.03491pt too wide) in paragraph at lines 141--141
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 pchsale_pchinvt| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+[]|\TU/SimSun(0)/m/n/7.52812 销 售 收 入 变 化
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 151--151
+Underfull \hbox (badness 3601) in paragraph at lines 141--141
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Corporate invest-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
+/m/n/7.52812 半 年
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 145--145
+\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
+7.52812 三 季 报 数
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
+ []
+
+
+Underfull \hbox (badness 1194) in paragraph at lines 147--147
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 12-month momen-
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 147--147
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 t-12 \TU/SimSun(0)/m/n/7.52812 月 份 末
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Dimson \TU/SimSun(0)/m/n/7.52812 调 整
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 151--151
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
@@ -2861,66 +2844,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--155
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
+/m/n/7.52812 半 年
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 155--155
+\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
+7.52812 三 季 报 数
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 157--157
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 157--157
+Underfull \hbox (badness 3601) in paragraph at lines 159--159
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
-[]|\TU/SimSun(0)/m/n/7.52812 分 析 师 人 数 变
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
-[]|\TU/SimSun(0)/m/n/7.52812 本 月 与 三 个
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
-/m/n/7.52812 半 年
+[]|\TU/SimSun(0)/m/n/7.52812 分 析 师 人 数 变
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 161--161
-\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
-7.52812 三 季 报 数
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Overfull \hbox (2.60483pt too wide) in paragraph at lines 163--163
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 pchsale_pchrect| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]|\TU/SimSun(0)/m/n/7.52812 销 售 收 入 变 化
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-\TU/SimSun(0)/m/n/7.52812 减 去 应 收 账 款
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+[]|\TU/SimSun(0)/m/n/7.52812 本 月 与 三 个
  []
 
 
@@ -2941,230 +2909,251 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
+Overfull \hbox (2.60483pt too wide) in paragraph at lines 165--165
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 pchsale_pchrect| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]|\TU/SimSun(0)/m/n/7.52812 销 售 收 入 变 化
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+\TU/SimSun(0)/m/n/7.52812 减 去 应 收 账 款
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
+/m/n/7.52812 半 年
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 165--165
+\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
+7.52812 三 季 报 数
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Industry-adjusted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
+Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
 []|\TU/SimSun(0)/m/n/7.52812 涉 及 股 票 的 分
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
 []|\TU/SimSun(0)/m/n/7.52812 分 析 师 预 测
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--171
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Operating profit
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 171--171
+Underfull \hbox (badness 5331) in paragraph at lines 173--173
 []|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
 (0)/m/n/7.52812 月
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 173--173
+Underfull \hbox (badness 7133) in paragraph at lines 175--175
 []|\TU/TimesNewRoman(0)/m/n/7.52812 square of market
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\TU/SimSun(0)/m/n/7.52812 系 统 性 风 险 的
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 173--173
+Underfull \hbox (badness 1565) in paragraph at lines 175--175
 []|\TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/n/7.52812 月 系 统 性 风 险 的 平
  方  |（系 统 性 风 险 根 据
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 173--173
+Underfull \hbox (badness 1838) in paragraph at lines 175--175
 \TU/TimesNewRoman(0)/m/n/7.52812 11 \TU/SimSun(0)/m/n/7.52812 月 初 到 \TU/TimesNe
 wRoman(0)/m/n/7.52812 t
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 \TU/SimSun(0)/m/n/7.52812 月 末  |（至 少
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 \TU/TimesNewRoman(0)/m/n/7.52812 120 \TU/SimSun(0)/m/n/7.52812 个 交 易
  []
 
 
-Overfull \hbox (5.12279pt too wide) in paragraph at lines 177--177
+Overfull \hbox (5.12279pt too wide) in paragraph at lines 179--179
 []|\TU/TimesNewRoman(0)/m/n/7.52812 pchsale_pchxsga| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 []|\TU/SimSun(0)/m/n/7.52812 销 售 收 入 变 化
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 177--177
+Underfull \hbox (badness 3601) in paragraph at lines 179--179
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--179
-[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 应 收
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--179
-[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
- []
-
-
-Underfull \hbox (badness 5331) in paragraph at lines 179--179
-[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
-(0)/m/n/7.52812 月
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 179--180
-[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
-[]|\TU/SimSun(0)/m/n/7.52812 增 值 因 子 的 波
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Number of earn-
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+[]|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 应 收
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--183
-[]|\TU/SimSun(0)/m/n/7.52812 月 度 净 利 润
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+[]|\TU/SimSun(0)/m/n/7.52812 财 务 流 动
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 185--185
+Underfull \hbox (badness 5331) in paragraph at lines 181--181
 []|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
 (0)/m/n/7.52812 月
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--187
-[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
-/m/n/7.52812 半 年
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]|\TU/SimSun(0)/m/n/7.52812 增 值 因 子 的 波
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 187--187
-\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
-7.52812 三 季 报 数
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Number of earn-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--185
+[]|\TU/SimSun(0)/m/n/7.52812 月 度 净 利 润
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 187--187
+[]|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
+(0)/m/n/7.52812 月
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 187--188
-\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 Industry adjusted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
-\TU/TimesNewRoman(0)/m/n/7.52812 book-to-market
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
-[]|\TU/SimSun(0)/m/n/7.52812 行 业 调 整 账 面
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--193
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 193--193
+Underfull \hbox (badness 3601) in paragraph at lines 189--189
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 Industry adjusted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+\TU/TimesNewRoman(0)/m/n/7.52812 book-to-market
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+[]|\TU/SimSun(0)/m/n/7.52812 行 业 调 整 账 面
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+[]|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
+/m/n/7.52812 半 年
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 195--195
+\TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
+7.52812 三 季 报 数
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+\TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
 []|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
- []
-
-
-Underfull \hbox (badness 5563) in paragraph at lines 195--195
-[]|\TU/TimesNewRoman(0)/m/n/7.52812 t-12 \TU/SimSun(0)/m/n/7.52812 月 份 末
- []
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 195--195
-\TU/SimSun(0)/m/n/7.52812 到 \TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/
-n/7.52812 月 份 末
  []
 
 
@@ -3173,7 +3162,18 @@ Underfull \hbox (badness 5563) in paragraph at lines 197--197
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 1590) in paragraph at lines 197--197
+\TU/SimSun(0)/m/n/7.52812 到 \TU/TimesNewRoman(0)/m/n/7.52812 t \TU/SimSun(0)/m/
+n/7.52812 月 份 末
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 199--199
+[]|\TU/TimesNewRoman(0)/m/n/7.52812 t-12 \TU/SimSun(0)/m/n/7.52812 月 份 末
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Accruals Compo-
  []
 
@@ -3188,78 +3188,78 @@ e=dflt;+dlig;mapping=tex-text;!
 Missing character: There is no △ in font Times New Roman/OT:script=latn;languag
 e=dflt;+dlig;mapping=tex-text;!
 
-Underfull \hbox (badness 4872) in paragraph at lines 199--199
+Underfull \hbox (badness 4872) in paragraph at lines 201--201
 []|\TU/SimSun(0)/m/n/7.52812 增 值 除 以 平 均 资 产 合 计；|  增 值 \TU/TimesNewRoman(0)/m/
 n/7.52812 = |\TU/SimSun(0)/m/n/7.52812 （\TU/TimesNewRoman(0)/m/n/7.52812 △CA-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--199
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 199--199
+Underfull \hbox (badness 3601) in paragraph at lines 201--201
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
-Underfull \hbox (badness 5331) in paragraph at lines 201--201
+Underfull \hbox (badness 5331) in paragraph at lines 203--203
 []|\TU/SimSun(0)/m/n/7.52812 去 年 \TU/TimesNewRoman(0)/m/n/7.52812 12 \TU/SimSun
 (0)/m/n/7.52812 月
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--203
-[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 205--205
+[]|\TU/SimSun(0)/m/n/7.52812 交 易 摩 擦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
 []|\TU/SimSun(0)/m/n/7.52812 营 业 收 入 与 存
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 []|\TU/SimSun(0)/m/n/7.52812 每 季 度 一 次
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 []|\TU/TimesNewRoman(0)/m/n/7.52812 Depreciation /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
 []|\TU/SimSun(0)/m/n/7.52812 年 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)
 /m/n/7.52812 半 年
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 207--207
+Underfull \hbox (badness 3601) in paragraph at lines 209--209
 \TU/SimSun(0)/m/n/7.52812 报\TU/TimesNewRoman(0)/m/n/7.52812 /\TU/SimSun(0)/m/n/
 7.52812 三 季 报 数
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 \TU/SimSun(0)/m/n/7.52812 月 根 据 财 报
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 31--208
+Underfull \hbox (badness 10000) in alignment at lines 33--210
  [] [] [] [] [] [] [] 
  []
 
@@ -3286,7 +3286,7 @@ File: figures/appendix-system/训练流程.png Graphic file (type bmp)
 File: figures/appendix-system/数据流水线.png Graphic file (type bmp)
 <figures/appendix-system/数据流水线.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--317
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
 []|\TU/SimSun(1)/m/n/10.53937 数 据 库 读 取 器
  []
 
