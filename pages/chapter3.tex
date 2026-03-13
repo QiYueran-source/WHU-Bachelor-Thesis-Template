@@ -210,7 +210,7 @@ $A$越大，表明Agent越厌恶风险，越倾向于选择低风险的组合。
 \subsubsection{游戏设定}
 在本研究中，将投资组合决策建模为单步强化学习环境，每一次决策构成一局完整的游戏。
 在该设定下，Agent在观测到因子数据后$obs$后，根据当前策略做出决策$action$，并返回奖励$reward$。
-$reward$由二次效用函数计算得到，记作$reward = \u(obs,action)$
+$reward$由二次效用函数计算得到，记作$reward = u(obs,action)$
 记每局对应一个转移$(obs, action, reward)$。
 
 强化学习的目标为，得到一个策略$\pi$，使得在观察到因子数据$obs$后，
