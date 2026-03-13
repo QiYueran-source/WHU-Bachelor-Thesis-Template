@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  13 MAR 2026 14:06
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.12) (preloaded format=xelatex 2026.3.2)  13 MAR 2026 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1790,7 +1790,6 @@ ine 184.
 
  (pages/chapter5.tex
  5
-Missing character: There is no ， in font txr!
 [24
 
 
@@ -1991,7 +1990,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  45111 strings out of 402987
  1076603 string characters out of 5452872
- 1777892 words of memory out of 5000000
+ 1777894 words of memory out of 5000000
  73063 multiletter control sequences out of 15000+600000
  658209 words of font info for 190 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
