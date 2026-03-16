@@ -1,0 +1,17 @@
+graph TB
+    MB["消息总线<br/>(MessageBus)"]
+    
+    DBLoader["数据库读取器<br/>读取窗口数据→DataFrame→Redis"]
+    Updater["更新器<br/>DataFrame→ym:code数据片"]
+    Monitor["监控器<br/>监控计数器"]
+    
+    DBLoader -->|DataLoaded| MB
+    MB-->|LoadRequest| DBLoader
+    MB -->|DataLoaded| Updater
+    Monitor -->|LoadRequest| MB
+    
+    %% 学术配色方案：使用统一的灰蓝色系
+    style MB fill:#2c3e50,color:#ffffff,stroke:#34495e,stroke-width:2px
+    style DBLoader fill:#ecf0f1,color:#2c3e50,stroke:#bdc3c7,stroke-width:2px
+    style Updater fill:#ecf0f1,color:#2c3e50,stroke:#bdc3c7,stroke-width:2px
+    style Monitor fill:#34495e,color:#ffffff,stroke:#2c3e50,stroke-width:2px
