@@ -1,2 +1,42 @@
 .DS_Store
 NodeForGraduationThesis-master
+
+# Overleaf
+overleaf/
+overleaf.zip
+
+# LaTeX 编译产物（不提交 aux / log / 目录等）
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.fmt
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.xdv
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+
+# biblatex / biber
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# 主文档生成的 PDF（若需保留 figures 等目录下的 .pdf，勿用 *.pdf 通配）
+/main.pdf
+/*.docx
+/*.doc
+/demo.pdf 
+
+# 备份
+pages.bac/
+ref.bac/
+
+
+# 
