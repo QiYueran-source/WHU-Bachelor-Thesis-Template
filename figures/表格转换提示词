@@ -1,8 +1,5 @@
 # 1.分组检验结果
-请处理下方实证表格，严格按要求输出可直接编译的 LaTeX 三线表：
-
-【原始表格】
-（粘贴表格）
+请处理图中实证表格，严格按要求输出可直接编译的 LaTeX 三线表：
 
 规则：
 1. 删除 count 列
@@ -21,6 +18,35 @@
 ...
 ```
 8. 用 booktabs + makecell，输出完整 LaTeX 代码
+
+示例：  
+
+```LaTeX
+{\small
+\begin{table}[htbp]
+  \centering
+  \caption{放松融资融券约束(1)}
+  \label{tab:group_test_relaxed1}
+  \begin{tabularx}{\textwidth}{lCCCCC}
+    \toprule
+    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    \midrule
+    组合1 & \makecell{$-0.021$ \\ $\text{[-0.8728]}$ \\ $\text{(0.3828)}$} & \makecell[c]{\mbox{} \\ $-0.077$ \\ \mbox{}} & \makecell{$-0.036$ \\ $\text{[-1.7]}$ \\ $\text{(0.08921)}$} & \makecell{$-0.032$ \\ $\text{[-1.579]}$ \\ $\text{(0.1144)}$} & \makecell{$-0.029$ \\ $\text{[-1.466]}$ \\ $\text{(0.1428)}$} \\
+    组合2 & \makecell{$0.000$ \\ $\text{[0.3453]}$ \\ $\text{(0.7299)}$} & \makecell[c]{\mbox{} \\ $0.026$ \\ \mbox{}} & \makecell{$-0.010$ \\ $\text{[-1.226]}$ \\ $\text{(0.2202)}$} & \makecell{$-0.009$ \\ $\text{[-1.079]}$ \\ $\text{(0.2807)}$} & \makecell{$-0.006$ \\ $\text{[-0.788]}$ \\ $\text{(0.4307)}$} \\
+    组合3 & \makecell{$0.000$ \\ $\text{[0.272]}$ \\ $\text{(0.7856)}$} & \makecell[c]{\mbox{} \\ $0.021$ \\ \mbox{}} & \makecell{$-0.011^{*}$ \\ $\text{[-2.008]}$ \\ $\text{(0.04468)}$} & \makecell{$-0.010^{*}$ \\ $\text{[-1.869]}$ \\ $\text{(0.06157)}$} & \makecell{$-0.008^{*}$ \\ $\text{[-1.626]}$ \\ $\text{(0.1039)}$} \\
+    组合4 & \makecell{$0.001$ \\ $\text{[0.277]}$ \\ $\text{(0.7818)}$} & \makecell[c]{\mbox{} \\ $0.023$ \\ \mbox{}} & \makecell{$-0.012^{**}$ \\ $\text{[-2.889]}$ \\ $\text{(0.003863)}$} & \makecell{$-0.010^{***}$ \\ $\text{[-2.849]}$ \\ $\text{(0.004382)}$} & \makecell{$-0.009^{**}$ \\ $\text{[-2.44]}$ \\ $\text{(0.01469)}$} \\
+    组合5 & \makecell{$0.000$ \\ $\text{[0.6455]}$ \\ $\text{(0.5186)}$} & \makecell[c]{\mbox{} \\ $0.050$ \\ \mbox{}} & \makecell{$-0.010^{**}$ \\ $\text{[-2.78]}$ \\ $\text{(0.005431)}$} & \makecell{$-0.009^{***}$ \\ $\text{[-2.615]}$ \\ $\text{(0.008911)}$} & \makecell{$-0.008^{**}$ \\ $\text{[-2.375]}$ \\ $\text{(0.01754)}$} \\
+    组合6 & \makecell{$0.000$ \\ $\text{[0.5313]}$ \\ $\text{(0.5952)}$} & \makecell[c]{\mbox{} \\ $0.043$ \\ \mbox{}} & \makecell{$-0.010^{***}$ \\ $\text{[-3.022]}$ \\ $\text{(0.002511)}$} & \makecell{$-0.010^{***}$ \\ $\text{[-2.966]}$ \\ $\text{(0.00302)}$} & \makecell{$-0.008^{***}$ \\ $\text{[-2.657]}$ \\ $\text{(0.007894)}$} \\
+    组合7 & \makecell{$0.001$ \\ $\text{[1.716]}$ \\ $\text{(0.0862)}$} & \makecell[c]{\mbox{} \\ $0.136$ \\ \mbox{}} & \makecell{$-0.006^{*}$ \\ $\text{[-1.748]}$ \\ $\text{(0.0805)}$} & \makecell{$-0.005$ \\ $\text{[-1.665]}$ \\ $\text{(0.09598)}$} & \makecell{$-0.004$ \\ $\text{[-1.158]}$ \\ $\text{(0.2469)}$} \\
+    组合8 & \makecell{$0.082^{**}$ \\ $\text{[2.48]}$ \\ $\text{(0.01312)}$} & \makecell[c]{\mbox{} \\ $0.166$ \\ \mbox{}} & \makecell{$-0.005$ \\ $\text{[-1.698]}$ \\ $\text{(0.08944)}$} & \makecell{$-0.004$ \\ $\text{[-1.519]}$ \\ $\text{(0.1286)}$} & \makecell{$-0.002$ \\ $\text{[-0.9122]}$ \\ $\text{(0.3617)}$} \\
+    组合9 & \makecell{$0.161^{***}$ \\ $\text{[4.093]}$ \\ $\text{(4.249e-05)}$} & \makecell[c]{\mbox{} \\ $0.311$ \\ \mbox{}} & \makecell{$0.003$ \\ $\text{[0.8622]}$ \\ $\text{(0.3886)}$} & \makecell{$0.003$ \\ $\text{[1.147]}$ \\ $\text{(0.2513)}$} & \makecell{$0.000$ \\ $\text{[1.654]}$ \\ $\text{(0.09816)}$} \\
+    \bottomrule
+    \multicolumn{6}{l}{\footnotesize 1. 所有t值计算使用Newy-West标准误；} \\
+    \multicolumn{6}{l}{\footnotesize 2. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。}
+  \end{tabularx}
+\end{table}
+}
+```
 
 # 2.Fama-MacBeth回归结果
 请将下方回归结果转换为标准 LaTeX 学术三线表，严格遵循以下规则：
