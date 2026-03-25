@@ -12,6 +12,14 @@
 5. 列名：分组序号、平均收益率、夏普比率、CAPM-$\\alpha$、FF3-$\\alpha$、FF5-$\\alpha$
 6. 按 p<0.1/*, p<0.05/**, p<0.01/*** 标星号
 7. 单元格格式：\makecell{$val^{**}$ \\ $\text{[t]}$ \\ $\text{(p)}$}
+9. 注释的格式为：
+```LaTeX
+...
+\bottomrule
+\multicolumn{4}{l}{\footnotesize 1. 所有t值计算使用Newy-West标准误；} \\
+\multicolumn{4}{l}{\footnotesize 2. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
+...
+```
 8. 用 booktabs + makecell，输出完整 LaTeX 代码
 
 # 2.Fama-MacBeth回归结果

@@ -96,16 +96,16 @@
 w_{a,s,t+1} \in [0,1]
 \]
 
-如果放松该约束，设定融资融券的比例上线为$L$，则有：
+如果放松该约束，设定融资融券的比例上限为$L_{max}$，则有：
 
 \[
-w_{a,s,t+1} \in [-L, 1+L]
+w_{a,s,t+1} \in [-L_{max}, 1+L_{max}]
 \]
 
 为了实现这一约束，在线性变换后，使用线性放缩的$\mathrm{sigmoid}$函数作为激活函数：
 
 \[
-\mathrm{Sigmoid\_Scaled}(x) = \frac{1}{1+e^{-x}} \cdot (1+2L) - L
+\mathrm{Sigmoid\_Scaled}(x) = \frac{1}{1+e^{-x}} \cdot (1+2L_{max}) - L_{max}
 \]
 
 因此，网络的输出为：
@@ -303,13 +303,14 @@ MLP网络相关参数见表\ref{tab:param-mlp}。
   \centering
   \caption{MLP 与正则化参数}
   \label{tab:param-mlp}
-  \begin{tabularx}{0.85\textwidth}{lXr}
+  \begin{tabularx}{\textwidth}{lXr}
     \toprule
     参数 & 定义 & 取值 \\
     \midrule
     \textbf{m} & 波动率计算窗口 & 12\\
     \textbf{l} & 读取因子数量（掩码长度） & 60 \\
     \textbf{H} & 隐藏层神经元数量 & 64 \\
+    \textbf{$L_{max}$} & 融资融券比例上限 & 0.0 （不允许融资融券） \\
     \textbf{agents} & 投资者数量 & 30 \\
     \textbf{dropout} & 神经元丢弃比例 & 0.25 \\
     \bottomrule
@@ -322,13 +323,13 @@ PPO算法的主要超参数见表\ref{tab:param-ppo}。
   \centering
   \caption{PPO 算法超参数}
   \label{tab:param-ppo}
-  \begin{tabularx}{0.85\textwidth}{lXr}
+  \begin{tabularx}{\textwidth}{lXr}
     \toprule
     参数 & 定义 & 取值 \\
     \midrule
     \textbf{lr} & 学习率 & $5\times 10^{-4}$ \\
     \textbf{$\epsilon$} & 裁剪半径 & $0.2$ \\
-    \textbf{vf\_coef} & 价值损失权重（$c_1$ & $0.5$ \\
+    \textbf{vf\_coef} & 价值损失权重（$c_1$） & $0.5$ \\
     \textbf{ent\_coef} & 熵正则权重（$c_2$） & $0.0$ \\
     \textbf{clip\_grad\_norm} & 梯度裁剪范数 & $0.5$ \\
     \textbf{weight\_decay} & 权重衰减 & $0.1$ \\
@@ -344,7 +345,7 @@ PPO算法的主要超参数见表\ref{tab:param-ppo}。
   \centering
   \caption{风险厌恶系数 $A$ 的分布参数}
   \label{tab:param-A}
-  \begin{tabularx}{0.85\textwidth}{lXr}
+  \begin{tabularx}{\textwidth}{lXr}
     \toprule
     参数 & 定义 & 取值 \\
     \midrule
