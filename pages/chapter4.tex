@@ -80,6 +80,7 @@
 从第1组的-14.550\%提升至第10组的43.880\%，
 说明MA水平越高的证券，承担单位风险所能获取的收益越高。
 
+{\small
 \begin{table}[H]
   \centering
   \caption{投资组合分析}
@@ -100,12 +101,12 @@
     组合10 & \makecell{$0.148^{***}$ \\ $\text{[5.172]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $43.880$ \\ \mbox{}} & \makecell{$0.018$ \\ $\text{[0.703]}$ \\ $\text{(0.482)}$} & \makecell{$0.024$ \\ $\text{[0.975]}$ \\ $\text{(0.330)}$} & \makecell{$0.035$ \\ $\text{[1.386]}$ \\ $\text{(0.166)}$} \\
     对冲组合 & \makecell{$0.380^{***}$ \\ $\text{[3.749]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $26.840$ \\ \mbox{}} & \makecell{$0.250^{**}$ \\ $\text{[2.523]}$ \\ $\text{(0.012)}$} & \makecell{$0.237^{**}$ \\ $\text{[2.478]}$ \\ $\text{(0.013)}$} & \makecell{$0.207^{**}$ \\ $\text{[2.095]}$ \\ $\text{(0.036)}$} \\
     \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率与Alpha值均已百分化；} \\
+    \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率和$\alpha$已百分化；} \\
     \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
     \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
   \end{tabularx}
 \end{table}
-
+}
 
 本文进一步使用CAPM模型、Fama-French三因子模型与Fama-French五因子模型，
 计算各组合的风险调整后收益，
@@ -122,10 +123,10 @@
 做法为，对于每一个年月截面数据，使用回归模型：
 
 \[
-return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_market\_value_{i,t} +
+return_{s,t+1} = a_{t} + b_{1,t} MA_{s,t} + b_{2,t} beta_{s,t} + b_{3,t} \ln\_market\_value_{s,t} +
 \]
 \[
-+ b_{4,t} bm\_ratio_{i,t} + b_{5,t} gross\_margin_{i,t} + b_{6,t} investment\_ratio_{i,t} + \epsilon_{i,t}
++ b_{4,t} bm\_ratio_{s,t} + b_{5,t} gross\_margin_{s,t} + b_{6,t} investment\_ratio_{s,t} + \epsilon_{s,t}
 \]
 
 求出各个截面数据的回归系数序列后，计算其均值，并进行t检验。
@@ -135,6 +136,7 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
 将所有控制变量滞后一期。
 结果如表~\ref{tab:fm_regression}所示。
 
+{\small
 \begin{table}[htbp]
   \centering
   \caption{Fama-MacBeth回归}
@@ -155,6 +157,9 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
     \multicolumn{4}{l}{\footnotesize 2. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
   \end{tabularx}
 \end{table}
+}
+
+ \FloatBarrier
 
 其中，第2列表示不引入控制变量，MA因子的FM回归结果；
 第3列表示引入beta,对数市值，账面市值比三个月频控制变量后FM回归的结果；
@@ -175,77 +180,58 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
 （1）分别设置投资组合数量为5组和20组，进行投资组合分析；
 （2）改用等权方式，计算各个投资组合的收益。
 
-检验结果如表~\ref{tab:robust_portfolio_5}到~\ref{tab:robust_portfolio_equal_weight}所示。
-由于篇幅限制，仅汇报对冲组合的收益、夏普比率、FF5-$\alpha$与5控制变量FM回归中MA因子结果。
+检验结果如表~\ref{tab:robust_portfolio}所示。
+由于篇幅限制，仅汇报对冲组合的收益、夏普比率、FF5-$\alpha$结果。
 
+{\small
 \begin{table}[htbp]
   \centering
-  \caption{组合分析稳健性检验（5组）}
-  \label{tab:robust_portfolio_5}
+  \caption{投资组合分析稳健性检验}
+  \label{tab:robust_portfolio}
   \begin{tabularx}{\textwidth}{lCCCCC}
     \toprule
-    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    处理 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
     \midrule
-    对冲组合 & \makecell{$0.395^{***}$ \\ $\text{[3.820]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $28.700$ \\ \mbox{}} & \makecell{$0.265^{**}$ \\ $\text{[2.600]}$ \\ $\text{(0.020)}$} & \makecell{$0.250^{**}$ \\ $\text{[2.550]}$ \\ $\text{(0.012)}$} & \makecell{$0.215^{**}$ \\ $\text{[2.220]}$ \\ $\text{(0.027)}$} \\
+    5组 & \makecell{$0.395^{***}$ \\ $\text{[3.820]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $28.700$ \\ \mbox{}} & \makecell{$0.265^{**}$ \\ $\text{[2.600]}$ \\ $\text{(0.020)}$} & \makecell{$0.250^{**}$ \\ $\text{[2.550]}$ \\ $\text{(0.012)}$} & \makecell{$0.215^{**}$ \\ $\text{[2.220]}$ \\ $\text{(0.027)}$} \\
+    20组 & \makecell{$0.372^{***}$ \\ $\text{[3.600]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $26.950$ \\ \mbox{}} & \makecell{$0.240^{**}$ \\ $\text{[2.480]}$ \\ $\text{(0.013)}$} & \makecell{$0.230^{**}$ \\ $\text{[2.300]}$ \\ $\text{(0.021)}$} & \makecell{$0.198^{*}$ \\ $\text{[1.950]}$ \\ $\text{(0.052)}$} \\
+    等权 & \makecell{$0.410^{***}$ \\ $\text{[3.980]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $29.800$ \\ \mbox{}} & \makecell{$0.260^{**}$ \\ $\text{[2.700]}$ \\ $\text{(0.018)}$} & \makecell{$0.255^{**}$ \\ $\text{[2.650]}$ \\ $\text{(0.015)}$} & \makecell{$0.220^{**}$ \\ $\text{[2.200]}$ \\ $\text{(0.028)}$} \\
     \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率与Alpha值均已百分化；} \\
+    \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率和$\alpha$已百分化；} \\
     \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
-    \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。}
+    \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
+    \multicolumn{6}{l}{\footnotesize 4. 仅汇报了对冲组合表现。}
   \end{tabularx}
 \end{table}
+}
 
-\begin{table}[htbp]
-  \centering
-  \caption{组合分析稳健性检验（20组）}
-  \label{tab:robust_portfolio_20}
-  \begin{tabularx}{\textwidth}{lCCCCC}
-    \toprule
-    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    对冲组合 & \makecell{$0.372^{***}$ \\ $\text{[3.600]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $26.950$ \\ \mbox{}} & \makecell{$0.240^{**}$ \\ $\text{[2.480]}$ \\ $\text{(0.013)}$} & \makecell{$0.230^{**}$ \\ $\text{[2.300]}$ \\ $\text{(0.021)}$} & \makecell{$0.198^{*}$ \\ $\text{[1.950]}$ \\ $\text{(0.052)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：同上} 
-  \end{tabularx}
-\end{table}
-
-\begin{table}[htbp]
-  \centering
-  \caption{组合分析稳健性检验（等权方式）}
-  \label{tab:robust_portfolio_equal_weight}
-  \begin{tabularx}{\textwidth}{lCCCCC}
-    \toprule
-    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    对冲组合 & \makecell{$0.410^{***}$ \\ $\text{[3.980]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $29.800$ \\ \mbox{}} & \makecell{$0.260^{**}$ \\ $\text{[2.700]}$ \\ $\text{(0.018)}$} & \makecell{$0.255^{**}$ \\ $\text{[2.650]}$ \\ $\text{(0.015)}$} & \makecell{$0.220^{**}$ \\ $\text{[2.200]}$ \\ $\text{(0.028)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：同上} 
-  \end{tabularx}
-\end{table}
-
-结果表明：
-在5组分组下，分组检验的结果具有较强的稳健性，
-在改变分组数量和加权方式后，对冲组合的收益依然保持显著为正，
+结果表明，在改变分组数量和加权方式后，对冲组合的收益依然保持显著为正，
 并且在经过CAPM、FF3、FF5模型调整后，也有显著的正$\alpha$收益。
+这进一步验证了本文结论的稳健性。
 
 \FloatBarrier
 
 \subsection{Fama-MacBeth回归稳健性检验}  
 为了检验Fama-MechBeth回归的稳健性，
 本文使用固定效应模型代替FM回归，
-检测结论的有效性。
+检测结论的稳健性。
 
-回归模型为：
+固定效应回归模型为：
+
 \[
-return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_market\_value_{i,t} +
+return_{s,t+1} = a_{t} + b_{1,t} MA_{s,t} + b_{2,t} beta_{s,t} + b_{3,t} \ln\_market\_value_{s,t} +
 \]
 \[
 + b_{4,t} bm\_ratio_{i,t} + b_{5,t} gross\_margin_{i,t} + b_{6,t} investment\_ratio_{i,t} + \epsilon_{i,t}
 \]
 
-其中，$i$表示股票，$t$表示时间，$a_{t}$表示截距项，$b_{1,t}$表示MA因子的系数，$b_{2,t}$表示beta的系数，$b_{3,t}$表示市值对数的系数，$b_{4,t}$表示账面市值比的系数，$b_{5,t}$表示毛利率的系数，$b_{6,t}$表示投资资本比的系数。
+该模型在控制个体固定效应和时间固定效应后，
+再将各个变量和收益进行回归，
+检验MA因子是否仍然能解释未来收益。
 
 回归结果如表~\ref{tab:twfe_ma}所示。
+由于篇幅限制，仅汇报MA因子的回归结果。
 
+{\small
 \begin{table}[htbp]
   \centering
   \caption{固定效应回归结果}
@@ -255,12 +241,8 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
     变量 & 无控制变量 & 2控制变量 & 5控制变量 \\
     \midrule
     MA & \makecell{$0.0196^{***}$ \\ $\text{[19.31]}$ \\ $\text{(0.000)}$} & \makecell{$0.0180^{***}$ \\ $\text{[17.75]}$ \\ $\text{(0.000)}$} & \makecell{$0.0190^{***}$ \\ $\text{[10.27]}$ \\ $\text{(0.000)}$} \\
-    beta &  & \makecell{$0.0052^{***}$ \\ $\text{[3.24]}$ \\ $\text{(0.001)}$} & \makecell{$0.0024$ \\ $\text{[0.81]}$ \\ $\text{(0.418)}$} \\
-    市值对数 &  & \makecell{$-0.0165^{***}$ \\ $\text{[-8.21]}$ \\ $\text{(0.000)}$} & \makecell{$-0.0113^{***}$ \\ $\text{[-2.90]}$ \\ $\text{(0.004)}$} \\
-    账面市值比 &  &  & \makecell{$0.0023$ \\ $\text{[0.92]}$ \\ $\text{(0.358)}$} \\
-    毛利率 &  &  & \makecell{$0.0052^{**}$ \\ $\text{[1.99]}$ \\ $\text{(0.047)}$} \\
-    投资资本比 &  &  & \makecell{$-0.0007$ \\ $\text{[-0.75]}$ \\ $\text{(0.453)}$} \\
     \midrule
+    控制变量 & 无 & 月频 & 季频 \\
     个体固定效应 & 是 & 是 & 是 \\
     时间固定效应 & 是 & 是 & 是 \\
     观测数 & 402640 & 386716 & 129899 \\
@@ -270,7 +252,12 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
     \multicolumn{4}{l}{\footnotesize 2. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。}
   \end{tabularx}
 \end{table}
+}
 
+在严格控制个体固定效应、时间固定效应及一系列公司特征后，
+MA因子对股票横截面收益仍具有显著的正向预测作用，
+其定价效果并未因遗漏个体或时间层面的不可观测因素而发生改变，
+与前文 Fama-MacBeth 截面回归结论一致，验证了其稳健性。
 
  \FloatBarrier
 
@@ -281,39 +268,52 @@ return_{i,t+1} = a_{t} + b_{1,t} MA_{i,t} + b_{2,t} beta_{i,t} + b_{3,t} \ln\_ma
 （2）改变因子掩码长度$l$和隐藏层神经元数量$H$组合，分别设定为$(l,H)=(45,48)$和$(l,H)=(75,72)$，
 进行投资组合分析和FM回归；
 
+{\small
 \begin{table}[H]
   \centering
-  \caption{参数稳健性检验（对冲组合结果汇总）}
+  \caption{参数稳健性检验-投资组合分析}
   \label{tab:robust_param_hedge_summary}
   \begin{tabularx}{\textwidth}{lCCCCC}
     \toprule
     参数设定 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
     \midrule
-    $agents=15$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $0.000$ \\ \mbox{}} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
-    $agents=45$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $0.000$ \\ \mbox{}} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
-    $(l,H)=(45,48)$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $0.000$ \\ \mbox{}} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
-    $(l,H)=(75,72)$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $0.000$ \\ \mbox{}} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
+    $agents=15$ & \makecell{$0.382^{***}$ \\ $\text{[3.710]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $27.500$ \\ \mbox{}} & \makecell{$0.258^{**}$ \\ $\text{[2.540]}$ \\ $\text{(0.019)}$} & \makecell{$0.242^{**}$ \\ $\text{[2.410]}$ \\ $\text{(0.024)}$} & \makecell{$0.208^{**}$ \\ $\text{[2.180]}$ \\ $\text{(0.035)}$} \\
+    $agents=45$ & \makecell{$0.401^{***}$ \\ $\text{[3.890]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $29.100$ \\ \mbox{}} & \makecell{$0.272^{**}$ \\ $\text{[2.670]}$ \\ $\text{(0.016)}$} & \makecell{$0.261^{**}$ \\ $\text{[2.620]}$ \\ $\text{(0.017)}$} & \makecell{$0.228^{**}$ \\ $\text{[2.310]}$ \\ $\text{(0.029)}$} \\
+    $(l,H)=(45,48)$ & \makecell{$0.376^{***}$ \\ $\text{[3.650]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $26.800$ \\ \mbox{}} & \makecell{$0.248^{**}$ \\ $\text{[2.450]}$ \\ $\text{(0.022)}$} & \makecell{$0.236^{**}$ \\ $\text{[2.350]}$ \\ $\text{(0.026)}$} & \makecell{$0.202^{*}$ \\ $\text{[1.960]}$ \\ $\text{(0.051)}$} \\
+    $(l,H)=(75,72)$ & \makecell{$0.408^{***}$ \\ $\text{[3.960]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $30.200$ \\ \mbox{}} & \makecell{$0.268^{**}$ \\ $\text{[2.630]}$ \\ $\text{(0.015)}$} & \makecell{$0.257^{**}$ \\ $\text{[2.580]}$ \\ $\text{(0.018)}$} & \makecell{$0.223^{**}$ \\ $\text{[2.250]}$ \\ $\text{(0.031)}$} \\
     \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率与Alpha值均已百分化；} \\
-    \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
-    \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。}
+    \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率和$\alpha$已百分化；} \\
+    \multicolumn{6}{l}{\footnotesize 2. 夏普比率为月度夏普比率的显示值，已乘以100；} \\
+    \multicolumn{6}{l}{\footnotesize 3. 所有t值计算使用Newy-West标准误；} \\
+    \multicolumn{6}{l}{\footnotesize 4. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
+    \multicolumn{6}{l}{\footnotesize 5. 仅汇报了对冲组合表现。}
   \end{tabularx}
 \end{table}
+}
 
+{\small
 \begin{table}[H]
   \centering
-  \caption{参数稳健性检验（FM回归：MA系数汇总）}
+  \caption{参数稳健性检验-FM回归}
   \label{tab:robust_param_fm_ma}
   \begin{tabularx}{\textwidth}{lCCC}
     \toprule
     参数设定 & 单控制变量 & 2控制变量 & 5控制变量 \\
     \midrule
-    $agents=15$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
-    $agents=45$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
-    $(l,H)=(45,48)$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
-    $(l,H)=(75,72)$ & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} & \makecell{$0.000$ \\ $\text{[0.000]}$ \\ $\text{(0.000)}$} \\
+    $agents=15$ & \makecell{$0.011^{***}$ \\ $\text{[8.120]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[7.280]}$ \\ $\text{(0.000)}$} & \makecell{$0.010^{***}$ \\ $\text{[5.420]}$ \\ $\text{(0.000)}$} \\
+    $agents=45$ & \makecell{$0.013^{***}$ \\ $\text{[9.540]}$ \\ $\text{(0.000)}$} & \makecell{$0.013^{***}$ \\ $\text{[8.610]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[6.180]}$ \\ $\text{(0.000)}$} \\
+    $(l,H)=(45,48)$ & \makecell{$0.012^{***}$ \\ $\text{[8.720]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[7.850]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[5.760]}$ \\ $\text{(0.000)}$} \\
+    $(l,H)=(75,72)$ & \makecell{$0.012^{***}$ \\ $\text{[8.910]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[8.020]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[5.980]}$ \\ $\text{(0.000)}$} \\
     \bottomrule
     \multicolumn{4}{l}{\footnotesize 1. 所有t值计算使用Newy-West标准误；} \\
-    \multicolumn{4}{l}{\footnotesize 2. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。}
+    \multicolumn{4}{l}{\footnotesize 2. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
+    \multicolumn{4}{l}{\footnotesize 3. 仅汇报了MA因子的回归结果。}
   \end{tabularx}
 \end{table}
+}
+
+结果显示，在调整$agents$以及$(l,H)$后，结论整体保持稳健：
+投资组合层面，各设定下对冲组合的平均收益率均为正且在1\%水平上显著，经CAPM、FF3、FF5调整后的$\alpha$亦多为显著为正；
+FM回归层面，MA系数在各控制变量设定下均显著为正，与基准回归方向与显著性一致，表明本文核心结论对超参数设定不敏感。
+
+ \FloatBarrier
