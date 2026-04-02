@@ -12,7 +12,7 @@
 
 根据上述步骤，可以设计一个Agent投资者的决策和学习过程。
 
-\section{数据输入}
+\subsection{数据输入}
 
 Agent投资者以月度因子数据为输入。
 由于不同特征的量纲、数量级、分布等方面存在明显差异，
@@ -24,7 +24,7 @@ Agent投资者以月度因子数据为输入。
 类似于机器学习中的特征选择方法\cite{breiman2001random}。
 设定Agent$a$只能随机获取88个因子中的$l$个因子，用于分析决策。
 
-\subsubsection{神经网络}
+\subsection{神经网络}
 
 与预测模型不同，Agent的神经网络采用端到端设计，
 无需预测组合未来的收益，而是直接进行决策，决定将多少比例的资金分配给证券。
@@ -53,20 +53,10 @@ $w$表示将对应比例的资金分配给证券，剩余资金分配给无风�
 
 \[u = \mu - \frac{A}{2} \sigma^2\]
 
-具体来说，对于证券$s$，其在$t$期的收益为$r_{s,t}$，
-则对于决策$w_{a,s,t}$，有: 
-
-\[
-return_{a,s,t+1} = w_{a,s,t} \cdot r_{s,t+1} + (1 - w_{a,s,t}) \cdot Risk\_Free\_Rate
-\]
-
-\[
-\bar{return}_{a,s,t} = \frac{1}{m} \sum_{i=t-m+1}^{t} return_{a,s,i}
-\]
-
-\[
-\sigma^2_{a,s,t} = \frac{1}{m} \sum_{i=t-m+1}^{t} \left(return_{a,s,i} - \bar{return}_{a,s,t}\right)^2
-\]
+其中，$\mu$为组合的期望收益，$\sigma^2$为组合的方差,
+$u$为Agent的效用，作为奖励信号，用于更新神经网络参数。
+Agent通过滚动窗口的方式保存$s$和无风险资产构成的组合在过去$m-1$个月的历史表现，
+用于计算组合表现的方差，进而计算二次效用函数。
 
 参数$A$是风险厌恶系数。
 $A$越大，表明Agent越厌恶风险，越倾向于选择低风险的组合。
@@ -79,199 +69,37 @@ $A$越大，表明Agent越厌恶风险，越倾向于选择低风险的组合。
 
 \subsection{强化学习}
 
-\subsubsection{游戏设定}
-参考FinRL框架，Agent执行一个完整的调仓周期视作一局强化学习“游戏”(Episode)。
-在本研究中，Agent获取月度因子，月度调仓，因此将每次独立决策作为一局“游戏”。
+参考FinRL量化强化学习框架的经典设定\cite{liu2021finrl}，
+本文将Agent完成一次完整的调仓周期定义为强化学习的一个回合（\textit{Episode}）。
+在本研究中，Agent以月度频率获取因子数据、执行调仓决策，
+单次月度调仓即为一个完整的决策闭环，因此将单次月度调仓的独立决策过程定义为一个回合。
 
-强化学习的目标为，得到一个策略$\pi$，使得在观察到因子数据$obs$后，
-根据策略$\pi$做出的决策$action$，能够最大化奖励$reward$。
-其中，$reward$由二次效用函数计算得到，记作$reward = u(obs,action)$
-记每局对应一个转移$(obs, action, reward)$。
+强化学习的核心目标，是学习一个最优策略$\pi_\theta$，
+使得Agent在观测到月度因子数据$obs$后，基于该策略输出的单证券投资权重决策$action$，
+能够最大化长期累计奖励。
+其中，单步决策的奖励值$reward$由前文定义的二次效用函数计算得到，
+即$reward = u(obs,action)$；
+$\theta$为策略对应的神经网络参数，也是最终的优化对象。
 
-记策略$\pi = \pi(action|obs)$，表示在$obs$观测下，做出决策$action$的概率。
-则学习目标为：
-
-\[J(\pi) = \mathbb{E}_{obs, action \sim \pi}\big[ reward(obs, action) \big]\]
-
-定义神经网络的参数为$\theta$，则策略$\pi$可以表示为：
-\[\pi_{\theta}(action|obs)\]
-
-优化目标为：
-\[J(\theta) = \mathbb{E}_{obs, action \sim \pi}\big[ reward(obs, action) \big]\]
-
-\subsubsection{PPO算法}
-使用近端策略优化（Proximal Policy Optimization, PPO）算法作为强化学习算法。
-PPO策略由Schulman等\cite{schulman2017proximal}提出，是一种基于策略梯度算法的强化学习算法。
-通过计算新的策略与当前策略的优势更新策略，并且通过限制概率比和裁剪的方式，避免策略更新幅度过大。
-该算法具有较好的收敛性和稳定性，适用于连续动作空间的问题。  
-
-使用Stable-Baselines3(SB3)\cite{raffin2021stable}框架实现PPO算法。
-
-\textbf{（1） Actor-Critic网络：}
-PPO使用Actor-Critic网络优化策略。
-Actor网络用于生成策略，使用前述的神经网络$f$作为Actor网络。
-Actor网络将$f_\theta(obs)$映射为均值为$f_\theta(obs)$，方差为$\sigma^2$的正态分布，
-在以这个分布作为策略$\pi_\theta(action|obs)$，探索动作空间，记为：
-
-\[\pi_\theta(action|obs) \sim \mathcal{N}\big(f_\theta(obs),\sigma^2\big)\]
-
-价值函数$V_\phi(obs)$用于评估当前策略的优劣势，其中，$\phi$为Critic网络的参数。
-用于拟合状态价值函数：
-
-\[V^\pi(obs) = \mathbb{E}{action \sim \pi(\cdot|obs)}\big[ reward(obs, action) \big]\]
-
-Critic学习对上述期望的近似，即$V_\phi(obs) \approx V^\pi(obs)$，
-作为基线，评估实际奖励$reward$与期望奖励$V^\pi(obs)$的差距：
-
-\[\hat{A}(obs, action) = reward(obs, action) - V_\phi(obs)\]
-
-通过不断训练，Critic网络改进对于$reward$的近似，是的后续计算更加准确。
-
-参考FinRL的设计\cite{liu2021finrl}，
-使用与Actor一致的网络作为Critic网络，仅输出层不做激活，
-使得奖励的范围为$(-\infty, +\infty)$。
-
-\textbf{（2）优化目标：}
-PPO的优化目标基于三项损失的和，分别是策略损失、价值损失和熵正则项。
-
-优化策略损失，使得策略朝着奖励增大的方向更新。
-具体来说，给定优势$\hat{A}$，如果$\hat{A} > 0$，则应该提高$\pi_\theta(action|obs)$，
-如果$\hat{A} < 0$，则应该降低$\pi_\theta(action|obs)$。
-定义概率比：
-
-\[ratio(\theta) =  \frac{\pi_\theta(action|obs)}{\pi_{\theta_{\mathrm{old}}}(action|obs)}\]
-
-表示新策略相对旧策略在该$(obs, action)$上的概率密度之比。
-$ratio(\theta)$越大，新策略越倾向做该动作。
-使用概率比和$\hat{A}$的乘积可以衡量策略损失：
-
-\[
-L^{PG}(\theta)
-= \mathbb{E}_{(obs,action,reward) \sim \mathcal{D}} 
-\big[ ratio(\theta) \cdot \hat{A}(obs, action) \big]
-\]
-其中$D$为多局单步游戏收集的$(obs, aciton, reward)$组成的集合。
-设定损失函数为$-L^{PG}(\theta)$。最小化损失函数，即最大化$L^{PG}(\theta)$，
-让$\theta$朝着奖励增大的方向更新。  
-
-为了防止更新幅度过大，定义经过裁剪策略损失：
-
-\[
-L^{\mathrm{CLIP}}(\theta)
-= \mathbb{E}_{(obs,action,reward) \sim \mathcal{D}} 
-\Big[ \min \big( ratio(\theta)\ \cdot \hat{A} \; \operatorname{clip}\big( r(\theta),\, 1-\epsilon,\, 1+\epsilon \big) \big) \Big]
-\]
-
-核心是使用$\operatorname{clip}$函数裁剪$ration$。
-$\epsilon$为裁剪半径，裁剪函数$clip(r(\theta),1-\epsilon,1+\epsilon)$
-将概率比截断在$[1-\epsilon,1+\epsilon]$，以限制更新幅度。
-同理，使用$-L^{\mathrm{CLIP}}(\theta)$作为损失函数。
-
-除了策略项更新，还需要更新Critic网络。定义价值损失：  
-
-\[
-L^{\mathrm{VF}}(\phi)
-= \mathbb{E}_{(obs,action,reward) \sim \mathcal{D}} \Big[ \big( V\phi(obs) - reward \big)^2 \Big].
-\]
-
-价值损失越小，Critic网络拟合的奖励越接近真实奖励，评价效果越好。
-
-
-最后，提供一个熵正则项，用于提高策略的探索性：
-
-\[L^{H}(\theta) = \mathbb{E}_{(obs,action) \sim \mathcal{D}} \big[H(\pi\theta(\cdot|obs)) \big]\]
-
-熵越大，动作分布越均匀，探索越多。
-定义熵正则损失为$-L^{H}(\theta)$，熵正则损失越小，探索性越高。
-
-将三项损失线性相加，得到最终损失：
-
-\[
-\mathcal{L}(\theta, \phi)
-= -L^{\mathrm{CLIP}}(\theta) 
-+ c_1 \cdot \mathcal{L}^{\mathrm{VF}}(\phi) - c_2 \cdot L^{H}(\theta)
-\]
-
-优化最终损失$\mathcal{L}(\theta, \phi)$，
-可以使得策略朝着奖励增大的方向更新，
-同时保持策略的探索性。
-
-最后，为了避免过拟合，对模型进行正则化处理：
-\texttt{clip\_grad\_norm} 对梯度范数进行裁剪，防止梯度爆炸、保证更新稳定；  
-\texttt{weight\_decay} 对权重施加 $L^2$ 惩罚，抑制权重过大、减轻过拟合。  
+本文使用近端策略优化（Proximal Policy Optimization, PPO）
+算法作为强化学习算法。PPO由Schulman等\cite{schulman2017proximal}提出，
+是一种基于策略梯度的经典强化学习算法，通过计算新策略与当前策略的优势函数更新策略，
+并通过限制概率比与裁剪的方式避免策略更新幅度过大，具有较好的收敛性与稳定性，
+其连续动作空间的特性也完全适配本研究中投资权重的连续取值需求。
+算法的具体实现使用Stable-Baselines3(SB3)\cite{raffin2021stable}框架，
+详细的损失函数推导与超参数设置见附录B。
 
 \subsection{滚动窗口}
-参考唐国豪\cite{唐国豪2025投资者预期协同}，FinRL\cite{liu2021finrl}等做法，
-使用滚动窗口的方式训练Agent，同时收集数据，用于后续研究。  
+参考唐国豪\cite{唐国豪2025投资者预期协同}、FinRL框架\cite{liu2021finrl}的经典实证做法，
+本文采用滚动窗口的方式完成Agent的训练与决策数据收集，
+以规避使用未来信息、保证研究的实证严谨性。
 
-对于每一期$t$，获取所有证券的特征$features_{a,s,t}$，
-用于计算下一期的决策$w_{a,s,t+1}$，并完成学习。
-在完成窗口内全部证券的决策和训练后，滚动到$t+1$期，重复上述过程。
-
-
-\subsection{参数设置}  
-本文的核心参数设置如下。
-
-MLP网络相关参数见表\ref{tab:param-mlp}。
-其中，证券组合的证券数$n$取1，即每次只决策一个证券，
-与后文为单个证券计算预期共识的设定保持一致。
-
-\begin{table}[H]
-  \centering
-  \caption{MLP 与正则化参数}
-  \label{tab:param-mlp}
-  \begin{tabularx}{\textwidth}{lXr}
-    \toprule
-    参数 & 定义 & 取值 \\
-    \midrule
-    \textbf{m} & 波动率计算窗口 & 12\\
-    \textbf{l} & 读取因子数量（掩码长度） & 60 \\
-    \textbf{H} & 隐藏层神经元数量 & 64 \\
-    \textbf{$L_{max}$} & 融资融券比例上限 & 0.0 （不允许融资融券） \\
-    \textbf{agents} & 投资者数量 & 30 \\
-    \textbf{dropout} & 神经元丢弃比例 & 0.25 \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
-
-PPO算法的主要超参数见表\ref{tab:param-ppo}。
-
-\begin{table}[H]
-  \centering
-  \caption{PPO 算法超参数}
-  \label{tab:param-ppo}
-  \begin{tabularx}{\textwidth}{lXr}
-    \toprule
-    参数 & 定义 & 取值 \\
-    \midrule
-    \textbf{lr} & 学习率 & $5\times 10^{-4}$ \\
-    \textbf{$\epsilon$} & 裁剪半径 & $0.2$ \\
-    \textbf{vf\_coef} & 价值损失权重（$c_1$） & $0.5$ \\
-    \textbf{ent\_coef} & 熵正则权重（$c_2$） & $0.0$ \\
-    \textbf{clip\_grad\_norm} & 梯度裁剪范数 & $0.5$ \\
-    \textbf{weight\_decay} & 权重衰减 & $0.1$ \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
-
-奖励函数的风险厌恶系数参数$A$见表\ref{tab:param-A}。
-该设定使 $A$ 取值集中在 $[2,8]$ 附近，具有右偏、厚尾特征，用于刻画投资者风险厌恶的异质性；
-每个 Agent 独立从该分布采样一个 $A$ 并用于计算效用与奖励。
-
-\begin{table}[H]
-  \centering
-  \caption{风险厌恶系数 $A$ 的分布参数}
-  \label{tab:param-A}
-  \begin{tabularx}{\textwidth}{lXr}
-    \toprule
-    参数 & 定义 & 取值 \\
-    \midrule
-    \textbf{$\mu_A$} & A的对数均值 & $1$ \\
-    \textbf{$\sigma_A^2$} & A的对数方差 & $0.16$ \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
-
+具体执行逻辑为：对于每一期$t$，
+仅使用$t$期及之前的历史数据，获取所有证券的特征$features_{a,s,t}$，
+用于计算$t+1$期的投资决策权重$w_{a,s,t+1}$，
+并基于$t+1$期的真实收益完成模型学习与参数更新；
+在完成当期全部证券的决策与训练后，
+窗口向前滚动至$t+1$期，重复上述流程直至样本期末。
 
 \section{指标设计}
 为了刻画Agent投资者的预期共识效应，
