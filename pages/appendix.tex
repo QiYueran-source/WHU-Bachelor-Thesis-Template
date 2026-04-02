@@ -469,76 +469,41 @@ L^{\mathrm{VF}}(\phi)
 \texttt{weight\_decay} 对权重施加 $L^2$ 惩罚，抑制权重过大、减轻过拟合。
 
 \subsection{参数设置}  
-本文的核心参数设置如下。
-
-MLP网络相关参数见表\ref{tab:param-mlp}。
-其中，证券组合的证券数$n$取1，即每次只决策一个证券，
-与后文为单个证券计算预期共识的设定保持一致。
+本文的核心参数设置如表\ref{tab:params_all}所示。
 
 \begin{table}[H]
-  \centering
-  \caption{MLP 与正则化参数}
-  \label{tab:param-mlp}
-  \begin{tabularx}{\textwidth}{lXr}
-    \toprule
-    参数 & 定义 & 取值 \\
-    \midrule
-    \textbf{m} & 波动率计算窗口 & 12\\
-    \textbf{l} & 读取因子数量（掩码长度） & 60 \\
-    \textbf{H} & 隐藏层神经元数量 & 64 \\
-    \textbf{$L_{max}$} & 融资融券比例上限 & 0.0 （不允许融资融券） \\
-    \textbf{agents} & 投资者数量 & 30 \\
-    \textbf{dropout} & 神经元丢弃比例 & 0.25 \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
-
-PPO算法的主要超参数见表\ref{tab:param-ppo}。
-
-\begin{table}[H]
-  \centering
-  \caption{PPO 算法超参数}
-  \label{tab:param-ppo}
-  \begin{tabularx}{\textwidth}{lXr}
-    \toprule
-    参数 & 定义 & 取值 \\
-    \midrule
-    \textbf{lr} & 学习率 & $5\times 10^{-4}$ \\
-    \textbf{$\epsilon$} & 裁剪半径 & $0.2$ \\
-    \textbf{vf\_coef} & 价值损失权重（$c_1$） & $0.5$ \\
-    \textbf{ent\_coef} & 熵正则权重（$c_2$） & $0.0$ \\
-    \textbf{clip\_grad\_norm} & 梯度裁剪范数 & $0.5$ \\
-    \textbf{weight\_decay} & 权重衰减 & $0.1$ \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
-
-奖励函数的风险厌恶系数参数$A$见表\ref{tab:param-A}。
-该设定使 $A$ 取值集中在 $[2,8]$ 附近，具有右偏、厚尾特征，用于刻画投资者风险厌恶的异质性；
-每个 Agent 独立从该分布采样一个 $A$ 并用于计算效用与奖励。
-
-\begin{table}[H]
-  \centering
-  \caption{风险厌恶系数 $A$ 的分布参数}
-  \label{tab:param-A}
-  \begin{tabularx}{\textwidth}{lXr}
-    \toprule
-    参数 & 定义 & 取值 \\
-    \midrule
-    \textbf{$\mu_A$} & A的对数均值 & $1$ \\
-    \textbf{$\sigma_A^2$} & A的对数方差 & $0.16$ \\
-    \bottomrule
-  \end{tabularx}
-\end{table}
-
-
-
-
-
-
-
-
-
+    \centering
+    \caption{模型参数与超参数设定}
+    \label{tab:params_all}
+    \begin{tabularx}{\textwidth}{lXr}
+      \toprule
+      参数 & 定义 & 取值 \\
+      \midrule
+      \multicolumn{3}{l}{\textbf{Panel A: MLP 与正则化参数}} \\
+      \midrule
+      \textbf{m} & 波动率计算窗口 & 12\\
+      \textbf{l} & 读取因子数量（掩码长度） & 60 \\
+      \textbf{H} & 隐藏层神经元数量 & 64 \\
+      \textbf{$L_{max}$} & 融资融券比例上限 & 0.0 （不允许融资融券） \\
+      \textbf{agents} & 投资者数量 & 30 \\
+      \textbf{dropout} & 神经元丢弃比例 & 0.25 \\
+      \midrule
+      \multicolumn{3}{l}{\textbf{Panel B: PPO 算法超参数}} \\
+      \midrule
+      \textbf{lr} & 学习率 & $5\times 10^{-4}$ \\
+      \textbf{$\epsilon$} & 裁剪半径 & $0.2$ \\
+      \textbf{vf\_coef} & 价值损失权重（$c_1$） & $0.5$ \\
+      \textbf{ent\_coef} & 熵正则权重（$c_2$） & $0.0$ \\
+      \textbf{clip\_grad\_norm} & 梯度裁剪范数 & $0.5$ \\
+      \textbf{weight\_decay} & 权重衰减 & $0.1$ \\
+      \midrule
+      \multicolumn{3}{l}{\textbf{Panel C: 风险厌恶系数 $A$ 的分布参数}} \\
+      \midrule
+      \textbf{$\mu_A$} & $A$的对数均值 & $1$ \\
+      \textbf{$\sigma_A^2$} & $A$的对数方差 & $0.16$ \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
 
 
 
