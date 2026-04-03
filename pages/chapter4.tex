@@ -20,14 +20,15 @@
   \centering
   \caption{描述性统计}
   \label{tab:descriptive_stats}
-  
-  % Panel A: 均值、标准差等
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrr}
+
+  \newcolumntype{C}{>{\centering\arraybackslash}X}
+
+  \begin{tabularx}{\textwidth}{l C C C C}
     \toprule
-    \multicolumn{5}{c}{\footnotesize\textbf{Panel A: 集中趋势与离散程度}} \\
-    \midrule
-    变量 & 观测数 & 缺失数 & 均值 & 标准差 \\
-    \midrule
+    & \multicolumn{4}{c}{\textbf{Panel A: 集中趋势与离散程度}} \\ % 关键！只在数据区居中
+    \cmidrule(lr){2-5}
+      & 观测数 & 缺失数 & 均值 & 标准差 \\
+    \cmidrule(lr){2-5}
     MA & 402640 & 0 & 0.669 & 0.114 \\
     月收益率 & 402640 & 0 & 0.004 & 0.135 \\
     beta & 998924 & 1076 & 1.111 & 5.738 \\
@@ -35,16 +36,15 @@
     账面市值比 & 325753 & 674247 & 0.651 & 0.264 \\
     毛利率 & 318602 & 681398 & 0.265 & 3.826 \\
     投资比率 & 402584 & 597416 & 0.943 & 0.103 \\
-  \end{tabular*}
+  \end{tabularx}
 
   \vspace{1em}
 
-  % Panel B: 分位数
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrr}
-    \multicolumn{6}{c}{\footnotesize\textbf{Panel B: 分位数分布}} \\
-    \midrule
-    变量 & 最小值 & 25\%分位数 & 50\%分位数 & 75\%分位数 & 最大值 \\
-    \midrule
+  \begin{tabularx}{\textwidth}{l C C C C C}
+    & \multicolumn{5}{c}{\textbf{Panel B: 分位数分布}} \\ % 关键！只在数据区居中
+    \cmidrule(lr){2-6}
+      & 最小值 & 25\%分位 & 50\%分位 & 75\%分位 & 最大值 \\
+    \cmidrule(lr){2-6}
     MA & 0.054 & 0.597 & 0.682 & 0.753 & 1.000 \\
     月收益率 & -0.837 & -0.066 & -0.003 & 0.061 & 4.153 \\
     beta & -2376.667 & 0.728 & 1.101 & 1.478 & 2540.833 \\
@@ -53,7 +53,7 @@
     毛利率 & -2137.804 & 0.151 & 0.245 & 0.371 & 2.161 \\
     投资比率 & -0.311 & 0.935 & 0.990 & 1.000 & 1.233 \\
     \bottomrule
-  \end{tabular*}
+  \end{tabularx}
 \end{table}
 }
 
@@ -244,9 +244,9 @@ MA指标对于未来的收益具有显著的正向影响，
     \toprule
     处理 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
     \midrule
-    5组 & \makecell{$0.395^{***}$ \\ $\text{[3.820]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $28.700$ \\ \mbox{}} & \makecell{$0.265^{**}$ \\ $\text{[2.600]}$ \\ $\text{(0.020)}$} & \makecell{$0.250^{**}$ \\ $\text{[2.550]}$ \\ $\text{(0.012)}$} & \makecell{$0.215^{**}$ \\ $\text{[2.220]}$ \\ $\text{(0.027)}$} \\
-    20组 & \makecell{$0.372^{***}$ \\ $\text{[3.600]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $26.950$ \\ \mbox{}} & \makecell{$0.240^{**}$ \\ $\text{[2.480]}$ \\ $\text{(0.013)}$} & \makecell{$0.230^{**}$ \\ $\text{[2.300]}$ \\ $\text{(0.021)}$} & \makecell{$0.198^{*}$ \\ $\text{[1.950]}$ \\ $\text{(0.052)}$} \\
-    等权 & \makecell{$0.410^{***}$ \\ $\text{[3.980]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $29.800$ \\ \mbox{}} & \makecell{$0.260^{**}$ \\ $\text{[2.700]}$ \\ $\text{(0.018)}$} & \makecell{$0.255^{**}$ \\ $\text{[2.650]}$ \\ $\text{(0.015)}$} & \makecell{$0.220^{**}$ \\ $\text{[2.200]}$ \\ $\text{(0.028)}$} \\
+    5组 & \makecell{$0.580^{***}$ \\ $\text{[3.497]}$ \\ $\text{(0.000)}$} & \makecell{\mbox{} \\ $26.130$ \\ \mbox{}} & \makecell{$0.449^{***}$ \\ $\text{[2.785]}$ \\ $\text{(0.005)}$} & \makecell{$0.423^{***}$ \\ $\text{[2.758]}$ \\ $\text{(0.006)}$} & \makecell{$0.386^{**}$ \\ $\text{[2.490]}$ \\ $\text{(0.012)}$} \\
+    20组 & \makecell{$0.226^{***}$ \\ $\text{[3.734]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $27.300$ \\ \mbox{}} & \makecell{$0.096$ \\ $\text{[1.569]}$ \\ $\text{(0.116)}$} & \makecell{$0.081$ \\ $\text{[1.412]}$ \\ $\text{(0.156)}$} & \makecell{$0.075^{*}$ \\ $\text{[1.251]}$ \\ $\text{(0.211)}$} \\
+    等权 & \makecell{$4.429^{***}$ \\ $\text{[8.691]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $96.010$ \\ \mbox{}} & \makecell{$4.220^{**}$ \\ $\text{[8.370]}$ \\ $\text{(0.018)}$} & \makecell{$4.277^{***}$ \\ $\text{[8.476]}$ \\ $\text{(0.000)}$} & \makecell{$4.272^{***}$ \\ $\text{[8.451]}$ \\ $\text{(0.000)}$} \\
     \bottomrule
     \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率和$\alpha$已百分化；} \\
     \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
@@ -294,7 +294,7 @@ return_{s,t+1} = a_{t} + b_{1,t} MA_{s,t} + b_{2,t} beta_{s,t} + b_{3,t} \ln\_ma
     \midrule
     MA & \makecell{$0.0196^{***}$ \\ $\text{[19.31]}$ \\ $\text{(0.000)}$} & \makecell{$0.0180^{***}$ \\ $\text{[17.75]}$ \\ $\text{(0.000)}$} & \makecell{$0.0190^{***}$ \\ $\text{[10.27]}$ \\ $\text{(0.000)}$} \\
     \midrule
-    控制变量 & 无 & 月频 & 季频 \\
+    控制变量 & 无 & 月频 & 月频和季频 \\
     个体固定效应 & 是 & 是 & 是 \\
     时间固定效应 & 是 & 是 & 是 \\
     观测数 & 402640 & 386716 & 129899 \\
@@ -323,44 +323,48 @@ MA因子对股票横截面收益仍具有显著的正向预测作用，
 {\small
 \begin{table}[H]
   \centering
-  \caption{参数稳健性检验-投资组合分析}
-  \label{tab:robust_param_hedge_summary}
-  \begin{tabularx}{\textwidth}{lCCCCC}
-    \toprule
-    参数设定 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    $agents=15$ & \makecell{$0.382^{***}$ \\ $\text{[3.710]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $27.500$ \\ \mbox{}} & \makecell{$0.258^{**}$ \\ $\text{[2.540]}$ \\ $\text{(0.019)}$} & \makecell{$0.242^{**}$ \\ $\text{[2.410]}$ \\ $\text{(0.024)}$} & \makecell{$0.208^{**}$ \\ $\text{[2.180]}$ \\ $\text{(0.035)}$} \\
-    $agents=45$ & \makecell{$0.401^{***}$ \\ $\text{[3.890]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $29.100$ \\ \mbox{}} & \makecell{$0.272^{**}$ \\ $\text{[2.670]}$ \\ $\text{(0.016)}$} & \makecell{$0.261^{**}$ \\ $\text{[2.620]}$ \\ $\text{(0.017)}$} & \makecell{$0.228^{**}$ \\ $\text{[2.310]}$ \\ $\text{(0.029)}$} \\
-    $(l,H)=(45,48)$ & \makecell{$0.376^{***}$ \\ $\text{[3.650]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $26.800$ \\ \mbox{}} & \makecell{$0.248^{**}$ \\ $\text{[2.450]}$ \\ $\text{(0.022)}$} & \makecell{$0.236^{**}$ \\ $\text{[2.350]}$ \\ $\text{(0.026)}$} & \makecell{$0.202^{*}$ \\ $\text{[1.960]}$ \\ $\text{(0.051)}$} \\
-    $(l,H)=(75,72)$ & \makecell{$0.408^{***}$ \\ $\text{[3.960]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $30.200$ \\ \mbox{}} & \makecell{$0.268^{**}$ \\ $\text{[2.630]}$ \\ $\text{(0.015)}$} & \makecell{$0.257^{**}$ \\ $\text{[2.580]}$ \\ $\text{(0.018)}$} & \makecell{$0.223^{**}$ \\ $\text{[2.250]}$ \\ $\text{(0.031)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：1. 所有收益率和$\alpha$已百分化；} \\
-    \multicolumn{6}{l}{\footnotesize 2. 夏普比率为月度夏普比率的显示值，已乘以100；} \\
-    \multicolumn{6}{l}{\footnotesize 3. 所有t值计算使用Newy-West标准误；} \\
-    \multicolumn{6}{l}{\footnotesize 4. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
-    \multicolumn{6}{l}{\footnotesize 5. 仅汇报了对冲组合表现。}
-  \end{tabularx}
-\end{table}
-}
+  \caption{参数稳健性检验结果}
+  \label{tab:robust_param_all}
+  % 定义居中对齐的等宽列
+  \newcolumntype{C}{>{\centering\arraybackslash}X}
 
-{\small
-\begin{table}[H]
-  \centering
-  \caption{参数稳健性检验-FM回归}
-  \label{tab:robust_param_fm_ma}
-  \begin{tabularx}{\textwidth}{lCCC}
+  % ========== Panel A: 投资组合分析（独立子表，5数据列） ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
     \toprule
-    参数设定 & 单控制变量 & 2控制变量 & 5控制变量 \\
-    \midrule
-    $agents=15$ & \makecell{$0.011^{***}$ \\ $\text{[8.120]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[7.280]}$ \\ $\text{(0.000)}$} & \makecell{$0.010^{***}$ \\ $\text{[5.420]}$ \\ $\text{(0.000)}$} \\
-    $agents=45$ & \makecell{$0.013^{***}$ \\ $\text{[9.540]}$ \\ $\text{(0.000)}$} & \makecell{$0.013^{***}$ \\ $\text{[8.610]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[6.180]}$ \\ $\text{(0.000)}$} \\
-    $(l,H)=(45,48)$ & \makecell{$0.012^{***}$ \\ $\text{[8.720]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[7.850]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[5.760]}$ \\ $\text{(0.000)}$} \\
-    $(l,H)=(75,72)$ & \makecell{$0.012^{***}$ \\ $\text{[8.910]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[8.020]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[5.980]}$ \\ $\text{(0.000)}$} \\
-    \bottomrule
-    \multicolumn{4}{l}{\footnotesize 1. 所有t值计算使用Newy-West标准误；} \\
-    \multicolumn{4}{l}{\footnotesize 2. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；} \\
-    \multicolumn{4}{l}{\footnotesize 3. 仅汇报了MA因子的回归结果。}
+    & \multicolumn{5}{c}{\textbf{Panel A: 投资组合分析}} \\
+    \cmidrule(lr){2-6}
+    参数设定 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    \cmidrule(lr){2-6}
+    $agents=15$       & \makecell{$0.382^{***}$ \\ $\text{[3.710]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $27.500$ \\} & \makecell{$0.258^{**}$ \\ $\text{[2.540]}$ \\ $\text{(0.019)}$} & \makecell{$0.242^{**}$ \\ $\text{[2.410]}$ \\ $\text{(0.024)}$} & \makecell{$0.208^{**}$ \\ $\text{[2.180]}$ \\ $\text{(0.035)}$} \\
+    $agents=45$       & \makecell{$0.401^{***}$ \\ $\text{[3.890]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $29.100$ \\} & \makecell{$0.272^{**}$ \\ $\text{[2.670]}$ \\ $\text{(0.016)}$} & \makecell{$0.261^{**}$ \\ $\text{[2.620]}$ \\ $\text{(0.017)}$} & \makecell{$0.228^{**}$ \\ $\text{[2.310]}$ \\ $\text{(0.029)}$} \\
+    $(l,H)=(45,48)$   & \makecell{$0.376^{***}$ \\ $\text{[3.650]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $26.800$ \\} & \makecell{$0.248^{**}$ \\ $\text{[2.450]}$ \\ $\text{(0.022)}$} & \makecell{$0.236^{**}$ \\ $\text{[2.350]}$ \\ $\text{(0.026)}$} & \makecell{$0.202^{*}$ \\ $\text{[1.960]}$ \\ $\text{(0.051)}$} \\
+    $(l,H)=(75,72)$   & \makecell{$0.408^{***}$ \\ $\text{[3.960]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $30.200$ \\} & \makecell{$0.268^{**}$ \\ $\text{[2.630]}$ \\ $\text{(0.015)}$} & \makecell{$0.257^{**}$ \\ $\text{[2.580]}$ \\ $\text{(0.018)}$} & \makecell{$0.223^{**}$ \\ $\text{[2.250]}$ \\ $\text{(0.031)}$} \\
   \end{tabularx}
+
+  \vspace{1em} % 两个子表之间的间距，可微调
+
+  % ========== Panel B: Fama-MacBeth 回归（独立子表，3数据列） ==========
+  \begin{tabularx}{\textwidth}{l C C C}
+    & \multicolumn{3}{c}{\textbf{Panel B: Fama-MacBeth 回归（MA因子）}} \\
+    \cmidrule(lr){2-4}
+    参数设定 & 单控制变量 & 2控制变量 & 5控制变量 \\
+    \cmidrule(lr){2-4}
+    $agents=15$       & \makecell{$0.011^{***}$ \\ $\text{[8.120]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[7.280]}$ \\ $\text{(0.000)}$} & \makecell{$0.010^{***}$ \\ $\text{[5.420]}$ \\ $\text{(0.000)}$} \\
+    $agents=45$       & \makecell{$0.013^{***}$ \\ $\text{[9.540]}$ \\ $\text{(0.000)}$} & \makecell{$0.013^{***}$ \\ $\text{[8.610]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[6.180]}$ \\ $\text{(0.000)}$} \\
+    $(l,H)=(45,48)$   & \makecell{$0.012^{***}$ \\ $\text{[8.720]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[7.850]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[5.760]}$ \\ $\text{(0.000)}$} \\
+    $(l,H)=(75,72)$   & \makecell{$0.012^{***}$ \\ $\text{[8.910]}$ \\ $\text{(0.000)}$} & \makecell{$0.012^{***}$ \\ $\text{[8.020]}$ \\ $\text{(0.000)}$} & \makecell{$0.011^{***}$ \\ $\text{[5.980]}$ \\ $\text{(0.000)}$} \\
+    \bottomrule
+  \end{tabularx}
+
+  % ========== 统一注释（放在两个子表下方，左对齐） ==========
+  \vspace{0.5em}
+  \begin{minipage}{\textwidth}
+  \footnotesize
+  注：1. 所有收益率与$\alpha$已百分化，月度夏普比率显示值已乘以100；\\
+  \quad\ 2. 所有$t$值采用Newey-West标准误；\\
+  \quad\ 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$；\\
+  \quad\ 4. 投资组合分析仅汇报对冲组合，FM回归仅汇报MA因子系数。
+  \end{minipage}
 \end{table}
 }
 

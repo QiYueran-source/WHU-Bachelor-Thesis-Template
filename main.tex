@@ -15,6 +15,7 @@
 \usepackage{placeins} % 控制浮动体位置（\FloatBarrier）
 \usepackage{tabularx} % 表格统一宽度
 \newcolumntype{C}{>{\centering\arraybackslash}X} % 居中伸缩列，表头与正文对齐
+\newcolumntype{Y}{>{\raggedright\arraybackslash}p{3.55cm}} % 描述性统计等：首列变量名固定宽度（略窄以配合 tabular* 避免溢出）
 \usepackage{longtable} % 长表格
 \usepackage{amsmath}     % 数学公式（必须，处理指数/下标）
 \usepackage{ctex}        % 中文支持（如需中文则加，否则删除）
