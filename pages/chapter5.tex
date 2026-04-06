@@ -27,44 +27,51 @@
 {\small
 \begin{table}[!htbp]
   \centering
-  \caption{投资组合分析-可融资融券}
-  \label{tab:mech_group_can_short}
-  \begin{tabularx}{\textwidth}{lCCCCC}
-    \toprule
-    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    组合1 & \makecell{$-0.038^{**}$ \\ $\text{[-2.169]}$ \\ $\text{(0.030)}$} & \makecell[c]{\mbox{} \\ $-1.600$ \\ \mbox{}} & \makecell{$-0.052^{***}$ \\ $\text{[-3.316]}$ \\ $\text{(0.001)}$} & \makecell{$-0.046^{***}$ \\ $\text{[-3.007]}$ \\ $\text{(0.003)}$} & \makecell{$-0.040^{***}$ \\ $\text{[-2.575]}$ \\ $\text{(0.010)}$} \\
-    组合2 & \makecell{$0.000$ \\ $\text{[0.001]}$ \\ $\text{(0.999)}$} & \makecell[c]{\mbox{} \\ $0.900$ \\ \mbox{}} & \makecell{$-0.015$ \\ $\text{[-1.053]}$ \\ $\text{(0.292)}$} & \makecell{$-0.012$ \\ $\text{[-0.845]}$ \\ $\text{(0.398)}$} & \makecell{$-0.007$ \\ $\text{[-0.525]}$ \\ $\text{(0.600)}$} \\
-    组合3 & \makecell{$0.145$ \\ $\text{[1.071]}$ \\ $\text{(0.284)}$} & \makecell[c]{\mbox{} \\ $85.400$ \\ \mbox{}} & \makecell{$-0.006$ \\ $\text{[-0.052]}$ \\ $\text{(0.958)}$} & \makecell{$0.004$ \\ $\text{[0.033]}$ \\ $\text{(0.974)}$} & \makecell{$0.040$ \\ $\text{[0.387]}$ \\ $\text{(0.699)}$} \\
-    组合4 & \makecell{$0.279^{**}$ \\ $\text{[2.318]}$ \\ $\text{(0.020)}$} & \makecell[c]{\mbox{} \\ $19.600$ \\ \mbox{}} & \makecell{$0.127$ \\ $\text{[1.350]}$ \\ $\text{(0.177)}$} & \makecell{$0.151$ \\ $\text{[1.592]}$ \\ $\text{(0.111)}$} & \makecell{$0.194^{**}$ \\ $\text{[2.087]}$ \\ $\text{(0.037)}$} \\
-    组合5 & \makecell{$0.390^{***}$ \\ $\text{[4.523]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $35.300$ \\ \mbox{}} & \makecell{$0.247^{***}$ \\ $\text{[3.492]}$ \\ $\text{(0.000)}$} & \makecell{$0.263^{***}$ \\ $\text{[3.976]}$ \\ $\text{(0.000)}$} & \makecell{$0.293^{***}$ \\ $\text{[4.280]}$ \\ $\text{(0.000)}$} \\
-    对冲组合 & \makecell{$0.766^{***}$ \\ $\text{[5.898]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $45.000$ \\ \mbox{}} & \makecell{$0.639^{***}$ \\ $\text{[4.990]}$ \\ $\text{(0.000)}$} & \makecell{$0.601^{***}$ \\ $\text{[4.706]}$ \\ $\text{(0.000)}$} & \makecell{$0.572^{***}$ \\ $\text{[4.411]}$ \\ $\text{(0.000)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 1. 所有收益率和$\alpha$已百分化；} \\
-    \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
-    \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。} \\
-  \end{tabularx}
-\end{table}
-}
+  \caption{异质性检验：可融资融券与不可融资融券样本的投资组合分析}
+  \label{tab:mech_group_short_sale_heter}
+  % 定义居中对齐的等宽列
+  \newcolumntype{C}{>{\centering\arraybackslash}X}
 
-{\small
-\begin{table}[htbp]
-  \centering
-  \caption{投资组合分析-不可融资融券组}
-  \label{tab:mech_group_cannot_short}
-  \begin{tabularx}{\textwidth}{lCCCCC}
+  % ========== Panel A: 可融资融券样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
     \toprule
+    & \multicolumn{5}{c}{\textbf{Panel A: 可融资融券样本}} \\
+    \cmidrule(lr){2-6}
     分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    组合1 & \makecell{$-0.024$ \\ $\text{[-1.070]}$ \\ $\text{(0.285)}$} & \makecell[c]{\mbox{} \\ $-79.200$ \\ \mbox{}} & \makecell{$-0.364^{*}$ \\ $\text{[-1.769]}$ \\ $\text{(0.077)}$} & \makecell{$-0.332^{*}$ \\ $\text{[-1.734]}$ \\ $\text{(0.083)}$} & \makecell{$-0.271$ \\ $\text{[-1.411]}$ \\ $\text{(0.158)}$} \\
-    组合2 & \makecell{$0.002$ \\ $\text{[0.121]}$ \\ $\text{(0.904)}$} & \makecell[c]{\mbox{} \\ $10.100$ \\ \mbox{}} & \makecell{$-0.127$ \\ $\text{[-1.053]}$ \\ $\text{(0.292)}$} & \makecell{$-0.112$ \\ $\text{[-0.985]}$ \\ $\text{(0.325)}$} & \makecell{$-0.068$ \\ $\text{[-0.610]}$ \\ $\text{(0.542)}$} \\
-    组合3 & \makecell{$0.143$ \\ $\text{[1.218]}$ \\ $\text{(0.223)}$} & \makecell[c]{\mbox{} \\ $11.000$ \\ \mbox{}} & \makecell{$0.006$ \\ $\text{[0.056]}$ \\ $\text{(0.955)}$} & \makecell{$0.026$ \\ $\text{[0.268]}$ \\ $\text{(0.789)}$} & \makecell{$0.050$ \\ $\text{[0.542]}$ \\ $\text{(0.588)}$} \\
-    组合4 & \makecell{$0.190^{**}$ \\ $\text{[2.242]}$ \\ $\text{(0.025)}$} & \makecell[c]{\mbox{} \\ $20.800$ \\ \mbox{}} & \makecell{$0.050$ \\ $\text{[0.728]}$ \\ $\text{(0.467)}$} & \makecell{$0.061$ \\ $\text{[0.924]}$ \\ $\text{(0.355)}$} & \makecell{$0.087$ \\ $\text{[1.345]}$ \\ $\text{(0.179)}$} \\
-    组合5 & \makecell{$0.248^{***}$ \\ $\text{[4.452]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $39.800$ \\ \mbox{}} & \makecell{$0.113^{**}$ \\ $\text{[2.403]}$ \\ $\text{(0.016)}$} & \makecell{$0.127^{**}$ \\ $\text{[2.664]}$ \\ $\text{(0.008)}$} & \makecell{$0.144^{***}$ \\ $\text{[3.065]}$ \\ $\text{(0.002)}$} \\
-    对冲组合 & \makecell{$0.483^{**}$ \\ $\text{[2.464]}$ \\ $\text{(0.014)}$} & \makecell[c]{\mbox{} \\ $18.500$ \\ \mbox{}} & \makecell{$0.351^{*}$ \\ $\text{[1.857]}$ \\ $\text{(0.063)}$} & \makecell{$0.334^{*}$ \\ $\text{[1.891]}$ \\ $\text{(0.059)}$} & \makecell{$0.289$ \\ $\text{[1.627]}$ \\ $\text{(0.104)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：同上。} \\
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.038^{**}$ \\ $\text{[-2.169]}$ \\ $\text{(0.030)}$} & \makecell[c]{\\ $-1.600$ \\} & \makecell{$-0.052^{***}$ \\ $\text{[-3.316]}$ \\ $\text{(0.001)}$} & \makecell{$-0.046^{***}$ \\ $\text{[-3.007]}$ \\ $\text{(0.003)}$} & \makecell{$-0.040^{***}$ \\ $\text{[-2.575]}$ \\ $\text{(0.010)}$} \\
+    组合2 & \makecell{$0.000$ \\ $\text{[0.001]}$ \\ $\text{(0.999)}$} & \makecell[c]{\\ $0.900$ \\} & \makecell{$-0.015$ \\ $\text{[-1.053]}$ \\ $\text{(0.292)}$} & \makecell{$-0.012$ \\ $\text{[-0.845]}$ \\ $\text{(0.398)}$} & \makecell{$-0.007$ \\ $\text{[-0.525]}$ \\ $\text{(0.600)}$} \\
+    组合3 & \makecell{$0.145$ \\ $\text{[1.071]}$ \\ $\text{(0.284)}$} & \makecell[c]{\\ $85.400$ \\} & \makecell{$-0.006$ \\ $\text{[-0.052]}$ \\ $\text{(0.958)}$} & \makecell{$0.004$ \\ $\text{[0.033]}$ \\ $\text{(0.974)}$} & \makecell{$0.040$ \\ $\text{[0.387]}$ \\ $\text{(0.699)}$} \\
+    组合4 & \makecell{$0.279^{**}$ \\ $\text{[2.318]}$ \\ $\text{(0.020)}$} & \makecell[c]{\\ $19.600$ \\} & \makecell{$0.127$ \\ $\text{[1.350]}$ \\ $\text{(0.177)}$} & \makecell{$0.151$ \\ $\text{[1.592]}$ \\ $\text{(0.111)}$} & \makecell{$0.194^{**}$ \\ $\text{[2.087]}$ \\ $\text{(0.037)}$} \\
+    组合5 & \makecell{$0.390^{***}$ \\ $\text{[4.523]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $35.300$ \\} & \makecell{$0.247^{***}$ \\ $\text{[3.492]}$ \\ $\text{(0.000)}$} & \makecell{$0.263^{***}$ \\ $\text{[3.976]}$ \\ $\text{(0.000)}$} & \makecell{$0.293^{***}$ \\ $\text{[4.280]}$ \\ $\text{(0.000)}$} \\
+    对冲组合 & \makecell{$0.766^{***}$ \\ $\text{[5.898]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $45.000$ \\} & \makecell{$0.639^{***}$ \\ $\text{[4.990]}$ \\ $\text{(0.000)}$} & \makecell{$0.601^{***}$ \\ $\text{[4.706]}$ \\ $\text{(0.000)}$} & \makecell{$0.572^{***}$ \\ $\text{[4.411]}$ \\ $\text{(0.000)}$} \\
   \end{tabularx}
+
+  \vspace{0.5em} % 两个子表之间的间距，可根据排版微调
+
+  % ========== Panel B: 不可融资融券样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
+    & \multicolumn{5}{c}{\textbf{Panel B: 不可融资融券样本}} \\
+    \cmidrule(lr){2-6}
+    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.024$ \\ $\text{[-1.070]}$ \\ $\text{(0.285)}$} & \makecell[c]{\\ $-79.200$ \\} & \makecell{$-0.364^{*}$ \\ $\text{[-1.769]}$ \\ $\text{(0.077)}$} & \makecell{$-0.332^{*}$ \\ $\text{[-1.734]}$ \\ $\text{(0.083)}$} & \makecell{$-0.271$ \\ $\text{[-1.411]}$ \\ $\text{(0.158)}$} \\
+    组合2 & \makecell{$0.002$ \\ $\text{[0.121]}$ \\ $\text{(0.904)}$} & \makecell[c]{\\ $10.100$ \\} & \makecell{$-0.127$ \\ $\text{[-1.053]}$ \\ $\text{(0.292)}$} & \makecell{$-0.112$ \\ $\text{[-0.985]}$ \\ $\text{(0.325)}$} & \makecell{$-0.068$ \\ $\text{[-0.610]}$ \\ $\text{(0.542)}$} \\
+    组合3 & \makecell{$0.143$ \\ $\text{[1.218]}$ \\ $\text{(0.223)}$} & \makecell[c]{\\ $11.000$ \\} & \makecell{$0.006$ \\ $\text{[0.056]}$ \\ $\text{(0.955)}$} & \makecell{$0.026$ \\ $\text{[0.268]}$ \\ $\text{(0.789)}$} & \makecell{$0.050$ \\ $\text{[0.542]}$ \\ $\text{(0.588)}$} \\
+    组合4 & \makecell{$0.190^{**}$ \\ $\text{[2.242]}$ \\ $\text{(0.025)}$} & \makecell[c]{\\ $20.800$ \\} & \makecell{$0.050$ \\ $\text{[0.728]}$ \\ $\text{(0.467)}$} & \makecell{$0.061$ \\ $\text{[0.924]}$ \\ $\text{(0.355)}$} & \makecell{$0.087$ \\ $\text{[1.345]}$ \\ $\text{(0.179)}$} \\
+    组合5 & \makecell{$0.248^{***}$ \\ $\text{[4.452]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $39.800$ \\} & \makecell{$0.113^{**}$ \\ $\text{[2.403]}$ \\ $\text{(0.016)}$} & \makecell{$0.127^{**}$ \\ $\text{[2.664]}$ \\ $\text{(0.008)}$} & \makecell{$0.144^{***}$ \\ $\text{[3.065]}$ \\ $\text{(0.002)}$} \\
+    对冲组合 & \makecell{$0.483^{**}$ \\ $\text{[2.464]}$ \\ $\text{(0.014)}$} & \makecell[c]{\\ $18.500$ \\} & \makecell{$0.351^{*}$ \\ $\text{[1.857]}$ \\ $\text{(0.063)}$} & \makecell{$0.334^{*}$ \\ $\text{[1.891]}$ \\ $\text{(0.059)}$} & \makecell{$0.289$ \\ $\text{[1.627]}$ \\ $\text{(0.104)}$} \\
+    \bottomrule
+  \end{tabularx}
+
+  % ========== 统一注释 ==========
+  \vspace{0.5em}
+  \begin{minipage}{\textwidth}
+  \footnotesize
+  注：1. 所有收益率和$\alpha$已百分化；\\
+  \quad\ 2. 所有$t$值计算采用Newey-West标准误；\\
+  \quad\ 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。
+  \end{minipage}
 \end{table}
 }
 
@@ -82,26 +89,15 @@
  \FloatBarrier
 
 \subsection{放松融资融券约束}
+
 在本节，对该约束进行放松，允许Agent进行融资和融券。
 设$L_{max} = 0.5$，Agent的最终决策范围$w \in [-0.5, 1.5]$。
-
-当$w < 0$时，表示做空证券$i$，获取总资金的$|w|$倍的资金，
-其收益仍然为$w \cdot return_{s,t+1} + (1 - w) \cdot Risk\_Free\_Rate$，
-表示做空证券$s$，将资金投入无风险资产。
-
-当$w > 1$时，表示融资购买证券$s$，获取总资金的$(w-1)$倍的资金，
-其收益同样为$w \cdot return_{s,t+1} + (1-w) \cdot Risk\_Free\_Rate$，
-表示融资购买证券$s$，并且需要以无风险利率支付利息。  
-
-放松融资约束后，
-按照MA，划分为10个投资组合，进行投资组合分析，
-结果如表~\ref{tab:group_test_relaxed1}和表~\ref{tab:group_test_relaxed2}所示。
 
 {\small
 \begin{table}[htbp]
   \centering
-  \caption{投资组合分析-放松融资融券约束(1)}
-  \label{tab:group_test_relaxed1}
+  \caption{投资组合分析-放松融资融券约束}
+  \label{tab:group_test_relaxed}
   \begin{tabularx}{\textwidth}{lCCCCC}
     \toprule
     分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
@@ -115,21 +111,6 @@
     组合7 & \makecell{$0.001$ \\ $\text{[1.716]}$ \\ $\text{(0.0862)}$} & \makecell[c]{\mbox{} \\ $13.600$ \\ \mbox{}} & \makecell{$-0.006^{*}$ \\ $\text{[-1.748]}$ \\ $\text{(0.0805)}$} & \makecell{$-0.005^{*}$ \\ $\text{[-1.665]}$ \\ $\text{(0.09598)}$} & \makecell{$-0.004$ \\ $\text{[-1.158]}$ \\ $\text{(0.2469)}$} \\
     组合8 & \makecell{$0.082^{**}$ \\ $\text{[2.48]}$ \\ $\text{(0.01312)}$} & \makecell[c]{\mbox{} \\ $16.600$ \\ \mbox{}} & \makecell{$-0.005$ \\ $\text{[-1.698]}$ \\ $\text{(0.08944)}$} & \makecell{$-0.004$ \\ $\text{[-1.519]}$ \\ $\text{(0.1286)}$} & \makecell{$-0.002$ \\ $\text{[-0.9122]}$ \\ $\text{(0.3617)}$} \\
     组合9 & \makecell{$0.161^{***}$ \\ $\text{[4.093]}$ \\ $\text{(4.249e-05)}$} & \makecell[c]{\mbox{} \\ $31.100$ \\ \mbox{}} & \makecell{$0.003$ \\ $\text{[0.8622]}$ \\ $\text{(0.3886)}$} & \makecell{$0.003$ \\ $\text{[1.147]}$ \\ $\text{(0.2513)}$} & \makecell{$0.000^{*}$ \\ $\text{[1.654]}$ \\ $\text{(0.09816)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：同上。} \\
-  \end{tabularx}
-\end{table}
-}
-
-{\small
-\begin{table}[htbp]
-  \centering
-  \caption{投资组合分析-放松融资融券约束(2)}
-  \label{tab:group_test_relaxed2}
-  \begin{tabularx}{\textwidth}{lCCCCC}
-    \toprule
-    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
     组合10 & \makecell{$0.267^{***}$ \\ $\text{[4.455]}$ \\ $\text{(8.395e-06)}$} & \makecell[c]{\mbox{} \\ $41.200$ \\ \mbox{}} & \makecell{$0.013^{**}$ \\ $\text{[2.583]}$ \\ $\text{(0.009794)}$} & \makecell{$0.014^{***}$ \\ $\text{[2.707]}$ \\ $\text{(0.006783)}$} & \makecell{$0.015^{***}$ \\ $\text{[2.907]}$ \\ $\text{(0.003654)}$} \\
     对冲组合 & \makecell{$0.480^{**}$ \\ $\text{[2.247]}$ \\ $\text{(0.02466)}$} & \makecell[c]{\mbox{} \\ $19.900$ \\ \mbox{}} & \makecell{$0.037^{*}$ \\ $\text{[1.904]}$ \\ $\text{(0.05696)}$} & \makecell{$0.033^{*}$ \\ $\text{[1.781]}$ \\ $\text{(0.07492)}$} & \makecell{$0.032^{*}$ \\ $\text{[1.781]}$ \\ $\text{(0.07498)}$} \\
     \bottomrule
@@ -137,6 +118,18 @@
   \end{tabularx}
 \end{table}
 }
+
+当$w < 0$时，表示做空证券$i$，获取总资金的$|w|$倍的资金，
+其收益仍然为$w \cdot return_{s,t+1} + (1 - w) \cdot Risk\_Free\_Rate$，
+表示做空证券$s$，将资金投入无风险资产。
+
+当$w > 1$时，表示融资购买证券$s$，获取总资金的$(w-1)$倍的资金，
+其收益同样为$w \cdot return_{s,t+1} + (1-w) \cdot Risk\_Free\_Rate$，
+表示融资购买证券$s$，并且需要以无风险利率支付利息。  
+
+放松融资约束后，
+按照MA，划分为10个投资组合，进行投资组合分析，
+结果如表~\ref{tab:group_test_relaxed1}和表~\ref{tab:group_test_relaxed2}所示。
 
  \FloatBarrier
 
@@ -191,52 +184,58 @@ MA指标的定价效应更显著：
 因此，受到投资者预期协同关注后，更容易形成较高的收益。
 相比之下，大市值证券的信息披露更充分、投资者结构更成熟，导致MA因子的定价效应较弱。
 
-\begin{samepage}
 {\small
-\begin{table}[H]
+\begin{table}[!htbp]
   \centering
-  \caption{投资组合分析-小市值}
-  \label{tab:heter_small}
-  \begin{tabularx}{\textwidth}{lCCCCC}
-    \toprule
-    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    组合1 & \makecell{$-0.351^{***}$ \\ $\text{[-2.880]}$ \\ $\text{(0.004)}$} & \makecell[c]{\mbox{} \\ $-23.510$ \\ \mbox{}} & \makecell{$-0.489^{***}$ \\ $\text{[-4.432]}$ \\ $\text{(0.000)}$} & \makecell{$-0.457^{***}$ \\ $\text{[-4.144]}$ \\ $\text{(0.000)}$} & \makecell{$-0.410^{***}$ \\ $\text{[-3.708]}$ \\ $\text{(0.000)}$} \\
-    组合2 & \makecell{$-0.078$ \\ $\text{[-0.476]}$ \\ $\text{(0.634)}$} & \makecell[c]{\mbox{} \\ $-3.728$ \\ \mbox{}} & \makecell{$-0.227$ \\ $\text{[-1.616]}$ \\ $\text{(0.106)}$} & \makecell{$-0.193$ \\ $\text{[-1.388]}$ \\ $\text{(0.165)}$} & \makecell{$-0.128$ \\ $\text{[-0.913]}$ \\ $\text{(0.361)}$} \\
-    组合3 & \makecell{$0.307^{*}$ \\ $\text{[1.668]}$ \\ $\text{(0.095)}$} & \makecell[c]{\mbox{} \\ $13.820$ \\ \mbox{}} & \makecell{$0.152$ \\ $\text{[0.942]}$ \\ $\text{(0.346)}$} & \makecell{$0.181$ \\ $\text{[1.131]}$ \\ $\text{(0.258)}$} & \makecell{$0.250$ \\ $\text{[1.539]}$ \\ $\text{(0.124)}$} \\
-    组合4 & \makecell{$0.577^{***}$ \\ $\text{[3.731]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $28.830$ \\ \mbox{}} & \makecell{$0.428^{***}$ \\ $\text{[3.126]}$ \\ $\text{(0.002)}$} & \makecell{$0.455^{***}$ \\ $\text{[3.389]}$ \\ $\text{(0.001)}$} & \makecell{$0.517^{***}$ \\ $\text{[3.754]}$ \\ $\text{(0.000)}$} \\
-    组合5 & \makecell{$0.865^{***}$ \\ $\text{[5.841]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $48.410$ \\ \mbox{}} & \makecell{$0.716^{***}$ \\ $\text{[5.228]}$ \\ $\text{(0.000)}$} & \makecell{$0.756^{***}$ \\ $\text{[5.321]}$ \\ $\text{(0.000)}$} & \makecell{$0.809^{***}$ \\ $\text{[5.707]}$ \\ $\text{(0.000)}$} \\
-    对冲组合 & \makecell{$1.216^{***}$ \\ $\text{[6.768]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $98.380$ \\ \mbox{}} & \makecell{$1.080^{***}$ \\ $\text{[6.059]}$ \\ $\text{(0.000)}$} & \makecell{$1.088^{***}$ \\ $\text{[5.980]}$ \\ $\text{(0.000)}$} & \makecell{$1.094^{***}$ \\ $\text{[6.026]}$ \\ $\text{(0.000)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 1. 所有收益率和$\alpha$已百分化；} \\
-    \multicolumn{6}{l}{\footnotesize 2. 所有t值计算使用Newy-West标准误；} \\
-    \multicolumn{6}{l}{\footnotesize 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。}
-  \end{tabularx}
-\end{table}
-}
+  \caption{异质性检验：不同市值规模的投资组合分析}
+  \label{tab:heter_size_group}
+  % 定义居中对齐的等宽列，与模板格式完全统一
+  \newcolumntype{C}{>{\centering\arraybackslash}X}
 
-{\small
-\begin{table}[H]
-  \centering
-  \caption{投资组合分析-大市值}
-  \label{tab:heter_big}
-  \begin{tabularx}{\textwidth}{lCCCCC}
+  % ========== Panel A: 小市值样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
     \toprule
+    & \multicolumn{5}{c}{\textbf{Panel A: 小市值样本}} \\
+    \cmidrule(lr){2-6}
     分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    组合1 & \makecell{$-0.294^{*}$ \\ $\text{[-1.854]}$ \\ $\text{(0.064)}$} & \makecell[c]{\mbox{} \\ $-12.988$ \\ \mbox{}} & \makecell{$-4.207^{***}$ \\ $\text{[-2.807]}$ \\ $\text{(0.005)}$} & \makecell{$-3.881^{***}$ \\ $\text{[-2.751]}$ \\ $\text{(0.006)}$} & \makecell{$-3.361^{**}$ \\ $\text{[-2.361]}$ \\ $\text{(0.018)}$} \\
-    组合2 & \makecell{$-0.003$ \\ $\text{[-0.231]}$ \\ $\text{(0.982)}$} & \makecell[c]{\mbox{} \\ $-0.195$ \\ \mbox{}} & \makecell{$-0.148$ \\ $\text{[-1.157]}$ \\ $\text{(0.247)}$} & \makecell{$-0.131$ \\ $\text{[-1.055]}$ \\ $\text{(0.292)}$} & \makecell{$-0.089$ \\ $\text{[-0.750]}$ \\ $\text{(0.453)}$} \\
-    组合3 & \makecell{$0.097$ \\ $\text{[0.772]}$ \\ $\text{(0.440)}$} & \makecell[c]{\mbox{} \\ $6.658$ \\ \mbox{}} & \makecell{$-0.464$ \\ $\text{[-0.452]}$ \\ $\text{(0.651)}$} & \makecell{$-0.323$ \\ $\text{[-0.321]}$ \\ $\text{(0.748)}$} & \makecell{$0.001$ \\ $\text{[0.009]}$ \\ $\text{(0.993)}$} \\
-    组合4 & \makecell{$0.201^{*}$ \\ $\text{[1.875]}$ \\ $\text{(0.061)}$} & \makecell[c]{\mbox{} \\ $17.500$ \\ \mbox{}} & \makecell{$0.068$ \\ $\text{[0.746]}$ \\ $\text{(0.456)}$} & \makecell{$0.085$ \\ $\text{[0.956]}$ \\ $\text{(0.339)}$} & \makecell{$0.114$ \\ $\text{[1.345]}$ \\ $\text{(0.179)}$} \\
-    组合5 & \makecell{$0.295^{***}$ \\ $\text{[3.535]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $32.440$ \\ \mbox{}} & \makecell{$0.155^{**}$ \\ $\text{[2.271]}$ \\ $\text{(0.023)}$} & \makecell{$0.173^{**}$ \\ $\text{[2.585]}$ \\ $\text{(0.010)}$} & \makecell{$0.195^{***}$ \\ $\text{[3.001]}$ \\ $\text{(0.003)}$} \\
-    对冲组合 & \makecell{$0.589^{***}$ \\ $\text{[4.548]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $33.120$ \\ \mbox{}} & \makecell{$0.451^{***}$ \\ $\text{[3.491]}$ \\ $\text{(0.000)}$} & \makecell{$0.436^{***}$ \\ $\text{[3.499]}$ \\ $\text{(0.000)}$} & \makecell{$0.406^{***}$ \\ $\text{[3.197]}$ \\ $\text{(0.001)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：同上。}
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.351^{***}$ \\ $\text{[-2.880]}$ \\ $\text{(0.004)}$} & \makecell[c]{\\ $-23.510$ \\} & \makecell{$-0.489^{***}$ \\ $\text{[-4.432]}$ \\ $\text{(0.000)}$} & \makecell{$-0.457^{***}$ \\ $\text{[-4.144]}$ \\ $\text{(0.000)}$} & \makecell{$-0.410^{***}$ \\ $\text{[-3.708]}$ \\ $\text{(0.000)}$} \\
+    组合2 & \makecell{$-0.078$ \\ $\text{[-0.476]}$ \\ $\text{(0.634)}$} & \makecell[c]{\\ $-3.728$ \\} & \makecell{$-0.227$ \\ $\text{[-1.616]}$ \\ $\text{(0.106)}$} & \makecell{$-0.193$ \\ $\text{[-1.388]}$ \\ $\text{(0.165)}$} & \makecell{$-0.128$ \\ $\text{[-0.913]}$ \\ $\text{(0.361)}$} \\
+    组合3 & \makecell{$0.307^{*}$ \\ $\text{[1.668]}$ \\ $\text{(0.095)}$} & \makecell[c]{\\ $13.820$ \\} & \makecell{$0.152$ \\ $\text{[0.942]}$ \\ $\text{(0.346)}$} & \makecell{$0.181$ \\ $\text{[1.131]}$ \\ $\text{(0.258)}$} & \makecell{$0.250$ \\ $\text{[1.539]}$ \\ $\text{(0.124)}$} \\
+    组合4 & \makecell{$0.577^{***}$ \\ $\text{[3.731]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $28.830$ \\} & \makecell{$0.428^{***}$ \\ $\text{[3.126]}$ \\ $\text{(0.002)}$} & \makecell{$0.455^{***}$ \\ $\text{[3.389]}$ \\ $\text{(0.001)}$} & \makecell{$0.517^{***}$ \\ $\text{[3.754]}$ \\ $\text{(0.000)}$} \\
+    组合5 & \makecell{$0.865^{***}$ \\ $\text{[5.841]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $48.410$ \\} & \makecell{$0.716^{***}$ \\ $\text{[5.228]}$ \\ $\text{(0.000)}$} & \makecell{$0.756^{***}$ \\ $\text{[5.321]}$ \\ $\text{(0.000)}$} & \makecell{$0.809^{***}$ \\ $\text{[5.707]}$ \\ $\text{(0.000)}$} \\
+    对冲组合 & \makecell{$1.216^{***}$ \\ $\text{[6.768]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $98.380$ \\} & \makecell{$1.080^{***}$ \\ $\text{[6.059]}$ \\ $\text{(0.000)}$} & \makecell{$1.088^{***}$ \\ $\text{[5.980]}$ \\ $\text{(0.000)}$} & \makecell{$1.094^{***}$ \\ $\text{[6.026]}$ \\ $\text{(0.000)}$} \\
   \end{tabularx}
+
+  \vspace{0.5em} % 子表间距，可根据版面微调
+
+  % ========== Panel B: 大市值样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
+    & \multicolumn{5}{c}{\textbf{Panel B: 大市值样本}} \\
+    \cmidrule(lr){2-6}
+    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.294^{*}$ \\ $\text{[-1.854]}$ \\ $\text{(0.064)}$} & \makecell[c]{\\ $-12.988$ \\} & \makecell{$-4.207^{***}$ \\ $\text{[-2.807]}$ \\ $\text{(0.005)}$} & \makecell{$-3.881^{***}$ \\ $\text{[-2.751]}$ \\ $\text{(0.006)}$} & \makecell{$-3.361^{**}$ \\ $\text{[-2.361]}$ \\ $\text{(0.018)}$} \\
+    组合2 & \makecell{$-0.003$ \\ $\text{[-0.231]}$ \\ $\text{(0.982)}$} & \makecell[c]{\\ $-0.195$ \\} & \makecell{$-0.148$ \\ $\text{[-1.157]}$ \\ $\text{(0.247)}$} & \makecell{$-0.131$ \\ $\text{[-1.055]}$ \\ $\text{(0.292)}$} & \makecell{$-0.089$ \\ $\text{[-0.750]}$ \\ $\text{(0.453)}$} \\
+    组合3 & \makecell{$0.097$ \\ $\text{[0.772]}$ \\ $\text{(0.440)}$} & \makecell[c]{\\ $6.658$ \\} & \makecell{$-0.464$ \\ $\text{[-0.452]}$ \\ $\text{(0.651)}$} & \makecell{$-0.323$ \\ $\text{[-0.321]}$ \\ $\text{(0.748)}$} & \makecell{$0.001$ \\ $\text{[0.009]}$ \\ $\text{(0.993)}$} \\
+    组合4 & \makecell{$0.201^{*}$ \\ $\text{[1.875]}$ \\ $\text{(0.061)}$} & \makecell[c]{\\ $17.500$ \\} & \makecell{$0.068$ \\ $\text{[0.746]}$ \\ $\text{(0.456)}$} & \makecell{$0.085$ \\ $\text{[0.956]}$ \\ $\text{(0.339)}$} & \makecell{$0.114$ \\ $\text{[1.345]}$ \\ $\text{(0.179)}$} \\
+    组合5 & \makecell{$0.295^{***}$ \\ $\text{[3.535]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $32.440$ \\} & \makecell{$0.155^{**}$ \\ $\text{[2.271]}$ \\ $\text{(0.023)}$} & \makecell{$0.173^{**}$ \\ $\text{[2.585]}$ \\ $\text{(0.010)}$} & \makecell{$0.195^{***}$ \\ $\text{[3.001]}$ \\ $\text{(0.003)}$} \\
+    对冲组合 & \makecell{$0.589^{***}$ \\ $\text{[4.548]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $33.120$ \\} & \makecell{$0.451^{***}$ \\ $\text{[3.491]}$ \\ $\text{(0.000)}$} & \makecell{$0.436^{***}$ \\ $\text{[3.499]}$ \\ $\text{(0.000)}$} & \makecell{$0.406^{***}$ \\ $\text{[3.197]}$ \\ $\text{(0.001)}$} \\
+    \bottomrule
+  \end{tabularx}
+
+  % ========== 统一注释，与模板格式完全匹配 ==========
+  \vspace{0.5em}
+  \begin{minipage}{\textwidth}
+  \footnotesize
+  注：1. 所有收益率和$\alpha$已百分化；\\
+  \quad\ 2. 所有$t$值计算采用Newey-West标准误；\\
+  \quad\ 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。
+  \end{minipage}
 \end{table}
 }
+ 
  \FloatBarrier
-\end{samepage}
 
 \subsection{股权性质异质性分析}
 为考察预期共识效应在不同股权性质企业中的表现差异，
@@ -259,52 +258,58 @@ MA指标的定价效应更加显著，定价效率更高；
 而国有企业的信息透明度更高，且受国家支持，不易受投资者预期变动的影响，
 因此定价效应更弱。
 
-\begin{samepage}
 {\small
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
-  \caption{投资组合分析-非国有企业}
-  \label{tab:heter_private}
-  \begin{tabularx}{\textwidth}{lCCCCC}
-    \toprule
-    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    组合1 & \makecell{$-0.474^{***}$ \\ $\text{[-2.888]}$ \\ $\text{(0.004)}$} & \makecell[c]{\mbox{} \\ $-21.870$ \\ \mbox{}} & \makecell{$-0.608^{***}$ \\ $\text{[-3.912]}$ \\ $\text{(0.000)}$} & \makecell{$-0.552^{***}$ \\ $\text{[-3.772]}$ \\ $\text{(0.000)}$} & \makecell{$-0.493^{***}$ \\ $\text{[-3.267]}$ \\ $\text{(0.001)}$} \\
-    组合2 & \makecell{$-0.069$ \\ $\text{[-0.445]}$ \\ $\text{(0.656)}$} & \makecell[c]{\mbox{} \\ $-3.284$ \\ \mbox{}} & \makecell{$-0.215$ \\ $\text{[-1.577]}$ \\ $\text{(0.115)}$} & \makecell{$-0.198$ \\ $\text{[-1.412]}$ \\ $\text{(0.158)}$} & \makecell{$-0.132$ \\ $\text{[-0.997]}$ \\ $\text{(0.319)}$} \\
-    组合3 & \makecell{$0.155$ \\ $\text{[1.114]}$ \\ $\text{(0.266)}$} & \makecell[c]{\mbox{} \\ $8.562$ \\ \mbox{}} & \makecell{$0.014$ \\ $\text{[0.114]}$ \\ $\text{(0.909)}$} & \makecell{$0.039$ \\ $\text{[0.317]}$ \\ $\text{(0.751)}$} & \makecell{$0.093$ \\ $\text{[0.768]}$ \\ $\text{(0.443)}$} \\
-    组合4 & \makecell{$0.325^{***}$ \\ $\text{[2.653]}$ \\ $\text{(0.008)}$} & \makecell[c]{\mbox{} \\ $22.460$ \\ \mbox{}} & \makecell{$0.174^{*}$ \\ $\text{[1.804]}$ \\ $\text{(0.071)}$} & \makecell{$0.201^{**}$ \\ $\text{[2.062]}$ \\ $\text{(0.039)}$} & \makecell{$0.247^{**}$ \\ $\text{[2.569]}$ \\ $\text{(0.010)}$} \\
-    组合5 & \makecell{$0.434^{***}$ \\ $\text{[4.953]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $41.130$ \\ \mbox{}} & \makecell{$0.293^{***}$ \\ $\text{[3.986]}$ \\ $\text{(0.000)}$} & \makecell{$0.315^{***}$ \\ $\text{[4.426]}$ \\ $\text{(0.000)}$} & \makecell{$0.343^{***}$ \\ $\text{[4.738]}$ \\ $\text{(0.000)}$} \\
-    对冲组合 & \makecell{$0.907^{***}$ \\ $\text{[6.118]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $55.480$ \\ \mbox{}} & \makecell{$0.776^{***}$ \\ $\text{[5.233]}$ \\ $\text{(0.000)}$} & \makecell{$0.742^{***}$ \\ $\text{[5.257]}$ \\ $\text{(0.000)}$} & \makecell{$0.711^{***}$ \\ $\text{[4.962]}$ \\ $\text{(0.000)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：同上。}
-  \end{tabularx}
-\end{table}
-}
+  \caption{异质性检验：不同产权性质的投资组合分析}
+  \label{tab:heter_ownership_group}
+  % 定义居中对齐的等宽列，与模板格式完全统一
+  \newcolumntype{C}{>{\centering\arraybackslash}X}
 
-{\small
-\begin{table}[htbp]
-  \centering
-  \caption{投资组合分析-国有企业}
-  \label{tab:heter_state}
-  \begin{tabularx}{\textwidth}{lCCCCC}
+  % ========== Panel A: 非国有企业样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
     \toprule
+    & \multicolumn{5}{c}{\textbf{Panel A: 非国有企业样本}} \\
+    \cmidrule(lr){2-6}
     分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-    \midrule
-    组合1 & \makecell{$-0.111$ \\ $\text{[-0.481]}$ \\ $\text{(0.631)}$} & \makecell[c]{\mbox{} \\ $-3.435$ \\ \mbox{}} & \makecell{$-0.240$ \\ $\text{[-1.123]}$ \\ $\text{(0.262)}$} & \makecell{$-0.218$ \\ $\text{[-1.061]}$ \\ $\text{(0.289)}$} & \makecell{$-0.163$ \\ $\text{[-0.816]}$ \\ $\text{(0.415)}$} \\
-    组合2 & \makecell{$0.061$ \\ $\text{[0.429]}$ \\ $\text{(0.668)}$} & \makecell[c]{\mbox{} \\ $3.636$ \\ \mbox{}} & \makecell{$-0.088$ \\ $\text{[-0.763]}$ \\ $\text{(0.446)}$} & \makecell{$-0.080$ \\ $\text{[-0.712]}$ \\ $\text{(0.477)}$} & \makecell{$-0.043$ \\ $\text{[-0.406]}$ \\ $\text{(0.685)}$} \\
-    组合3 & \makecell{$0.114$ \\ $\text{[1.153]}$ \\ $\text{(0.249)}$} & \makecell[c]{\mbox{} \\ $9.695$ \\ \mbox{}} & \makecell{$-0.022$ \\ $\text{[-0.265]}$ \\ $\text{(0.791)}$} & \makecell{$-0.009$ \\ $\text{[-0.117]}$ \\ $\text{(0.907)}$} & \makecell{$0.010$ \\ $\text{[0.134]}$ \\ $\text{(0.894)}$} \\
-    组合4 & \makecell{$0.176^{*}$ \\ $\text{[1.868]}$ \\ $\text{(0.062)}$} & \makecell[c]{\mbox{} \\ $18.900$ \\ \mbox{}} & \makecell{$0.031$ \\ $\text{[0.435]}$ \\ $\text{(0.664)}$} & \makecell{$0.047$ \\ $\text{[0.640]}$ \\ $\text{(0.522)}$} & \makecell{$0.065$ \\ $\text{[0.914]}$ \\ $\text{(0.361)}$} \\
-    组合5 & \makecell{$0.203^{***}$ \\ $\text{[3.262]}$ \\ $\text{(0.001)}$} & \makecell[c]{\mbox{} \\ $29.220$ \\ \mbox{}} & \makecell{$0.068$ \\ $\text{[1.297]}$ \\ $\text{(0.195)}$} & \makecell{$0.073$ \\ $\text{[1.491]}$ \\ $\text{(0.136)}$} & \makecell{$0.090^{*}$ \\ $\text{[1.824]}$ \\ $\text{(0.068)}$} \\
-    对冲组合 & \makecell{0.313 \\ $\text{[1.557]}$ \\ $\text{(0.119)}$} & \makecell[c]{\mbox{} \\ $11.111$ \\ \mbox{}} & \makecell{$0.183$ \\ $\text{[0.943]}$ \\ $\text{(0.346)}$} & \makecell{$0.166$ \\ $\text{[0.892]}$ \\ $\text{(0.372)}$} & \makecell{$0.128$ \\ $\text{[0.709]}$ \\ $\text{(0.479)}$} \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize 注：同上。}
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.474^{***}$ \\ $\text{[-2.888]}$ \\ $\text{(0.004)}$} & \makecell[c]{\\ $-21.870$ \\} & \makecell{$-0.608^{***}$ \\ $\text{[-3.912]}$ \\ $\text{(0.000)}$} & \makecell{$-0.552^{***}$ \\ $\text{[-3.772]}$ \\ $\text{(0.000)}$} & \makecell{$-0.493^{***}$ \\ $\text{[-3.267]}$ \\ $\text{(0.001)}$} \\
+    组合2 & \makecell{$-0.069$ \\ $\text{[-0.445]}$ \\ $\text{(0.656)}$} & \makecell[c]{\\ $-3.284$ \\} & \makecell{$-0.215$ \\ $\text{[-1.577]}$ \\ $\text{(0.115)}$} & \makecell{$-0.198$ \\ $\text{[-1.412]}$ \\ $\text{(0.158)}$} & \makecell{$-0.132$ \\ $\text{[-0.997]}$ \\ $\text{(0.319)}$} \\
+    组合3 & \makecell{$0.155$ \\ $\text{[1.114]}$ \\ $\text{(0.266)}$} & \makecell[c]{\\ $8.562$ \\} & \makecell{$0.014$ \\ $\text{[0.114]}$ \\ $\text{(0.909)}$} & \makecell{$0.039$ \\ $\text{[0.317]}$ \\ $\text{(0.751)}$} & \makecell{$0.093$ \\ $\text{[0.768]}$ \\ $\text{(0.443)}$} \\
+    组合4 & \makecell{$0.325^{***}$ \\ $\text{[2.653]}$ \\ $\text{(0.008)}$} & \makecell[c]{\\ $22.460$ \\} & \makecell{$0.174^{*}$ \\ $\text{[1.804]}$ \\ $\text{(0.071)}$} & \makecell{$0.201^{**}$ \\ $\text{[2.062]}$ \\ $\text{(0.039)}$} & \makecell{$0.247^{**}$ \\ $\text{[2.569]}$ \\ $\text{(0.010)}$} \\
+    组合5 & \makecell{$0.434^{***}$ \\ $\text{[4.953]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $41.130$ \\} & \makecell{$0.293^{***}$ \\ $\text{[3.986]}$ \\ $\text{(0.000)}$} & \makecell{$0.315^{***}$ \\ $\text{[4.426]}$ \\ $\text{(0.000)}$} & \makecell{$0.343^{***}$ \\ $\text{[4.738]}$ \\ $\text{(0.000)}$} \\
+    对冲组合 & \makecell{$0.907^{***}$ \\ $\text{[6.118]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $55.480$ \\} & \makecell{$0.776^{***}$ \\ $\text{[5.233]}$ \\ $\text{(0.000)}$} & \makecell{$0.742^{***}$ \\ $\text{[5.257]}$ \\ $\text{(0.000)}$} & \makecell{$0.711^{***}$ \\ $\text{[4.962]}$ \\ $\text{(0.000)}$} \\
   \end{tabularx}
+
+  \vspace{0.5em} % 子表间距，可根据版面微调
+
+  % ========== Panel B: 国有企业样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
+    & \multicolumn{5}{c}{\textbf{Panel B: 国有企业样本}} \\
+    \cmidrule(lr){2-6}
+    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.111$ \\ $\text{[-0.481]}$ \\ $\text{(0.631)}$} & \makecell[c]{\\ $-3.435$ \\} & \makecell{$-0.240$ \\ $\text{[-1.123]}$ \\ $\text{(0.262)}$} & \makecell{$-0.218$ \\ $\text{[-1.061]}$ \\ $\text{(0.289)}$} & \makecell{$-0.163$ \\ $\text{[-0.816]}$ \\ $\text{(0.415)}$} \\
+    组合2 & \makecell{$0.061$ \\ $\text{[0.429]}$ \\ $\text{(0.668)}$} & \makecell[c]{\\ $3.636$ \\} & \makecell{$-0.088$ \\ $\text{[-0.763]}$ \\ $\text{(0.446)}$} & \makecell{$-0.080$ \\ $\text{[-0.712]}$ \\ $\text{(0.477)}$} & \makecell{$-0.043$ \\ $\text{[-0.406]}$ \\ $\text{(0.685)}$} \\
+    组合3 & \makecell{$0.114$ \\ $\text{[1.153]}$ \\ $\text{(0.249)}$} & \makecell[c]{\\ $9.695$ \\} & \makecell{$-0.022$ \\ $\text{[-0.265]}$ \\ $\text{(0.791)}$} & \makecell{$-0.009$ \\ $\text{[-0.117]}$ \\ $\text{(0.907)}$} & \makecell{$0.010$ \\ $\text{[0.134]}$ \\ $\text{(0.894)}$} \\
+    组合4 & \makecell{$0.176^{*}$ \\ $\text{[1.868]}$ \\ $\text{(0.062)}$} & \makecell[c]{\\ $18.900$ \\} & \makecell{$0.031$ \\ $\text{[0.435]}$ \\ $\text{(0.664)}$} & \makecell{$0.047$ \\ $\text{[0.640]}$ \\ $\text{(0.522)}$} & \makecell{$0.065$ \\ $\text{[0.914]}$ \\ $\text{(0.361)}$} \\
+    组合5 & \makecell{$0.203^{***}$ \\ $\text{[3.262]}$ \\ $\text{(0.001)}$} & \makecell[c]{\\ $29.220$ \\} & \makecell{$0.068$ \\ $\text{[1.297]}$ \\ $\text{(0.195)}$} & \makecell{$0.073$ \\ $\text{[1.491]}$ \\ $\text{(0.136)}$} & \makecell{$0.090^{*}$ \\ $\text{[1.824]}$ \\ $\text{(0.068)}$} \\
+    对冲组合 & \makecell{$0.313$ \\ $\text{[1.557]}$ \\ $\text{(0.119)}$} & \makecell[c]{\\ $11.111$ \\} & \makecell{$0.183$ \\ $\text{[0.943]}$ \\ $\text{(0.346)}$} & \makecell{$0.166$ \\ $\text{[0.892]}$ \\ $\text{(0.372)}$} & \makecell{$0.128$ \\ $\text{[0.709]}$ \\ $\text{(0.479)}$} \\
+    \bottomrule
+  \end{tabularx}
+
+  % ========== 统一注释，与模板格式完全匹配 ==========
+  \vspace{0.5em}
+  \begin{minipage}{\textwidth}
+  \footnotesize
+  注：1. 所有收益率和$\alpha$已百分化；\\
+  \quad\ 2. 所有$t$值计算采用Newey-West标准误；\\
+  \quad\ 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。
+  \end{minipage}
 \end{table}
 }
 
  \FloatBarrier
-\end{samepage}
-
 
 \subsection{市场周期异质性分析}
 为考察预期共识效应在不同市场周期中的表现差异，
@@ -324,51 +329,57 @@ MA指标的定价效应更加显著，定价效率更高；
 相反，在熊市市场中，投资者的避险情绪上升，交易活跃度下降，
 导致错误定价的空间收窄，MA定价效果减弱。
 
-\begin{samepage}
+{\small
+\begin{table}[!htbp]
+  \centering
+  \caption{异质性检验：不同市场行情的投资组合分析}
+  \label{tab:heter_market_condition_group}
+  % 定义居中对齐的等宽列，与此前模板格式完全统一
+  \newcolumntype{C}{>{\centering\arraybackslash}X}
 
-  {\small
-  \begin{table}[htbp]
-    \centering
-    \caption{投资组合分析-牛市}
-    \label{tab:heter_bull}
-    \begin{tabularx}{\textwidth}{lCCCCC}
-      \toprule
-      分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-      \midrule
-      组合1 & \makecell{$-0.310^{*}$ \\ $\text{[-1.940]}$ \\ $\text{(0.052)}$} & \makecell[c]{\mbox{} \\ $-15.120$ \\ \mbox{}} & \makecell{$-0.437^{***}$ \\ $\text{[-2.576]}$ \\ $\text{(0.010)}$} & \makecell{$-0.400^{**}$ \\ $\text{[-2.431]}$ \\ $\text{(0.015)}$} & \makecell{$-0.385^{**}$ \\ $\text{[-2.231]}$ \\ $\text{(0.026)}$} \\
-      组合2 & \makecell{$-0.126$ \\ $\text{[-1.427]}$ \\ $\text{(0.154)}$} & \makecell[c]{\mbox{} \\ $-10.590$ \\ \mbox{}} & \makecell{$-0.252^{***}$ \\ $\text{[-2.637]}$ \\ $\text{(0.008)}$} & \makecell{$-0.238^{**}$ \\ $\text{[-2.409]}$ \\ $\text{(0.016)}$} & \makecell{$-0.214^{**}$ \\ $\text{[-2.150]}$ \\ $\text{(0.032)}$} \\
-      组合3 & \makecell{$0.032$ \\ $\text{[0.056]}$ \\ $\text{(0.955)}$} & \makecell[c]{\mbox{} \\ $0.391$ \\ \mbox{}} & \makecell{$-0.122^{**}$ \\ $\text{[-2.033]}$ \\ $\text{(0.042)}$} & \makecell{$-0.108$ \\ $\text{[-1.621]}$ \\ $\text{(0.105)}$} & \makecell{$-0.096$ \\ $\text{[-1.500]}$ \\ $\text{(0.134)}$} \\
-      组合4 & \makecell{$0.094^{*}$ \\ $\text{[1.869]}$ \\ $\text{(0.062)}$} & \makecell[c]{\mbox{} \\ $14.470$ \\ \mbox{}} & \makecell{$-0.031$ \\ $\text{[-0.615]}$ \\ $\text{(0.538)}$} & \makecell{$-0.018$ \\ $\text{[-0.332]}$ \\ $\text{(0.740)}$} & \makecell{$-0.006$ \\ $\text{[-0.118]}$ \\ $\text{(0.906)}$} \\
-      组合5 & \makecell{$0.201^{***}$ \\ $\text{[3.971]}$ \\ $\text{(0.000)}$} & \makecell[c]{\mbox{} \\ $39.030$ \\ \mbox{}} & \makecell{$0.076$ \\ $\text{[1.508]}$ \\ $\text{(0.132)}$} & \makecell{$0.099^{*}$ \\ $\text{[1.668]}$ \\ $\text{(0.095)}$} & \makecell{$0.103^{*}$ \\ $\text{[1.898]}$ \\ $\text{(0.058)}$} \\
-      对冲组合 & \makecell{$0.511^{***}$ \\ $\text{[3.422]}$ \\ $\text{(0.001)}$} & \makecell[c]{\mbox{} \\ $29.640$ \\ \mbox{}} & \makecell{$0.388^{**}$ \\ $\text{[2.466]}$ \\ $\text{(0.014)}$} & \makecell{$0.369^{**}$ \\ $\text{[2.463]}$ \\ $\text{(0.014)}$} & \makecell{$0.364^{**}$ \\ $\text{[2.291]}$ \\ $\text{(0.022)}$} \\
-      \bottomrule
-      \multicolumn{6}{l}{\footnotesize 注：同上。}
-    \end{tabularx}
-  \end{table}
-  }
+  % ========== Panel A: 牛市样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
+    \toprule
+    & \multicolumn{5}{c}{\textbf{Panel A: 牛市样本}} \\
+    \cmidrule(lr){2-6}
+    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.310^{*}$ \\ $\text{[-1.940]}$ \\ $\text{(0.052)}$} & \makecell[c]{\\ $-15.120$ \\} & \makecell{$-0.437^{***}$ \\ $\text{[-2.576]}$ \\ $\text{(0.010)}$} & \makecell{$-0.400^{**}$ \\ $\text{[-2.431]}$ \\ $\text{(0.015)}$} & \makecell{$-0.385^{**}$ \\ $\text{[-2.231]}$ \\ $\text{(0.026)}$} \\
+    组合2 & \makecell{$-0.126$ \\ $\text{[-1.427]}$ \\ $\text{(0.154)}$} & \makecell[c]{\\ $-10.590$ \\} & \makecell{$-0.252^{***}$ \\ $\text{[-2.637]}$ \\ $\text{(0.008)}$} & \makecell{$-0.238^{**}$ \\ $\text{[-2.409]}$ \\ $\text{(0.016)}$} & \makecell{$-0.214^{**}$ \\ $\text{[-2.150]}$ \\ $\text{(0.032)}$} \\
+    组合3 & \makecell{$0.032$ \\ $\text{[0.056]}$ \\ $\text{(0.955)}$} & \makecell[c]{\\ $0.391$ \\} & \makecell{$-0.122^{**}$ \\ $\text{[-2.033]}$ \\ $\text{(0.042)}$} & \makecell{$-0.108$ \\ $\text{[-1.621]}$ \\ $\text{(0.105)}$} & \makecell{$-0.096$ \\ $\text{[-1.500]}$ \\ $\text{(0.134)}$} \\
+    组合4 & \makecell{$0.094^{*}$ \\ $\text{[1.869]}$ \\ $\text{(0.062)}$} & \makecell[c]{\\ $14.470$ \\} & \makecell{$-0.031$ \\ $\text{[-0.615]}$ \\ $\text{(0.538)}$} & \makecell{$-0.018$ \\ $\text{[-0.332]}$ \\ $\text{(0.740)}$} & \makecell{$-0.006$ \\ $\text{[-0.118]}$ \\ $\text{(0.906)}$} \\
+    组合5 & \makecell{$0.201^{***}$ \\ $\text{[3.971]}$ \\ $\text{(0.000)}$} & \makecell[c]{\\ $39.030$ \\} & \makecell{$0.076$ \\ $\text{[1.508]}$ \\ $\text{(0.132)}$} & \makecell{$0.099^{*}$ \\ $\text{[1.668]}$ \\ $\text{(0.095)}$} & \makecell{$0.103^{*}$ \\ $\text{[1.898]}$ \\ $\text{(0.058)}$} \\
+    对冲组合 & \makecell{$0.511^{***}$ \\ $\text{[3.422]}$ \\ $\text{(0.001)}$} & \makecell[c]{\\ $29.640$ \\} & \makecell{$0.388^{**}$ \\ $\text{[2.466]}$ \\ $\text{(0.014)}$} & \makecell{$0.369^{**}$ \\ $\text{[2.463]}$ \\ $\text{(0.014)}$} & \makecell{$0.364^{**}$ \\ $\text{[2.291]}$ \\ $\text{(0.022)}$} \\
+  \end{tabularx}
 
-  {\small
-  \begin{table}[htbp]
-    \centering
-    \caption{投资组合分析-熊市}
-    \label{tab:heter_bear}
-    \begin{tabularx}{\textwidth}{lCCCCC}
-      \toprule
-      分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
-      \midrule
-      组合1 & \makecell{$-0.178$ \\ $\text{[-0.313]}$ \\ $\text{(0.754)}$} & \makecell[c]{\mbox{} \\ $-4.151$ \\ \mbox{}} & \makecell{$-0.401$ \\ $\text{[-0.843]}$ \\ $\text{(0.399)}$} & \makecell{$-0.352$ \\ $\text{[-0.751]}$ \\ $\text{(0.452)}$} & \makecell{$0.071$ \\ $\text{[0.169]}$ \\ $\text{(0.866)}$} \\
-      组合2 & \makecell{$0.318$ \\ $\text{[0.883]}$ \\ $\text{(0.377)}$} & \makecell[c]{\mbox{} \\ $13.470$ \\ \mbox{}} & \makecell{$0.110$ \\ $\text{[0.379]}$ \\ $\text{(0.705)}$} & \makecell{$0.089$ \\ $\text{[0.294]}$ \\ $\text{(0.769)}$} & \makecell{$0.265$ \\ $\text{[0.999]}$ \\ $\text{(0.318)}$} \\
-      组合3 & \makecell{$0.410$ \\ $\text{[1.531]}$ \\ $\text{(0.126)}$} & \makecell[c]{\mbox{} \\ $22.770$ \\ \mbox{}} & \makecell{$0.235$ \\ $\text{[1.063]}$ \\ $\text{(0.288)}$} & \makecell{$0.265$ \\ $\text{[1.245]}$ \\ $\text{(0.213)}$} & \makecell{$0.370^{**}$ \\ $\text{[2.090]}$ \\ $\text{(0.037)}$} \\
-      组合4 & \makecell{$0.455^{**}$ \\ $\text{[2.203]}$ \\ $\text{(0.028)}$} & \makecell[c]{\mbox{} \\ $33.440$ \\ \mbox{}} & \makecell{$0.263^{*}$ \\ $\text{[1.707]}$ \\ $\text{(0.088)}$} & \makecell{$0.284^{*}$ \\ $\text{[1.873]}$ \\ $\text{(0.061)}$} & \makecell{$0.363^{***}$ \\ $\text{[2.945]}$ \\ $\text{(0.003)}$} \\
-      组合5 & \makecell{$0.510^{***}$ \\ $\text{[3.355]}$ \\ $\text{(0.001)}$} & \makecell[c]{\mbox{} \\ $43.520$ \\ \mbox{}} & \makecell{$0.340^{***}$ \\ $\text{[2.871]}$ \\ $\text{(0.004)}$} & \makecell{$0.338^{***}$ \\ $\text{[3.057]}$ \\ $\text{(0.002)}$} & \makecell{$0.391^{***}$ \\ $\text{[4.053]}$ \\ $\text{(0.000)}$} \\
-      对冲组合 & \makecell{$0.688$ \\ $\text{[1.533]}$ \\ $\text{(0.125)}$} & \makecell[c]{\mbox{} \\ $19.710$ \\ \mbox{}} & \makecell{$0.616$ \\ $\text{[1.586]}$ \\ $\text{(0.113)}$} & \makecell{$0.565$ \\ $\text{[1.468]}$ \\ $\text{(0.142)}$} & \makecell{$0.195$ \\ $\text{[0.557]}$ \\ $\text{(0.577)}$} \\
-      \bottomrule
-      \multicolumn{6}{l}{\footnotesize 注：同上。}
-    \end{tabularx}
-  \end{table}
-  }
+  \vspace{0.5em} % 子表间距，与此前合并表格式统一
+
+  % ========== Panel B: 熊市样本 ==========
+  \begin{tabularx}{\textwidth}{l C C C C C}
+    & \multicolumn{5}{c}{\textbf{Panel B: 熊市样本}} \\
+    \cmidrule(lr){2-6}
+    分组序号 & 平均收益率 & 夏普比率 & CAPM-$\alpha$ & FF3-$\alpha$ & FF5-$\alpha$ \\
+    \cmidrule(lr){2-6}
+    组合1 & \makecell{$-0.178$ \\ $\text{[-0.313]}$ \\ $\text{(0.754)}$} & \makecell[c]{\\ $-4.151$ \\} & \makecell{$-0.401$ \\ $\text{[-0.843]}$ \\ $\text{(0.399)}$} & \makecell{$-0.352$ \\ $\text{[-0.751]}$ \\ $\text{(0.452)}$} & \makecell{$0.071$ \\ $\text{[0.169]}$ \\ $\text{(0.866)}$} \\
+    组合2 & \makecell{$0.318$ \\ $\text{[0.883]}$ \\ $\text{(0.377)}$} & \makecell[c]{\\ $13.470$ \\} & \makecell{$0.110$ \\ $\text{[0.379]}$ \\ $\text{(0.705)}$} & \makecell{$0.089$ \\ $\text{[0.294]}$ \\ $\text{(0.769)}$} & \makecell{$0.265$ \\ $\text{[0.999]}$ \\ $\text{(0.318)}$} \\
+    组合3 & \makecell{$0.410$ \\ $\text{[1.531]}$ \\ $\text{(0.126)}$} & \makecell[c]{\\ $22.770$ \\} & \makecell{$0.235$ \\ $\text{[1.063]}$ \\ $\text{(0.288)}$} & \makecell{$0.265$ \\ $\text{[1.245]}$ \\ $\text{(0.213)}$} & \makecell{$0.370^{**}$ \\ $\text{[2.090]}$ \\ $\text{(0.037)}$} \\
+    组合4 & \makecell{$0.455^{**}$ \\ $\text{[2.203]}$ \\ $\text{(0.028)}$} & \makecell[c]{\\ $33.440$ \\} & \makecell{$0.263^{*}$ \\ $\text{[1.707]}$ \\ $\text{(0.088)}$} & \makecell{$0.284^{*}$ \\ $\text{[1.873]}$ \\ $\text{(0.061)}$} & \makecell{$0.363^{***}$ \\ $\text{[2.945]}$ \\ $\text{(0.003)}$} \\
+    组合5 & \makecell{$0.510^{***}$ \\ $\text{[3.355]}$ \\ $\text{(0.001)}$} & \makecell[c]{\\ $43.520$ \\} & \makecell{$0.340^{***}$ \\ $\text{[2.871]}$ \\ $\text{(0.004)}$} & \makecell{$0.338^{***}$ \\ $\text{[3.057]}$ \\ $\text{(0.002)}$} & \makecell{$0.391^{***}$ \\ $\text{[4.053]}$ \\ $\text{(0.000)}$} \\
+    对冲组合 & \makecell{$0.688$ \\ $\text{[1.533]}$ \\ $\text{(0.125)}$} & \makecell[c]{\\ $19.710$ \\} & \makecell{$0.616$ \\ $\text{[1.586]}$ \\ $\text{(0.113)}$} & \makecell{$0.565$ \\ $\text{[1.468]}$ \\ $\text{(0.142)}$} & \makecell{$0.195$ \\ $\text{[0.557]}$ \\ $\text{(0.577)}$} \\
+    \bottomrule
+  \end{tabularx}
+
+  % ========== 统一注释，与此前模板格式完全匹配 ==========
+  \vspace{0.5em}
+  \begin{minipage}{\textwidth}
+  \footnotesize
+  注：1. 所有收益率和$\alpha$已百分化；\\
+  \quad\ 2. 所有$t$值计算采用Newey-West标准误；\\
+  \quad\ 3. $^{*}p<0.1$，$^{**}p<0.05$，$^{***}p<0.01$。
+  \end{minipage}
+\end{table}
+}
 
  \FloatBarrier
-\end{samepage}
 
 
