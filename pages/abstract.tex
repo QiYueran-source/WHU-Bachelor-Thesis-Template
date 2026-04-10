@@ -7,21 +7,26 @@
 
 金融市场是多类型投资者共同参与的复杂动态系统，
 资产价格在很大程度上受投资者预期的驱动，而投资者在单只资产上形成的一致性预期能否对资产价格产生系统性影响，
-是理解金融市场运行机制、维护资本市场稳定的核心命题。我国 A 股市场长期以散户投资者为主导，
-个体投资者信息处理能力有限，决策易呈现集体性的乐观或悲观预期趋同特征，
-同时市场长期存在融资融券发展不均衡、卖空约束较强的制度环境，为预期共识的形成与定价效应提供了独特的本土研究场景。
-然而现有研究中，传统预期共识度量方法存在内生性、代表性偏差等缺陷，难以精准刻画个股层面的投资者预期形成与共识聚合过程，
-关于 A 股市场预期共识定价效应的形成机制与适用边界也尚未形成系统性结论。
-为此，本文基于多 Agent 实验金融框架，构建了异质性的智能体投资者模型：以 A 股市场 88 个公司特征因子作为模型输入，
-采用多层感知机作为 Agent 的决策框架，通过近端策略优化强化学习算法完成智能体训练，
+是理解金融市场运行机制、维护资本市场稳定的核心命题。
+我国A股市场长期以散户投资者为主导，
+个体投资者信息处理能力有限，单个决策易受到信息不对称的影响；
+同时，监管机构对于融资融券的约束较为严格，在2010年后才逐步放开。
+这些特性为预期共识的形成与定价效应提供了独特的本土研究场景。
+然而现有研究中，传统预期共识度量方法存在代表性偏差等缺陷，
+难以精准刻画个股层面的投资者预期形成与共识聚合过程，
+关于A股市场预期共识定价效应的形成机制与适用边界也尚未形成系统性结论。
+为此，本文基于多Agent实验金融框架，构建了异质性的智能体投资者模型：
+以A股市场88个公司特征因子作为模型输入，
+采用多层感知机作为Agent的决策框架，通过近端策略优化强化学习算法完成智能体训练，
 以滚动窗口方式模拟投资者信息处理、交易决策与动态学习的全流程，
-并构建平均决策值 MA 指标刻画投资者预期共识度，系统探究 A 股市场中投资者预期共识的定价效应。
+并构建平均决策值MA指标刻画投资者预期共识度，系统探究A股市场中投资者预期共识的定价效应。
 
-实证结果显示，投资者预期共识度与股票未来收益呈现显著的正相关关系，
-即预期共识度越高的股票，未来收益水平越高，这一结论在调整分组设定、替换回归模型、变更核心参数等一系列稳健性检验后依然成立。
-进一步地，本文基于Miller异质信念假说，从融资融券约束视角探究预期共识定价效应的核心形成机制，
-通过融资融券标的分组检验与多 Agent 反事实模拟实验发现，融资融券约束是预期共识定价效应的重要形成机制，
-放松融资融券约束后，投资者异质预期能够更充分地融入资产价格，预期共识的定价效应显著增强。
+本文使用投资组合分析和Fama-MacBeth回归检验MA指标的定价效应。
+实证结果显示，投资者预期共识度与股票未来收益呈现显著的正相关关系。
+这一结论在调整分组设定、替换回归模型、变更核心参数等一系列稳健性检验后依然成立。
+进一步地，本文基于Miller的异质信念假说，从融资融券约束视角探究预期共识定价效应的核心形成机制，
+通过融资融券标的分组检验与多Agent反事实模拟实验发现，融资融券约束是预期共识定价效应的重要形成机制，
+放松融资融券约束后，投资者预期能够更充分地表达预期，预期共识的定价效应显著增强。
 最后，本文从企业特征与市场环境维度展开异质性分析，结果表明，预期共识的定价效应存在显著的条件性差异，
 在小市值企业、非国有企业以及牛市市场周期中，预期共识的定价效应表现得更为突出。
 最后，本文基于研究结论，对投资者、政策制定者和研究者提出了相应的建议。
@@ -35,26 +40,9 @@
 
 \begin{enabstract}{Expectation consensus effect; Asset pricing; Agent; Deep learning}
 
-Financial markets are complex systems in which prices are strongly shaped by investor expectations. 
-In China's A-share market, where retail investors dominate and short-selling constraints remain salient,
- expectation convergence may have distinctive pricing implications. 
- To examine this issue, this study builds a heterogeneous multi-agent experimental finance framework. 
- Using 88 firm-level characteristics as inputs,
-  each agent is modeled with a multilayer perceptron and trained by proximal policy optimization. 
-  A rolling-window simulation is used to reproduce information processing, trading decisions, 
-  and dynamic learning, and an average decision index (MA) is constructed to measure expectation consensus.
+Financial markets are complex systems where asset prices are largely driven by investor expectations. Whether consensus expectations on individual assets exert systematic pricing effects is core to understanding market mechanisms and maintaining capital market stability. China's A-share market, long dominated by retail investors prone to information asymmetry and subject to strict margin trading constraints relaxed gradually since 2010, provides a unique context for studying expectation consensus. However, traditional measures suffer from representative bias, failing to capture stock-level expectation formation and consensus aggregation, and no systematic conclusions exist on its mechanism and boundaries in the A-share market. To address these gaps, this paper builds a heterogeneous agent model: using 88 firm characteristics as inputs, it employs a multilayer perceptron for agent decisions, trains agents via proximal policy optimization with rolling windows, and constructs the Mean Action (MA) index to measure expectation consensus.
 
-The results show a significant positive relation 
-between expectation consensus and future stock returns: stocks with higher 
-consensus earn higher subsequent returns. This finding remains robust across 
-alternative portfolio settings, regression specifications, and key parameter choices.
- Further mechanism tests based on Miller's heterogeneous-beliefs hypothesis indicate that margin
-  trading and short-selling constraints are a key driver of this effect. When such constraints 
-  are relaxed, heterogeneous beliefs are incorporated into prices more fully, and the pricing 
-  effect of expectation consensus becomes stronger. Additional heterogeneity analysis shows 
-  that the effect is more pronounced among small-cap firms, non-state-owned enterprises, 
-  and during bull-market periods. These findings provide practical implications for investors and 
-  policy makers in improving investment decisions and market regulation.
+Portfolio analysis and Fama-MacBeth regression reveal a significant positive correlation between expectation consensus and future returns, robust to alternative groupings, models and parameters. Furthermore, based on Miller's heterogeneous beliefs hypothesis, we identify margin trading constraints as a key mechanism via grouping tests and counterfactual simulations: relaxing constraints enables fuller incorporation of heterogeneous expectations into prices, strengthening the consensus effect. Heterogeneity analysis shows this effect is more pronounced in small-cap firms, non-state-owned enterprises and bull markets. Corresponding suggestions are offered for investors, policymakers and researchers.
 
 \end{enabstract}
 \newpage
