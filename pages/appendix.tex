@@ -468,64 +468,6 @@ L^{\mathrm{VF}}(\phi)
 \texttt{clip\_grad\_norm} 对梯度范数进行裁剪，防止梯度爆炸、保证更新稳定；  
 \texttt{weight\_decay} 对权重施加 $L^2$ 惩罚，抑制权重过大、减轻过拟合。
 
-\subsection{参数设置}  
-本文的核心参数设置如表\ref{tab:params_all}所示。
-
-{\small
-\begin{table}[!htbp]
-  \centering
-  \caption{模型参数与超参数设定}
-  \label{tab:params_all}
-  
-  \begin{minipage}{\textwidth} % 外层保持与页面同宽
-  \setlength{\tabcolsep}{4pt} % 列间距保持舒适
-
-  % ========== Panel A: MLP 与正则化参数 ==========
-  \begin{tabularx}{\dimexpr\textwidth - 1.5cm\relax}{>{\bfseries}p{2.6cm} >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{2.2cm}}
-    \toprule
-    & \multicolumn{2}{c}{\textbf{Panel A: MLP 与正则化参数}} \\
-    \cmidrule(lr){2-3}
-    参数 & 定义 & 取值 \\
-    \cmidrule(lr){2-3}
-    m & 波动率计算窗口 & 12 \\
-    l & 读取因子数量（掩码长度） & 60 \\
-    H & 隐藏层神经元数量 & 64 \\
-    $L_{\text{max}}$ & 融资融券比例上限 & \mbox{0.0} \\ % 双重保险：\mbox强制不换行
-    agents & 投资者数量 & 30 \\
-    dropout & 神经元丢弃比例 & 0.25 \\
-  \end{tabularx}
-
-  \vspace{0.6em}
-
-  % ========== Panel B: PPO 算法超参数 ==========
-  \begin{tabularx}{\dimexpr\textwidth - 1.5cm\relax}{>{\bfseries}p{2.6cm} >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{2.2cm}}
-    & \multicolumn{2}{c}{\textbf{Panel B: PPO 算法超参数}} \\
-    \cmidrule(lr){2-3}
-    参数 & 定义 & 取值 \\
-    \cmidrule(lr){2-3}
-    lr & 学习率 & $5\times 10^{-4}$ \\
-    $\epsilon$ & 裁剪半径 & $0.2$ \\
-    vf\_coef & 价值损失权重（$c_1$） & $0.5$ \\
-    ent\_coef & 熵正则权重（$c_2$） & $0.0$ \\
-    clip\_grad\_norm & 梯度裁剪范数 & $0.5$ \\
-    weight\_decay & 权重衰减 & $0.1$ \\
-  \end{tabularx}
-
-  \vspace{0.6em}
-
-  % ========== Panel C: 风险厌恶系数分布参数 ==========
-  \begin{tabularx}{\dimexpr\textwidth - 1.5cm\relax}{>{\bfseries}p{2.6cm} >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{2.2cm}}
-    & \multicolumn{2}{c}{\textbf{Panel C: 风险厌恶系数 $A$ 的分布参数}} \\
-    \cmidrule(lr){2-3}
-    参数 & 定义 & 取值 \\
-    \cmidrule(lr){2-3}
-    $\mu_A$ & $A$的对数均值 & $1$ \\
-    $\sigma_A^2$ & $A$的对数方差 & $0.16$ \\
-    \bottomrule
-  \end{tabularx}
-  \end{minipage}
-\end{table}
-}
 
 \chapter{系统设计}
 本研究涉及较长的数据周期，较多的Agent和数量庞大的因子数据，
