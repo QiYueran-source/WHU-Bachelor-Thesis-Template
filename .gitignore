@@ -22,6 +22,7 @@ overleaf.zip
 *.synctex.gz
 *.synctex(busy)
 *.pdfsync
+*.out
 
 # biblatex / biber
 *-blx.aux
@@ -39,4 +40,5 @@ pages.bac/
 ref.bac/
 
 
-# 
+# 签名
+figures/签名.jpg
