@@ -290,7 +290,7 @@
     \raggedright
     作者签名：\includegraphics[width=2.5cm]{figures/签名.jpg}\quad
     指导教师签名：\mbox{\hspace{2cm}}\\[0.9ex]
-    日\hspace{2em}期：\hspace{2.5cm}\quad 年\quad 月\quad 日 \hspace{2cm}
+    日\hspace{2em}期：\hspace{2.5cm}\quad2026年5月16日 \hspace{2cm}
   \end{minipage}\par}
 
   \vspace*{100pt}
@@ -305,7 +305,7 @@
     \raggedright
     作者签名：\includegraphics[width=2.5cm]{figures/签名.jpg}\quad
     指导教师签名：\mbox{\hspace{2cm}}\\[0.9ex]
-    日\hspace{2em}期：\hspace{2.5cm}\quad 年\quad 月\quad 日 \hspace{2cm}
+    日\hspace{2em}期：\hspace{2.5cm}\quad2026年5月16日 \hspace{2cm}
   \end{minipage}\par}
   \vspace*{\fill} % 顶部填充
 }
